@@ -318,7 +318,7 @@
     <comment>Wizard title on WizardShell page for UWP projects</comment>
   </data>
   <data name="NewProjectTitleWPF" xml:space="preserve">
-    <value>New WPF app</value>
+    <value>New Avalonia app</value>
     <comment>Wizard title on WizardShell page for WPF projects</comment>
   </data>
   <data name="NotificationRemoveError_Dependency" xml:space="preserve">

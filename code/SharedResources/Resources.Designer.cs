@@ -1450,7 +1450,7 @@ namespace Microsoft.Templates.SharedResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New WPF app.
+        ///   Looks up a localized string similar to New Avalonia app.
         /// </summary>
         public static string NewProjectTitleWPF {
             get {
