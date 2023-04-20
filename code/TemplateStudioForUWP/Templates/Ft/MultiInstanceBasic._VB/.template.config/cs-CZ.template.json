@@ -1,6 +1,0 @@
-﻿{
-    "author": "Microsoft Community",
-    "name": "Multi-Instance",
-    "description": "Spustí více instancí aplikace.",
-    "identity": "ts.Feat.MultiInstance.VB"
-}

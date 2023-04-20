@@ -1,6 +1,0 @@
-﻿<#@ template debug="true" hostspecific="true" language="C#" #>
-<# 
-var root = @"..\..\..\TemplateStudioForUwp\Templates";
-var outputNamespace = "TemplateStudioForUwp.Tests";
-#>
-<#@ include file="..\..\SharedFunctionality.Tests\GeneratedCode\TemplateTestDataGen.t4" #>
