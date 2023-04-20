@@ -24,7 +24,7 @@ namespace Microsoft.Templates.UI.ViewModels.NewProject
 {
     public class MainViewModel : BaseMainViewModel
     {
-        public const string NewProjectStepProjectType = "01ProjectType";
+        public const string NewProjectStepPlatform = "01Platform";
         public const string NewProjectStepFramework = "02Framework";
 
         private RelayCommand _refreshTemplatesCacheCommand;
@@ -77,7 +77,7 @@ namespace Microsoft.Templates.UI.ViewModels.NewProject
         {
             get
             {
-                yield return StepData.MainStep(NewProjectStepProjectType, "1", Resources.NewProjectStepProjectType, () => new ProjectTypePage(), true, true);
+                yield return StepData.MainStep(NewProjectStepPlatform, "1", Resources.NewProjectStepPlatform, () => new ProjectTypePage(), true, true);
                 yield return StepData.MainStep(NewProjectStepFramework, "2", Resources.NewProjectStepDesignPattern, () => new FrameworkPage());
             }
         }

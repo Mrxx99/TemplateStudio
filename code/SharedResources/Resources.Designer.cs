@@ -1396,6 +1396,15 @@ namespace Microsoft.Templates.SharedResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Platform.
+        /// </summary>
+        public static string NewProjectStepPlatform {
+            get {
+                return ResourceManager.GetString("NewProjectStepPlatform", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Project type.
         /// </summary>
         public static string NewProjectStepProjectType {

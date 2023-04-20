@@ -1423,4 +1423,7 @@ See the final result: {2}
     <value>Update to MVVM Toolkit version 8</value>
     <comment>Message when a breaking change is detected for MvvmToolkit version</comment>
   </data>
+  <data name="NewProjectStepPlatform" xml:space="preserve">
+    <value>Platform</value>
+  </data>
 </root>
