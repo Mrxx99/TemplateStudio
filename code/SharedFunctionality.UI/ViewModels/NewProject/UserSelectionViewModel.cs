@@ -54,20 +54,21 @@ namespace Microsoft.Templates.UI.ViewModels.NewProject
             _isInitialized = true;
         }
 
-        public async Task AddLayoutTemplatesAsync()
+        public Task AddLayoutTemplatesAsync()
         {
-            var layout = GenContext.ToolBox.Repo.GetLayoutTemplates(_context);
-            foreach (var item in layout)
-            {
-                if (item.Template != null)
-                {
-                    var template = MainViewModel.Instance.GetTemplate(item.Template);
-                    if (template != null)
-                    {
-                        await AddAsync(TemplateOrigin.Layout, template, item.Layout.Name, item.Layout.Readonly);
-                    }
-                }
-            }
+            //var layout = GenContext.ToolBox.Repo.GetLayoutTemplates(_context);
+            //foreach (var item in layout)
+            //{
+            //    if (item.Template != null)
+            //    {
+            //        var template = MainViewModel.Instance.GetTemplate(item.Template);
+            //        if (template != null)
+            //        {
+            //            await AddAsync(TemplateOrigin.Layout, template, item.Layout.Name, item.Layout.Readonly);
+            //        }
+            //    }
+            //}
+            return Task.CompletedTask;
         }
 
         public void UnsubscribeEventHandlers()

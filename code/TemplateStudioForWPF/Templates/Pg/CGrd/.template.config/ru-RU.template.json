@@ -1,6 +1,0 @@
-﻿{
-  "author": "Microsoft",
-  "name": "Content Grid",
-  "description": "Эта страница содержит базовую сетку содержимого на основе ListView.",
-  "identity": "ts.WPF.Page.ContentGrid"
-}
