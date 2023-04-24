@@ -86,25 +86,8 @@ namespace Microsoft.Templates.UI.ViewModels.NewProject
         {
             switch (context.Platform)
             {
-                case Platforms.Uwp:
-                    WizardStatus.Title = $"{Resources.NewProjectTitleUWP} ({GenContext.Current.ProjectName})";
-                    break;
-                case Platforms.Wpf:
+                case Platforms.Avalonia:
                     WizardStatus.Title = $"{Resources.NewProjectTitleWPF} ({GenContext.Current.ProjectName})";
-                    break;
-                case Platforms.WinUI:
-                    switch (context.GetAppModel())
-                    {
-                        case AppModels.Desktop:
-                            WizardStatus.Title = $"{Resources.NewProjectTitleWinUIDesktop} ({GenContext.Current.ProjectName})";
-                            break;
-                        case AppModels.Uwp:
-                            WizardStatus.Title = $"{Resources.NewProjectTitleWinUIUWP} ({GenContext.Current.ProjectName})";
-                            break;
-                    }
-
-                    break;
-                default:
                     break;
             }
 

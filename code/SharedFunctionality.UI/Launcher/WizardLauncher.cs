@@ -227,10 +227,6 @@ namespace Microsoft.Templates.UI.Launcher
                     configInfo.ProjectType = vm.SelectedProjectType.Name;
                     configInfo.Framework = vm.SelectedFramework.Name;
                     configInfo.Platform = vm.SelectedPlatform;
-                    if (configInfo.Platform == Platforms.WinUI)
-                    {
-                        configInfo.AppModel = vm.SelectedAppModel;
-                    }
 
                     ProjectMetadataService.SaveProjectMetadata(configInfo, GenContext.ToolBox.Shell.Project.GetActiveProjectPath());
                     var userSeletion = new UserSelectionContext(language, configInfo.Platform)

@@ -53,18 +53,6 @@ namespace Microsoft.Templates.Core
                 }
             }
 
-            bool isUwpInvalidLanguage = language != null ? platform.Equals(Platforms.Uwp, StringComparison.OrdinalIgnoreCase)
-                                        && language.Equals(Any, StringComparison.OrdinalIgnoreCase)
-                                        : true;
-            bool isWebInvalidLanguage = language != null ? platform.Equals(Platforms.Web, StringComparison.OrdinalIgnoreCase)
-                                        && !language.Equals(Any, StringComparison.OrdinalIgnoreCase)
-                                        : true;
-            if (isUwpInvalidLanguage || isWebInvalidLanguage)
-            {
-                // Validity is false if either are true since this is an invalid language + platform combo.
-                isValid = false;
-            }
-
             return isValid;
         }
     }

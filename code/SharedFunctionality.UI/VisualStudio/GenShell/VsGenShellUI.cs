@@ -84,14 +84,9 @@ namespace Microsoft.Templates.UI.VisualStudio.GenShell
             });
         }
 
-        private async Task OpenProjectOverviewAsync()
+        private Task OpenProjectOverviewAsync()
         {
-            if (GenContext.CurrentPlatform == Platforms.Uwp)
-            {
-                await SafeThreading.JoinableTaskFactory.SwitchToMainThreadAsync();
-                var dte = await _vsShellService.GetDteAsync();
-                dte.Events.SolutionEvents.Opened += SolutionEvents_Opened;
-            }
+            return Task.CompletedTask;
         }
 
         public void ShowModal(IWindow shell)

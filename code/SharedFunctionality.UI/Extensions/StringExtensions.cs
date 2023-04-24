@@ -30,12 +30,8 @@ namespace Microsoft.Templates.UI.Extensions
         {
             switch (platform)
             {
-                case Platforms.Uwp:
-                    return Resources.UWP;
-                case Platforms.Wpf:
-                    return Resources.WPF;
-                case Platforms.WinUI:
-                    return Resources.WinUI;
+                case Platforms.Avalonia:
+                    return Resources.Avalonia;
                 default:
                     return platform;
             }

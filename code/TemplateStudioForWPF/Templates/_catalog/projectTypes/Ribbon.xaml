@@ -1,19 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<!--This file is NOT compatible with Silverlight-->
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!--  This file is NOT compatible with Silverlight  -->
 <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
-  <Canvas Name="SVGRoot" Width="48" Height="48">
-    <Canvas.RenderTransform>
-      <TranslateTransform X="0" Y="0"/>
-    </Canvas.RenderTransform>
-    <Canvas.Resources/>
-    <!--Unknown tag: sodipodi:namedview-->
-    <!--Unknown tag: metadata-->
-    <Canvas Name="layer1">
-      <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path20" Fill="#FF000000" StrokeThickness="0.04266667">
-        <Path.Data>
-          <PathGeometry Figures="M 0 24.01333 V 5.02667 H 24 48 V 24.01333 43 H 24 0 Z m 44.8 0 V 8.22667 H 30.4 16 v 1.6 1.6 H 9.6 3.2 V 25.61333 39.8 H 24 44.8 Z M 6.3573333 22.62667 v -1.6 H 11.178667 16 v 1.6 1.6 H 11.178667 6.3573333 Z m 12.7999997 -3.2 v -4.8 H 23.978667 28.8 v 4.8 4.8 h -4.821333 -4.821334 z m 12.8 0 v -4.8 H 36.778667 41.6 v 4.8 4.8 h -4.821333 -4.821334 z m -25.5999997 -3.2 v -1.6 H 11.178667 16 v 1.6 1.6 H 11.178667 6.3573333 Z" FillRule="NonZero"/>
-        </Path.Data>
-      </Path>
-    </Canvas>
-  </Canvas>
+    <Path
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="48"
+        Height="48"
+        Data="m234.149 123c-2.166 0-4.333.827-5.982 2.473-3.3 3.292-3.3 8.644 0 11.936l22.177 22.124c-25.179 18.432-41.578 48.09-41.578 81.638h203.063c0-33.548-16.399-63.206-41.578-81.638l22.177-22.124c3.3-3.309 3.3-8.627 0-11.936-3.299-3.292-8.664-3.292-11.964 0l-25.086 25.025c-13.595-6.741-28.866-10.616-45.081-10.616-16.214 0-31.485 3.875-45.081 10.616l-25.085-25.025c-1.65-1.646-3.816-2.473-5.982-2.473zm25.383 67.526h16.922v16.882h-16.922zm84.609 0h16.922v16.882h-16.922zm-169.219 67.526c-9.341 0-16.922 7.563-16.922 16.882v101.289c0 9.319 7.581 16.882 16.922 16.882s16.922-7.563 16.922-16.882v-101.289c0-9.319-7.581-16.882-16.922-16.882zm33.844 0v135.053c0 9.318 7.581 16.881 16.922 16.881h16.922v59.086c0 13.977 11.371 25.322 25.383 25.322 14.011 0 25.382-11.345 25.382-25.322v-59.086h33.844v59.086c0 13.977 11.372 25.322 25.383 25.322 14.012 0 25.383-11.345 25.383-25.322v-59.086h16.922c9.341 0 16.922-7.563 16.922-16.881v-135.053zm236.907 0c-9.341 0-16.922 7.563-16.922 16.882v101.289c0 9.319 7.581 16.882 16.922 16.882s16.922-7.563 16.922-16.882v-101.289c0-9.319-7.581-16.882-16.922-16.882z"
+        Fill="#000000"
+        Stretch="Uniform" />
 </Viewbox>

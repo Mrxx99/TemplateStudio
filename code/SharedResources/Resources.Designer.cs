@@ -223,6 +223,15 @@ namespace Microsoft.Templates.SharedResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Avalonia.
+        /// </summary>
+        public static string Avalonia {
+            get {
+                return ResourceManager.GetString("Avalonia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Breaking changes.
         /// </summary>
         public static string BreakingChanges {
@@ -1684,6 +1693,15 @@ namespace Microsoft.Templates.SharedResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select target platforms.
+        /// </summary>
+        public static string PlatformTypeTitle {
+            get {
+                return ResourceManager.GetString("PlatformTypeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error executing &apos;{0}&apos;. Ignoring the error as Continue on Error is enabled. Related template: {1}..
         /// </summary>
         public static string PostActionContinuerOnErrorWarning {
@@ -1923,15 +1941,6 @@ namespace Microsoft.Templates.SharedResources {
         public static string ProjectDetailsTitle {
             get {
                 return ResourceManager.GetString("ProjectDetailsTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Select a project type.
-        /// </summary>
-        public static string ProjectTypeTitle {
-            get {
-                return ResourceManager.GetString("ProjectTypeTitle", resourceCulture);
             }
         }
         

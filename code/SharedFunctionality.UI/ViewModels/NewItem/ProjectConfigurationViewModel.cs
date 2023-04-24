@@ -65,16 +65,8 @@ namespace Microsoft.Templates.UI.ViewModels.NewItem
                 SetProperty(ref _selectedPlatform, value);
                 if (_selectedPlatform != null)
                 {
-                    if (SelectedPlatform == Core.Platforms.WinUI)
-                    {
-                        IsWinUISelected = true;
-                        LoadAppModels();
-                    }
-                    else
-                    {
-                        IsWinUISelected = false;
-                        LoadProjectTypes();
-                    }
+                    IsWinUISelected = false;
+                    LoadProjectTypes();
                 }
             }
         }
@@ -108,10 +100,6 @@ namespace Microsoft.Templates.UI.ViewModels.NewItem
         private void LoadProjectTypes()
         {
             var context = new UserSelectionContext(Language, SelectedPlatform);
-            if (SelectedPlatform == Core.Platforms.WinUI)
-            {
-                context.AddAppModel(SelectedAppModel);
-            }
 
             var targetProjectTypes = GenContext.ToolBox.Repo.GetProjectTypes(context).ToList();
             ProjectTypes.Clear();
@@ -139,10 +127,6 @@ namespace Microsoft.Templates.UI.ViewModels.NewItem
             {
                 ProjectType = SelectedProjectType.Name,
             };
-            if (SelectedPlatform == Core.Platforms.WinUI)
-            {
-                context.AddAppModel(SelectedAppModel);
-            }
 
             var targetFrameworks = GenContext.ToolBox.Repo.GetFrontEndFrameworks(context).ToList();
 

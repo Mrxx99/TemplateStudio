@@ -28,10 +28,7 @@ namespace Microsoft.Templates.UI.VisualStudio
         // Need to reconsider how this works now we have more than just one extension - where should this logic move to
         private readonly IEnumerable<RightClickAvailability> _availableOptions = new List<RightClickAvailability>()
         {
-            new RightClickAvailability(Platforms.Uwp, ProgrammingLanguages.CSharp) { TemplateTypes = new List<TemplateType>() { TemplateType.Page, TemplateType.Feature, TemplateType.Service, TemplateType.Testing } },
-            new RightClickAvailability(Platforms.Uwp, ProgrammingLanguages.VisualBasic) { TemplateTypes = new List<TemplateType>() { TemplateType.Page, TemplateType.Feature, TemplateType.Service, TemplateType.Testing } },
-            new RightClickAvailability(Platforms.Wpf, ProgrammingLanguages.CSharp) { TemplateTypes = new List<TemplateType>() { TemplateType.Page, TemplateType.Feature, TemplateType.Testing } },
-            new RightClickAvailability(Platforms.WinUI, ProgrammingLanguages.CSharp, AppModels.Desktop) { TemplateTypes = new List<TemplateType>() { TemplateType.Page, TemplateType.Feature, TemplateType.Testing } },
+            new RightClickAvailability(Platforms.Avalonia, ProgrammingLanguages.CSharp) { TemplateTypes = new List<TemplateType>() { TemplateType.Page, TemplateType.Feature, TemplateType.Testing } }
         };
 
         private readonly GenerationService _generationService = GenerationService.Instance;

@@ -174,17 +174,7 @@ EndProject
         {
             switch (platform)
             {
-                case Platforms.Uwp:
-                    if (isCPSProject)
-                    {
-                         return File.ReadAllText(@"Fakes\Solution\ProjectConfigurationTemplates\Uwp\UwpProjectAnyCPUTemplate.txt");
-                    }
-                    else
-                    {
-                        return File.ReadAllText(@"Fakes\Solution\ProjectConfigurationTemplates\Uwp\UwpProjectTemplate.txt");
-                    }
-
-                case Platforms.Wpf:
+                case Platforms.Avalonia:
                     if (projectRelativeToSolutionPath.Contains("wapproj"))
                     {
                         return File.ReadAllText(@"Fakes\Solution\ProjectConfigurationTemplates\Wpf\MSIXProjectTemplate.txt");
@@ -208,46 +198,7 @@ EndProject
                             return File.ReadAllText(@"Fakes\Solution\ProjectConfigurationTemplates\Wpf\WpfProjectAnyCPUTemplate.txt");
                         }
                     }
-
-                case Platforms.WinUI:
-                    if (projectRelativeToSolutionPath.Contains("wapproj"))
-                    {
-                        if (language == ProgrammingLanguages.Cpp)
-                        {
-                            return File.ReadAllText(@"Fakes\Solution\ProjectConfigurationTemplates\WinUI\MSIXCppProjectTemplate.txt");
-                        }
-                        else
-                        {
-                            return File.ReadAllText(@"Fakes\Solution\ProjectConfigurationTemplates\WinUI\MSIXProjectTemplate.txt");
-                        }
-                    }
-                    else if (projectRelativeToSolutionPath.Contains(".Core."))
-                    {
-                        return File.ReadAllText(@"Fakes\Solution\ProjectConfigurationTemplates\WinUI\WinUICoreProjectTemplate.txt");
-                    }
-                    else if (language == ProgrammingLanguages.Cpp)
-                    {
-                        if (appmodel == "Desktop")
-                        {
-                            return File.ReadAllText(@"Fakes\Solution\ProjectConfigurationTemplates\WinUI\WinUICppDesktopProjectTemplate.txt");
-                        }
-                        else
-                        {
-                            return File.ReadAllText(@"Fakes\Solution\ProjectConfigurationTemplates\WinUI\WinUICppUwpProjectTemplate.txt");
-                        }
-                    }
-                    else
-                    {
-                        if (appmodel == "Desktop")
-                        {
-                            return File.ReadAllText(@"Fakes\Solution\ProjectConfigurationTemplates\WinUI\WinUIDesktopProjectTemplate.txt");
-                        }
-                        else
-                        {
-                            return File.ReadAllText(@"Fakes\Solution\ProjectConfigurationTemplates\WinUI\WinUIUwpProjectTemplate.txt");
-                        }
-                    }
-
+            
                 default:
                     return string.Empty;
             }
@@ -257,19 +208,8 @@ EndProject
         {
             switch (platform)
             {
-                case Platforms.Uwp:
-                    return File.ReadAllText(@"Fakes\Solution\SolutionTemplates\UwpSolutionTemplate.txt");
-                case Platforms.Wpf:
+                case Platforms.Avalonia:
                     return File.ReadAllText(@"Fakes\Solution\SolutionTemplates\WpfSolutionTemplate.txt");
-                case Platforms.WinUI:
-                    if (language == ProgrammingLanguages.Cpp)
-                    {
-                        return File.ReadAllText(@"Fakes\Solution\SolutionTemplates\WinUICppSolutionTemplate.txt");
-                    }
-                    else
-                    {
-                        return File.ReadAllText(@"Fakes\Solution\SolutionTemplates\WinUIDesktopSolutionTemplate.txt"); 
-                    }
             }
 
             throw new InvalidDataException(nameof(platform));

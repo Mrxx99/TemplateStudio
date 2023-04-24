@@ -445,8 +445,8 @@
     <value>Your project details</value>
     <comment>Project details header on MainPage</comment>
   </data>
-  <data name="ProjectTypeTitle" xml:space="preserve">
-    <value>Select a project type</value>
+  <data name="PlatformTypeTitle" xml:space="preserve">
+    <value>Select target platforms</value>
     <comment>ProjectType Title on ProjectTypePage</comment>
   </data>
   <data name="TemplateDetailsAuthor" xml:space="preserve">
@@ -1425,5 +1425,8 @@ See the final result: {2}
   </data>
   <data name="NewProjectStepPlatform" xml:space="preserve">
     <value>Platform</value>
+  </data>
+  <data name="Avalonia" xml:space="preserve">
+    <value>Avalonia</value>
   </data>
 </root>

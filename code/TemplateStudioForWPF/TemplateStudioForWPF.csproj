@@ -164,6 +164,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="TemplateStudioForWpfPackage.cs" />
     <Content Include="TemplateStudio.targetsize-128.png">
@@ -173,6 +174,11 @@
     <Content Include="Templates\Proj\Default\ts.ProjectName\README.md">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <None Include="Templates\_catalog\projectTypes.json" />
+    <None Include="Templates\_catalog\projectTypes\Blank.md" />
+    <None Include="Templates\_catalog\projectTypes\MenuBar.md" />
+    <None Include="Templates\_catalog\projectTypes\Ribbon.md" />
+    <None Include="Templates\_catalog\projectTypes\SplitView.md" />
     <Page Include="..\SharedStyles\TemplateStudioStyles.xaml">
       <Link>Styles\TemplateStudioStyles.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
@@ -201,64 +207,28 @@
       <Link>TemplateStudioKey.snk</Link>
     </Content>
     <Content Include="Commands\Resources\TemplateStudioCommand.png" />
+    <Page Include="Templates\_catalog\projectTypes\Blank.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Templates\_catalog\projectTypes\MenuBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Templates\_catalog\projectTypes\Ribbon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Templates\_catalog\projectTypes\SplitView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <VSCTCompile Include="Commands\TemplateStudioForWpfPackage.vsct">
       <Generator>VsctGenerator</Generator>
       <ResourceName>Menus.ctmenu</ResourceName>
       <LastGenOutput>TemplateStudioForWpfPackage.cs</LastGenOutput>
     </VSCTCompile>
-    <Content Include="Content\EULA.cs-CZ.rtf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Content\EULA.de-DE.rtf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Content\EULA.es-ES.rtf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Content\EULA.fr-FR.rtf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Content\EULA.it-IT.rtf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Content\EULA.ja-JP.rtf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Content\EULA.ko-KR.rtf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Content\EULA.pl-PL.rtf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Content\EULA.pt-BR.rtf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Content\EULA.rtf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Content\EULA.ru-RU.rtf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Content\EULA.tr-TR.rtf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Content\EULA.zh-CN.rtf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Content\EULA.zh-TW.rtf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

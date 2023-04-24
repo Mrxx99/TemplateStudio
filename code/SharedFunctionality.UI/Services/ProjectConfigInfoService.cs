@@ -70,11 +70,6 @@ namespace Microsoft.Templates.UI.Services
                 data.Platform = InferPlatform();
             }
 
-            if (data.Platform == Platforms.WinUI)
-            {
-                data.AppModel = InferAppModel();
-            }
-
             if (string.IsNullOrEmpty(data.ProjectType))
             {
                 data.ProjectType = InferProjectType(data.Platform);
@@ -100,20 +95,7 @@ namespace Microsoft.Templates.UI.Services
 
         public string InferPlatform()
         {
-            if (IsWinUI())
-            {
-                return Platforms.WinUI;
-            }
-            else if (IsUwp())
-            {
-                return Platforms.Uwp;
-            }
-            else if (IsWpf())
-            {
-                return Platforms.Wpf;
-            }
-
-            throw new Exception(Resources.ErrorUnableResolvePlatform);
+            return Platforms.Avalonia;
         }
 
         private bool IsUwp()
@@ -128,29 +110,12 @@ namespace Microsoft.Templates.UI.Services
             return false;
         }
 
-        private bool IsWpf()
-        {
-            return ContainsProperty("UseWPF", "true");
-        }
-
-        private bool IsWinUI()
-        {
-            return ContainsProperty("UseWinUI", "true");
-        }
 
         private string InferProjectType(string platform)
         {
-            if (IsTabbedNav(platform))
-            {
-                return TabbedNav;
-            }
-            else if (IsMenuBar(platform))
+            if (IsMenuBar(platform))
             {
                 return MenuBar;
-            }
-            else if (IsNavView(platform))
-            {
-                return NavView;
             }
             else if (IsSplitView(platform))
             {
@@ -174,10 +139,6 @@ namespace Microsoft.Templates.UI.Services
             {
                 return CodeBehind;
             }
-            else if (IsNone(platform))
-            {
-                return None;
-            }
             else if (IsPrism())
             {
                 return Prism;
@@ -192,174 +153,44 @@ namespace Microsoft.Templates.UI.Services
 
         private bool IsBlank(string platform)
         {
-            switch (platform)
-            {
-                case Platforms.Uwp:
-                    return !(ExistsFileInProjectPath("ShellPage.xaml", "Views")
-                        || ExistsFileInProjectPath("PivotPage.xaml", "Views"));
-                case Platforms.Wpf:
-                    return ExistsFileInProjectPath("ShellWindow.xaml", "Views")
-                        && !FileContainsLine("Views", "ShellWindow.xaml", "<Menu Grid.Row=\"0\" Focusable=\"False\">")
-                        && !FileContainsLine("Views", "ShellWindow.xaml", "<controls:HamburgerMenu")
-                        && !FileContainsLine("Views", "ShellWindow.xaml", "<Fluent:Ribbon x:Name=\"ribbonControl\" Grid.Row=\"0\">");
-                case Platforms.WinUI:
-                    return ExistsFileInProjectPath("IActivationHandler.cs", "Activation") || IsCppProject();
-                default:
-                    return false;
-            }
+            return ExistsFileInProjectPath("ShellWindow.xaml", "Views")
+                && !FileContainsLine("Views", "ShellWindow.xaml", "<Menu Grid.Row=\"0\" Focusable=\"False\">")
+                && !FileContainsLine("Views", "ShellWindow.xaml", "<controls:HamburgerMenu")
+                && !FileContainsLine("Views", "ShellWindow.xaml", "<Fluent:Ribbon x:Name=\"ribbonControl\" Grid.Row=\"0\">");
         }
 
-        private bool IsNavView(string platform)
-        {
-            switch (platform)
-            {
-                case Platforms.WinUI:
-                    return ExistsFileInProjectPath("ShellPage.xaml", "Views")
-                        && FileContainsLine("Views", "ShellPage.xaml", "<NavigationView");
-                default:
-                    return false;
-            }
-        }
 
         private bool IsSplitView(string platform)
         {
-            switch (platform)
-            {
-                case Platforms.Uwp:
-                    if (IsCSharpProject())
-                    {
-                        // Prism doesn't have an activation service, but will have PageToken constants
-                        return ExistsFileInProjectPath("ShellPage.xaml", "Views")
-                            && (ExistsFileInProjectPath("ActivationService.cs", "Services") || ExistsFileInProjectPath("PageTokens.cs", "Constants"));
-                    }
-
-                    return ExistsFileInProjectPath("ActivationService.vb", "Services")
-                        && ExistsFileInProjectPath("ShellPage.xaml", "Views");
-                case Platforms.Wpf:
-                    return ExistsFileInProjectPath("ShellWindow.xaml", "Views")
-                        && FileContainsLine("Views", "ShellWindow.xaml", "<controls:HamburgerMenu");
-                default:
-                    return false;
-            }
+            return ExistsFileInProjectPath("ShellWindow.xaml", "Views")
+                && FileContainsLine("Views", "ShellWindow.xaml", "<controls:HamburgerMenu");
         }
 
         private bool IsMenuBar(string platform)
         {
-            switch (platform)
-            {
-                case Platforms.Uwp:
-                    return ExistsFileInProjectPath("ShellPage.xaml", "Views")
-                        && (ExistsFileInProjectPath("MenuNavigationHelper.cs", "Helpers")
-                        || ExistsFileInProjectPath("MenuNavigationHelper.vb", "Helpers")
-                        || ExistsFileInProjectPath("MenuNavigationService.cs", "Services"));
-                case Platforms.Wpf:
-                    return ExistsFileInProjectPath("ShellWindow.xaml", "Views")
-                        && FileContainsLine("Views", "ShellWindow.xaml", "<Menu Grid.Row=\"0\" Focusable=\"False\">");
-                case Platforms.WinUI:
-                    return ExistsFileInProjectPath("ShellPage.xaml", "Views")
-                        && FileContainsLine("Views", "ShellPage.xaml", "<MenuBar");
-                default:
-                    return false;
-            }
-        }
-
-        private bool IsTabbedNav(string platform)
-        {
-            if (platform == Platforms.Uwp)
-            {
-                // TabbedNav implementation is equal to SplitView but winui:NavigationView contains a property PaneDisplayMode="Top"
-                return IsSplitView(Platforms.Uwp)
-                    && FileContainsLine("Views", "ShellPage.xaml", "PaneDisplayMode=\"Top\"");
-            }
-
-            return false;
+            return ExistsFileInProjectPath("ShellWindow.xaml", "Views")
+                && FileContainsLine("Views", "ShellWindow.xaml", "<Menu Grid.Row=\"0\" Focusable=\"False\">");
         }
 
         private bool IsRibbon(string platform)
         {
-            if (platform == Platforms.Wpf)
-            {
-                return ExistsFileInProjectPath("ShellWindow.xaml", "Views")
-                        && FileContainsLine("Views", "ShellWindow.xaml", "<Fluent:Ribbon x:Name=\"ribbonControl\" Grid.Row=\"0\">");
-            }
-
-            return false;
+            return ExistsFileInProjectPath("ShellWindow.xaml", "Views")
+                    && FileContainsLine("Views", "ShellWindow.xaml", "<Fluent:Ribbon x:Name=\"ribbonControl\" Grid.Row=\"0\">");
         }
 
         private bool IsCodeBehind(string platform)
         {
-            switch (platform)
+            if (ExistsFileInProjectPath("ApplicationHostService.cs", "Services"))
             {
-                case Platforms.Uwp:
-                    if (IsCSharpProject())
-                    {
-                        if (ExistsFileInProjectPath("ActivationService.cs", "Services"))
-                        {
-                            var codebehindFile = Directory.GetFiles(Path.Combine(_shell.Project.GetActiveProjectPath(), "Views"), "*.xaml.cs", SearchOption.TopDirectoryOnly).FirstOrDefault();
-                            if (!string.IsNullOrEmpty(codebehindFile))
-                            {
-                                var fileContent = File.ReadAllText(codebehindFile);
-                                return fileContent.Contains("INotifyPropertyChanged")
-                                    && fileContent.Contains("public event PropertyChangedEventHandler PropertyChanged;");
-                            }
-                        }
-                    }
-
-                    if (ExistsFileInProjectPath("ActivationService.vb", "Services"))
-                    {
-                        var codebehindFile = Directory.GetFiles(Path.Combine(_shell.Project.GetActiveProjectPath(), "Views"), "*.xaml.vb", SearchOption.TopDirectoryOnly).FirstOrDefault();
-                        if (!string.IsNullOrEmpty(codebehindFile))
-                        {
-                            var fileContent = File.ReadAllText(codebehindFile);
-                            return fileContent.Contains("INotifyPropertyChanged") &&
-                                   fileContent.Contains("Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged");
-                        }
-                    }
-
-                    return false;
-                case Platforms.Wpf:
-                    if (ExistsFileInProjectPath("ApplicationHostService.cs", "Services"))
-                    {
-                        var codebehindFile = Directory.GetFiles(Path.Combine(_shell.Project.GetActiveProjectPath(), "Views"), "*.xaml.cs", SearchOption.TopDirectoryOnly).FirstOrDefault();
-                        if (!string.IsNullOrEmpty(codebehindFile))
-                        {
-                            var fileContent = File.ReadAllText(codebehindFile);
-                            return fileContent.Contains("INotifyPropertyChanged")
-                                && fileContent.Contains("public event PropertyChangedEventHandler PropertyChanged;");
-                        }
-                    }
-
-                    return false;
-                default:
-                    return false;
-            }
-        }
-
-        private bool IsNone(string platform)
-        {
-            if (platform == Platforms.WinUI)
-            {
-                if (IsCSharpProject())
+                var codebehindFile = Directory.GetFiles(Path.Combine(_shell.Project.GetActiveProjectPath(), "Views"), "*.xaml.cs", SearchOption.TopDirectoryOnly).FirstOrDefault();
+                if (!string.IsNullOrEmpty(codebehindFile))
                 {
-                    var codebehindFile = Directory.GetFiles(Path.Combine(_shell.Project.GetActiveProjectPath()), "*.xaml.cs", SearchOption.AllDirectories).FirstOrDefault();
-                    if (!string.IsNullOrEmpty(codebehindFile))
-                    {
-                        var fileContent = File.ReadAllText(codebehindFile);
-                        return !fileContent.Contains("ViewModel");
-                    }
+                    var fileContent = File.ReadAllText(codebehindFile);
+                    return fileContent.Contains("INotifyPropertyChanged")
+                        && fileContent.Contains("public event PropertyChangedEventHandler PropertyChanged;");
                 }
-
-                if (IsCppProject())
-                {
-                    return true;
-                }
-
-                return false;
             }
-            else
-            {
-                return false;
-            }
+            return false;
         }
 
         private bool IsPrism()
@@ -369,14 +200,7 @@ namespace Microsoft.Templates.UI.Services
 
         private bool IsMvvmToolkit(string platform)
         {
-            if (platform == Platforms.Uwp)
-            {
-                return ContainsNugetPackage("Microsoft.Toolkit.Mvvm");
-            }
-            else
-            {
-                return ContainsNugetPackage("CommunityToolkit.Mvvm");
-            }
+              return ContainsNugetPackage("CommunityToolkit.Mvvm");
         }
 
         private bool IsCSharpProject()
