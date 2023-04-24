@@ -8,12 +8,12 @@
     "shortName": "ts.WPF.MVVMToolkit.Project.SplitView",
     "identity": "ts.WPF.MVVMToolkit.Project.SplitView",
     "tags": {
-      "language": "C#",
-      "type": "item",
-      "ts.type": "composition",
-      "ts.platform": "Wpf",
-      "ts.version": "1.0.0",
-      "ts.compositionFilter": "$projectType == SplitView & $frontendframework == MVVMToolkit & ts.type == project"
+        "language": "C#",
+        "type": "item",
+        "ts.type": "composition",
+        "ts.platform": "Avalonia",
+        "ts.version": "1.0.0",
+        "ts.compositionFilter": "$projectType == SplitView & $frontendframework == MVVMToolkit & ts.type == project"
     },
     "sourceName": "ts.ItemName",
     "preferNameDirectory": true,

@@ -9,18 +9,18 @@
   "identity": "ts.WPF.Proj.Default",
   "groupIdentity": "ts.WPF.Proj.Default",
   "description": "",
-  "tags": {
-    "language": "C#",
-    "type": "project",
-    "ts.type": "project",
-    "ts.projecttype": "Blank|SplitView|MenuBar|Ribbon",
-    "ts.frontendframework": "CodeBehind|MVVMToolkit",
-    "ts.platform": "Wpf",
-    "ts.outputToParent": "true",
-    "ts.version": "1.0.0",
-    "ts.displayOrder": "0",
-    "ts.licenses": "[Microsoft.Extensions.Hosting](https://licenses.nuget.org/Apache-2.0)|[MahApps.Metro](https://github.com/MahApps/MahApps.Metro/blob/master/LICENSE)"
-  },
+    "tags": {
+        "language": "C#",
+        "type": "project",
+        "ts.type": "project",
+        "ts.projecttype": "Blank|SplitView|MenuBar|Ribbon",
+        "ts.frontendframework": "CodeBehind|MVVMToolkit",
+        "ts.platform": "Avalonia",
+        "ts.outputToParent": "true",
+        "ts.version": "1.0.0",
+        "ts.displayOrder": "0",
+        "ts.licenses": "[Microsoft.Extensions.Hosting](https://licenses.nuget.org/Apache-2.0)|[MahApps.Metro](https://github.com/MahApps/MahApps.Metro/blob/master/LICENSE)"
+    },
   "sourceName": "ts.ProjectName",
   "preferNameDirectory": true,
   "guids": [

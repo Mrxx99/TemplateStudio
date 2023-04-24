@@ -11,7 +11,7 @@
       "language": "C#",
       "type": "item",
       "ts.type": "composition",
-      "ts.platform": "Wpf",
+      "ts.platform": "Avalonia",
       "ts.version": "1.0.0",
       "ts.compositionFilter": "ts.type == page & groupidentity != ts.WPF.Page.Settings & $frontendframework == MVVMToolkit & $projectType == MenuBar"
     },

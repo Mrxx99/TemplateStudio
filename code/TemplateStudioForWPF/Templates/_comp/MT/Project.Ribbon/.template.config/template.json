@@ -8,13 +8,13 @@
     "shortName": "ts.WPF.MVVMToolkit.Project.Ribbon",
     "identity": "ts.WPF.MVVMToolkit.Project.Ribbon",
     "tags": {
-      "language": "C#",
-      "type": "item",
-      "ts.type": "composition",
-      "ts.platform": "Wpf",
-      "ts.version": "1.0.0",
-      "ts.compositionOrder": "2",
-      "ts.compositionFilter": "$projectType == Ribbon & $frontendframework == MVVMToolkit & ts.type == project"
+        "language": "C#",
+        "type": "item",
+        "ts.type": "composition",
+        "ts.platform": "Avalonia",
+        "ts.version": "1.0.0",
+        "ts.compositionOrder": "2",
+        "ts.compositionFilter": "$projectType == Ribbon & $frontendframework == MVVMToolkit & ts.type == project"
     },
     "sourceName": "ts.ItemName",
     "preferNameDirectory": true,
