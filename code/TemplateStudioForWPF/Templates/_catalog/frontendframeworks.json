@@ -1,7 +1,7 @@
 ﻿[
     {
         "name": "MVVMToolkit",
-        "displayName": "MVVM Toolkit",
+        "displayName": "Community Toolkit",
         "summary": "A modern, fast, modular MVVM library and part of the Windows Community Toolkit.",
         "author": "Microsoft Community",
         "order": "1",
@@ -12,20 +12,10 @@
     {
         "name": "CodeBehind",
         "displayName": "ReactiveUI",
-        "summary": "This is the traditional model for an application where logic is handled in the code-behind.",
-        "author": "Microsoft",
+        "summary": "Cross-platform MVVM framework for all .NET platforms that is inspired by functional reactive programming.",
+        "author": "ReactiveUI team",
         "order": "0",
-        "licenses": "",
-        "platform": "Avalonia",
-        "languages": [ "C#" ]
-    },
-    {
-        "name": "Prism",
-        "displayName": "Prism",
-        "summary": "Prism is a framework for building loosely coupled, maintainable, and testable XAML applications.",
-        "author": "Brian Lagunas, Dan Siegel",
-        "order": "2",
-        "licenses": "[Prism](https://github.com/PrismLibrary/Prism/blob/master/LICENSE)",
+        "licenses": "[ReactiveUI](https://github.com/reactiveui/ReactiveUI/blob/main/LICENSE)",
         "platform": "Avalonia",
         "languages": [ "C#" ]
     }
