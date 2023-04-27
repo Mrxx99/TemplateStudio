@@ -450,7 +450,7 @@
     <Content Include="Templates\_catalog\frontendframeworks.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_catalog\frontendframeworks\CodeBehind.md">
+    <Content Include="Templates\_catalog\frontendframeworks\ReactiveUI.md">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\MT\Project.Blank\.template.config\template.json">
@@ -528,8 +528,9 @@
     <Content Include="Templates\Proj\Default\ts.ProjectName\Styles\_Thickness.xaml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_catalog\frontendframeworks\CodeBehind.xaml">
+    <Content Include="Templates\_catalog\frontendframeworks\ReactiveUI.xaml">
       <IncludeInVSIX>true</IncludeInVSIX>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.Blank\Views\ShellWindow.xaml">
       <IncludeInVSIX>true</IncludeInVSIX>

@@ -10,7 +10,7 @@
         "languages": [ "C#" ]
     },
     {
-        "name": "CodeBehind",
+        "name": "ReactiveUI",
         "displayName": "ReactiveUI",
         "summary": "Cross-platform MVVM framework for all .NET platforms that is inspired by functional reactive programming.",
         "author": "ReactiveUI team",

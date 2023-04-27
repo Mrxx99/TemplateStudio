@@ -14,7 +14,7 @@
         "type": "project",
         "ts.type": "project",
         "ts.projecttype": "Desktop|Web|IOS|Android",
-        "ts.frontendframework": "CodeBehind|MVVMToolkit",
+        "ts.frontendframework": "ReactiveUI|MVVMToolkit",
         "ts.platform": "Avalonia",
         "ts.outputToParent": "true",
         "ts.version": "1.0.0",
