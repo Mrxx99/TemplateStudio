@@ -37,7 +37,6 @@ namespace Microsoft.Templates.VsEmulator.Main
         private Visibility _isAddNewFeatureCommandVisible;
         private Visibility _isAddNewServiceCommandVisible;
         private Visibility _isAddNewTestingCommandVisible;
-        private const string BlankProjectType = "Blank";
 
         public string ProjectName { get; private set; }
 

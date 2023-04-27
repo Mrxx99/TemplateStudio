@@ -1,16 +1,15 @@
 ﻿[
     {
-        "name": "Blank",
+        "name": "Desktop",
         "displayName": "Desktop",
         "summary": "This option allows you to run your project on Windows, OSX, Linux.",
         "author": "AvaloniaUI",
         "order": "1",
-        "licenses": "",
         "platform": "Avalonia",
         "languages": [ "C#" ]
     },
     {
-        "name": "SplitView",
+        "name": "Web",
         "displayName": "Web",
         "summary": "This option allows you to run your project on Web using Web Assembly.",
         "author": "AvaloniaUI",
@@ -19,7 +18,7 @@
         "languages": [ "C#" ]
     },
     {
-        "name": "MenuBar",
+        "name": "IOS",
         "displayName": "IOS",
         "summary": "This option allows you to run your project on IOS devices.",
         "author": "AvaloniaUI",
@@ -28,12 +27,11 @@
         "languages": [ "C#" ]
     },
     {
-        "name": "Ribbon",
+        "name": "Android",
         "displayName": "Android",
         "summary": "This option allows you to run your project on Android devices.",
         "author": "AvaloniaUI",
         "order": "3",
-        "licenses": "[Fluent.Ribbon](https://www.nuget.org/packages/Fluent.Ribbon/7.0.0/license)",
         "platform": "Avalonia",
         "languages": [ "C#" ]
     }

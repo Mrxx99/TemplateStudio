@@ -1927,6 +1927,15 @@ namespace Microsoft.Templates.SharedResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Target platforms.
+        /// </summary>
+        public static string ProjectDetailsTargetPlatformSectionTitle {
+            get {
+                return ResourceManager.GetString("ProjectDetailsTargetPlatformSectionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Testing.
         /// </summary>
         public static string ProjectDetailsTestingSectionTitle {

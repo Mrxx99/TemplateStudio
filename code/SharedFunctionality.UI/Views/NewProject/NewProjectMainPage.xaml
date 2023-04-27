@@ -70,7 +70,7 @@
                         <TextBlock
                             Style="{StaticResource TSTextBlockSubSectionTitle}"
                             Margin="{StaticResource Margin_M2_LeftRight_L_Top}"
-                            Text="{x:Static res:Resources.ProjectDetailsProjectTypeSectionTitle}" />
+                            Text="{x:Static res:Resources.ProjectDetailsTargetPlatformSectionTitle}" />
                         <ComboBox
                             x:Name="projectTypeCombo"
                             Margin="16,12,26,0"
@@ -78,7 +78,7 @@
                             SelectedItem="{Binding ProjectType.Selected, Mode=TwoWay}"
                             Style="{StaticResource TSComboBoxProjectTypeStyle}"
                             IsEnabled="{Binding WizardStatus.IsNotBusy}"
-                            AutomationProperties.Name="{x:Static res:Resources.ProjectDetailsProjectTypeSectionTitle}"
+                            AutomationProperties.Name="{x:Static res:Resources.ProjectDetailsTargetPlatformSectionTitle}"
                             PreviewKeyDown="ComboBox_PreviewKeyDown" />
                         <TextBlock
                             Style="{StaticResource TSTextBlockSubSectionTitle}"

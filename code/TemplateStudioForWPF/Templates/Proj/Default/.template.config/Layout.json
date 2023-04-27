@@ -3,12 +3,12 @@
         "name": "Main",
         "templateGroupIdentity": "ts.WPF.Page.Blank",
         "readonly": "false",
-        "projecttype": "Blank|SplitView|MenuBar|Ribbon"
+        "projecttype": "Desktop|Web|IOS|Android"
     },
     {
         "name": "Multiple views",
         "templateGroupIdentity": "ts.WPF.Feat.MultiView",
         "readonly": "true",
-        "projecttype": "MenuBar|Ribbon"
+        "projecttype": "IOS|Android"
     }
 ]

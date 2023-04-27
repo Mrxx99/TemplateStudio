@@ -8,12 +8,12 @@
     "identity": "ts.WPF.Project.SplitView.AddHamburgerMenuItem",
     "shortName": "ts.WPF.Project.SplitView.AddHamburgerMenuItem",
     "tags": {
-      "language": "C#",
-      "type": "item",
-      "ts.type": "composition",
-      "ts.platform": "Avalonia",
-      "ts.version": "1.0.0",
-      "ts.compositionFilter": "ts.type == page & identity != ts.WPF.Page.Settings & $frontendframework == MVVMToolkit & $projectType == SplitView"
+        "language": "C#",
+        "type": "item",
+        "ts.type": "composition",
+        "ts.platform": "Avalonia",
+        "ts.version": "1.0.0",
+        "ts.compositionFilter": "ts.type == page & identity != ts.WPF.Page.Settings & $frontendframework == MVVMToolkit & $projectType == Web"
     },
     "sourceName": "ts.ItemName",
     "preferNameDirectory": true,

@@ -174,11 +174,12 @@
     <Content Include="Templates\Proj\Default\ts.ProjectName\README.md">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <None Include="Templates\_catalog\frontendframeworks\MVVMToolkit.md" />
     <None Include="Templates\_catalog\projectTypes.json" />
-    <None Include="Templates\_catalog\projectTypes\Blank.md" />
-    <None Include="Templates\_catalog\projectTypes\MenuBar.md" />
-    <None Include="Templates\_catalog\projectTypes\Ribbon.md" />
-    <None Include="Templates\_catalog\projectTypes\SplitView.md" />
+    <None Include="Templates\_catalog\projectTypes\Desktop.md" />
+    <None Include="Templates\_catalog\projectTypes\IOS.md" />
+    <None Include="Templates\_catalog\projectTypes\Android.md" />
+    <None Include="Templates\_catalog\projectTypes\Web.md" />
     <Page Include="..\SharedStyles\TemplateStudioStyles.xaml">
       <Link>Styles\TemplateStudioStyles.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
@@ -207,19 +208,23 @@
       <Link>TemplateStudioKey.snk</Link>
     </Content>
     <Content Include="Commands\Resources\TemplateStudioCommand.png" />
-    <Page Include="Templates\_catalog\projectTypes\Blank.xaml">
+    <Page Include="Templates\_catalog\frontendframeworks\MVVMToolkit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Templates\_catalog\projectTypes\MenuBar.xaml">
+    <Page Include="Templates\_catalog\projectTypes\Desktop.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Templates\_catalog\projectTypes\Ribbon.xaml">
+    <Page Include="Templates\_catalog\projectTypes\IOS.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Templates\_catalog\projectTypes\SplitView.xaml">
+    <Page Include="Templates\_catalog\projectTypes\Android.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Templates\_catalog\projectTypes\Web.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

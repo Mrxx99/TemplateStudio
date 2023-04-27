@@ -1429,4 +1429,7 @@ See the final result: {2}
   <data name="Avalonia" xml:space="preserve">
     <value>Avalonia</value>
   </data>
+  <data name="ProjectDetailsTargetPlatformSectionTitle" xml:space="preserve">
+    <value>Target platforms</value>
+  </data>
 </root>

@@ -8,13 +8,13 @@
     "identity": "ts.WPF.Project.MenuBar.AddMenuItemResources",
     "shortName": "ts.WPF.Project.MenuBar.AddMenuItemResources",
     "tags": {
-      "language": "C#",
-      "type": "item",
-      "ts.type": "composition",
-      "ts.platform": "Avalonia",
-      "ts.version": "1.0.0",
-      "ts.compositionFilter": "ts.type == page & identity != ts.WPF.Page.Settings & $projectType == MenuBar"
-   },
+        "language": "C#",
+        "type": "item",
+        "ts.type": "composition",
+        "ts.platform": "Avalonia",
+        "ts.version": "1.0.0",
+        "ts.compositionFilter": "ts.type == page & identity != ts.WPF.Page.Settings & $projectType == IOS"
+    },
     "sourceName": "ts.ItemName",
     "preferNameDirectory": true,
     "PrimaryOutputs": [

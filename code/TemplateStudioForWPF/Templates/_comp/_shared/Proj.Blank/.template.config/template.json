@@ -8,13 +8,13 @@
     "shortName": "ts.WPF.Project",
     "identity": "ts.WPF.Project",
     "tags": {
-      "language": "C#",
-      "type": "item",
-      "ts.type": "composition",
-      "ts.platform": "Avalonia",
-      "ts.version": "1.0.0",
-      "ts.compositionOrder": "0",
-      "ts.compositionFilter": "$projectType == Blank & $frontendframework == MVVMToolkit & ts.type == project"
+        "language": "C#",
+        "type": "item",
+        "ts.type": "composition",
+        "ts.platform": "Avalonia",
+        "ts.version": "1.0.0",
+        "ts.compositionOrder": "0",
+        "ts.compositionFilter": "$projectType == Desktop & $frontendframework == MVVMToolkit & ts.type == project"
     },
     "sourceName": "ts.ItemName",
     "preferNameDirectory": true,

@@ -14,7 +14,7 @@
         "ts.platform": "Avalonia",
         "ts.version": "1.0.0",
         "ts.compositionOrder": "2",
-        "ts.compositionFilter": "$projectType == Ribbon & $frontendframework == MVVMToolkit & ts.type == project"
+        "ts.compositionFilter": "$projectType == Android & $frontendframework == MVVMToolkit & ts.type == project"
     },
     "sourceName": "ts.ItemName",
     "preferNameDirectory": true,

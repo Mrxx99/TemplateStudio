@@ -8,12 +8,12 @@
     "identity": "ts.WPF.Project.MenuBar.AddMenuItem.Settings",
     "shortName": "ts.WPF.Project.MenuBar.AddMenuItem.Settings",
     "tags": {
-      "language": "C#",
-      "type": "item",
-      "ts.type": "composition",
-      "ts.platform": "Avalonia",
-      "ts.version": "1.0.0",
-      "ts.compositionFilter": "ts.type == page & groupidentity == ts.WPF.Page.Settings & $frontendframework == MVVMToolkit & $projectType == MenuBar"
+        "language": "C#",
+        "type": "item",
+        "ts.type": "composition",
+        "ts.platform": "Avalonia",
+        "ts.version": "1.0.0",
+        "ts.compositionFilter": "ts.type == page & groupidentity == ts.WPF.Page.Settings & $frontendframework == MVVMToolkit & $projectType == IOS"
     },
     "sourceName": "ts.ItemName",
     "preferNameDirectory": true,

@@ -13,7 +13,7 @@
         "language": "C#",
         "type": "project",
         "ts.type": "project",
-        "ts.projecttype": "Blank|SplitView|MenuBar|Ribbon",
+        "ts.projecttype": "Desktop|Web|IOS|Android",
         "ts.frontendframework": "CodeBehind|MVVMToolkit",
         "ts.platform": "Avalonia",
         "ts.outputToParent": "true",

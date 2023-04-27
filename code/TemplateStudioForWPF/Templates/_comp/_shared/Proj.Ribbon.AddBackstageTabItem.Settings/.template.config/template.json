@@ -8,12 +8,12 @@
     "identity": "ts.WPF.Project.Ribbon.AddBackstageTabItem.Settings",
     "shortName": "ts.WPF.Project.Ribbon.AddBackstageTabItem.Settings",
     "tags": {
-      "language": "C#",
-      "type": "item",
-      "ts.type": "composition",
-      "ts.platform": "Avalonia",
-      "ts.version": "1.0.0",
-      "ts.compositionFilter": "ts.type == page & identity == ts.WPF.Page.Settings & $frontendframework == MVVMToolkit & $projectType == Ribbon"
+        "language": "C#",
+        "type": "item",
+        "ts.type": "composition",
+        "ts.platform": "Avalonia",
+        "ts.version": "1.0.0",
+        "ts.compositionFilter": "ts.type == page & identity == ts.WPF.Page.Settings & $frontendframework == MVVMToolkit & $projectType == Android"
     },
     "sourceName": "ts.ItemName",
     "preferNameDirectory": true,
