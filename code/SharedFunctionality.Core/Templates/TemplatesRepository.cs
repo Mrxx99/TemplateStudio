@@ -263,51 +263,52 @@ namespace Microsoft.Templates.Core
 
         public IEnumerable<LayoutInfo> GetLayoutTemplates(UserSelectionContext context)
         {
-            if (string.IsNullOrEmpty(context.ProjectType))
-            {
-                throw new ArgumentNullException(nameof(context.ProjectType));
-            }
+            //if (string.IsNullOrEmpty(context.ProjectType))
+            //{
+            //    throw new ArgumentNullException(nameof(context.ProjectType));
+            //}
 
-            var projectTemplates = GetTemplates(TemplateType.Project, context);
+            //var projectTemplates = GetTemplates(TemplateType.Project, context);
 
-            foreach (var projectTemplate in projectTemplates)
-            {
-                var layout = projectTemplate?
-                .GetLayout()
-                .Where(l => l.ProjectType == null || l.ProjectType.GetMultiValue().Contains(context.ProjectType));
+            //foreach (var projectTemplate in projectTemplates)
+            //{
+            //    var layout = projectTemplate?
+            //    .GetLayout()
+            //    .Where(l => l.ProjectType == null || l.ProjectType.GetMultiValue().Contains(context.ProjectType));
 
-                if (layout != null)
-                {
-                    foreach (var item in layout)
-                    {
-                        var template = Find(t => t.GroupIdentity == item.TemplateGroupIdentity
-                                                && (t.GetProjectTypeList().Contains(context.ProjectType) || t.GetProjectTypeList().Contains(All))
-                                                && IsMatchFrontEnd(t, context.FrontEndFramework)
-                                                ////&& IsMatchBackEnd(t, context.BackEndFramework)
-                                                && IsMatchPropertyBag(t, context.PropertyBag)
-                                                && t.GetLanguage() == context.Language
-                                                && t.GetPlatform() == context.Platform);
+            //    if (layout != null)
+            //    {
+            //        foreach (var item in layout)
+            //        {
+            //            var template = Find(t => t.GroupIdentity == item.TemplateGroupIdentity
+            //                                    && (t.GetProjectTypeList().Contains(context.ProjectType) || t.GetProjectTypeList().Contains(All))
+            //                                    && IsMatchFrontEnd(t, context.FrontEndFramework)
+            //                                    ////&& IsMatchBackEnd(t, context.BackEndFramework)
+            //                                    && IsMatchPropertyBag(t, context.PropertyBag)
+            //                                    && t.GetLanguage() == context.Language
+            //                                    && t.GetPlatform() == context.Platform);
 
-                        if (template == null)
-                        {
-                            LogOrAlertException(string.Format(Resources.ErrorLayoutNotFound, item.TemplateGroupIdentity, context.FrontEndFramework, context.Platform));
-                        }
-                        else
-                        {
-                            var templateType = template.GetTemplateType();
-                            if (!templateType.IsItemTemplate())
-                            {
-                                LogOrAlertException(string.Format(Resources.ErrorLayoutType, template.Identity));
-                            }
-                            else
-                            {
-                                var templateInfo = GetTemplateInfo(template, context);
-                                yield return new LayoutInfo() { Layout = item, Template = templateInfo };
-                            }
-                        }
-                    }
-                }
-            }
+            //            if (template == null)
+            //            {
+            //                LogOrAlertException(string.Format(Resources.ErrorLayoutNotFound, item.TemplateGroupIdentity, context.FrontEndFramework, context.Platform));
+            //            }
+            //            else
+            //            {
+            //                var templateType = template.GetTemplateType();
+            //                if (!templateType.IsItemTemplate())
+            //                {
+            //                    LogOrAlertException(string.Format(Resources.ErrorLayoutType, template.Identity));
+            //                }
+            //                else
+            //                {
+            //                    var templateInfo = GetTemplateInfo(template, context);
+            //                    yield return new LayoutInfo() { Layout = item, Template = templateInfo };
+            //                }
+            //            }
+            //        }
+            //    }
+            //}
+            return new List<LayoutInfo>();
         }
 
         public void AddAdditionalTemplates(IEnumerable<ITemplateInfo> extraTemplates)
