@@ -8,6 +8,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:res="clr-namespace:Microsoft.Templates.SharedResources;assembly=SharedResources"
+    xmlns:services="clr-namespace:Microsoft.Templates.UI.Services"
     Title="MainPage"
     d:DesignHeight="300"
     d:DesignWidth="300"
@@ -75,15 +76,101 @@
                             Margin="{StaticResource Margin_M2_LeftRight_L_Top}"
                             Style="{StaticResource TSTextBlockSubSectionTitle}"
                             Text="{x:Static res:Resources.ProjectDetailsTargetPlatformSectionTitle}" />
-                        <ComboBox
+                        <ItemsControl
                             x:Name="projectTypeCombo"
                             Margin="16,12,26,0"
-                            AutomationProperties.Name="{x:Static res:Resources.ProjectDetailsTargetPlatformSectionTitle}"
                             IsEnabled="{Binding WizardStatus.IsNotBusy}"
-                            ItemsSource="{Binding ProjectType.Items}"
-                            PreviewKeyDown="ComboBox_PreviewKeyDown"
-                            SelectedItem="{Binding ProjectType.Selected, Mode=TwoWay}"
-                            Style="{StaticResource TSComboBoxProjectTypeStyle}" />
+                            ItemsSource="{Binding ProjectType.SelectedItems}">
+                            <ItemsControl.ItemContainerStyle>
+                                <Style>
+                                    <Setter Property="Control.Margin" Value="0,0,0,5" />
+                                </Style>
+                            </ItemsControl.ItemContainerStyle>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border
+                                        x:Name="templateRoot"
+                                        Padding="3"
+                                        Background="{Binding ComboBoxBackground, Source={x:Static services:UIStylesService.Instance}}"
+                                        BorderBrush="{Binding ComboBoxBorder, Source={x:Static services:UIStylesService.Instance}}"
+                                        BorderThickness="1"
+                                        SnapsToDevicePixels="true">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="0" MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid IsHitTestVisible="false">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="20" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <controls:ImageEx
+                                                    x:Name="icon"
+                                                    Grid.Column="0"
+                                                    SourcePath="{Binding Icon}"
+                                                    Style="{StaticResource TSImageExProjectDetails}" />
+                                                <TextBlock
+                                                    Grid.Column="1"
+                                                    Margin="{StaticResource Margin_M_Left}"
+                                                    Style="{StaticResource TSTextBlockComboBoxItem}"
+                                                    Text="{Binding Title}" />
+                                            </Grid>
+                                            <Button
+                                                x:Name="removeButton"
+                                                Grid.Column="1"
+                                                Height="Auto"
+                                                Margin="0,0,5,0"
+                                                HorizontalAlignment="Right"
+                                                Background="Transparent"
+                                                BorderBrush="Transparent"
+                                                SnapsToDevicePixels="true">
+                                                <Button.Style>
+                                                    <Style TargetType="{x:Type Button}">
+                                                        <Setter Property="Background" Value="Transparent" />
+                                                        <Setter Property="Template">
+                                                            <Setter.Value>
+                                                                <ControlTemplate TargetType="{x:Type Button}">
+                                                                    <Border Background="{TemplateBinding Background}">
+                                                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                                                    </Border>
+                                                                </ControlTemplate>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                        <Style.Triggers>
+                                                            <Trigger Property="IsMouseOver" Value="True">
+                                                                <Setter Property="Background" Value="Transparent" />
+                                                            </Trigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Button.Style>
+                                                <Path
+                                                    x:Name="remove"
+                                                    Width="10"
+                                                    Height="10"
+                                                    Margin="0"
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    Data="M 11.416016,10 20,1.4160156 18.583984,0 10,8.5839846 1.4160156,0 0,1.4160156 8.5839844,10 0,18.583985 1.4160156,20 10,11.416015 18.583984,20 20,18.583985 Z"
+                                                    Fill="{Binding ComboBoxGlyph, Source={x:Static services:UIStylesService.Instance}}"
+                                                    Stretch="Uniform">
+                                                    <Path.Style>
+                                                        <Style TargetType="Path">
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding ElementName=removeButton, Path=IsMouseOver}" Value="True">
+                                                                    <Setter Property="Path.Fill" Value="Red" />
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+
+                                                        </Style>
+                                                    </Path.Style>
+                                                </Path>
+                                            </Button>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
                         <TextBlock
                             Margin="{StaticResource Margin_M2_LeftRight_L_Top}"
                             Style="{StaticResource TSTextBlockSubSectionTitle}"
