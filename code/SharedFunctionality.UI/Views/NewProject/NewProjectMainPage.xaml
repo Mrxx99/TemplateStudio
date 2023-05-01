@@ -5,10 +5,10 @@
     xmlns:common="clr-namespace:Microsoft.Templates.UI.Views.Common"
     xmlns:controls="clr-namespace:Microsoft.Templates.UI.Controls"
     xmlns:converters="clr-namespace:Microsoft.Templates.UI.Converters"
+    xmlns:services="clr-namespace:Microsoft.Templates.UI.Services"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:res="clr-namespace:Microsoft.Templates.SharedResources;assembly=SharedResources"
-    xmlns:services="clr-namespace:Microsoft.Templates.UI.Services"
     Title="MainPage"
     d:DesignHeight="300"
     d:DesignWidth="300"
@@ -83,24 +83,25 @@
                             ItemsSource="{Binding ProjectType.SelectedItems}">
                             <ItemsControl.ItemContainerStyle>
                                 <Style>
-                                    <Setter Property="Control.Margin" Value="0,0,0,5" />
+                                    <Setter Property="Control.Margin" Value="0,0,0,5"/>
                                 </Style>
                             </ItemsControl.ItemContainerStyle>
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <Border
                                         x:Name="templateRoot"
-                                        Padding="3"
                                         Background="{Binding ComboBoxBackground, Source={x:Static services:UIStylesService.Instance}}"
                                         BorderBrush="{Binding ComboBoxBorder, Source={x:Static services:UIStylesService.Instance}}"
                                         BorderThickness="1"
+                                        Padding="3"
                                         SnapsToDevicePixels="true">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*" />
                                                 <ColumnDefinition Width="0" MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" />
                                             </Grid.ColumnDefinitions>
-                                            <Grid IsHitTestVisible="false">
+                                            <Grid
+                                                IsHitTestVisible="false">
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="20" />
                                                     <ColumnDefinition Width="*" />
@@ -153,18 +154,7 @@
                                                     VerticalAlignment="Center"
                                                     Data="M 11.416016,10 20,1.4160156 18.583984,0 10,8.5839846 1.4160156,0 0,1.4160156 8.5839844,10 0,18.583985 1.4160156,20 10,11.416015 18.583984,20 20,18.583985 Z"
                                                     Fill="{Binding ComboBoxGlyph, Source={x:Static services:UIStylesService.Instance}}"
-                                                    Stretch="Uniform">
-                                                    <Path.Style>
-                                                        <Style TargetType="Path">
-                                                            <Style.Triggers>
-                                                                <DataTrigger Binding="{Binding ElementName=removeButton, Path=IsMouseOver}" Value="True">
-                                                                    <Setter Property="Path.Fill" Value="Red" />
-                                                                </DataTrigger>
-                                                            </Style.Triggers>
-
-                                                        </Style>
-                                                    </Path.Style>
-                                                </Path>
+                                                    Stretch="Uniform" />
                                             </Button>
                                         </Grid>
                                     </Border>
