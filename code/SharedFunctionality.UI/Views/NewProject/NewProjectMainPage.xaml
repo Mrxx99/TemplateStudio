@@ -5,10 +5,10 @@
     xmlns:common="clr-namespace:Microsoft.Templates.UI.Views.Common"
     xmlns:controls="clr-namespace:Microsoft.Templates.UI.Controls"
     xmlns:converters="clr-namespace:Microsoft.Templates.UI.Converters"
-    xmlns:services="clr-namespace:Microsoft.Templates.UI.Services"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:res="clr-namespace:Microsoft.Templates.SharedResources;assembly=SharedResources"
+    xmlns:services="clr-namespace:Microsoft.Templates.UI.Services"
     Title="MainPage"
     d:DesignHeight="300"
     d:DesignWidth="300"
@@ -83,25 +83,24 @@
                             ItemsSource="{Binding ProjectType.SelectedItems}">
                             <ItemsControl.ItemContainerStyle>
                                 <Style>
-                                    <Setter Property="Control.Margin" Value="0,0,0,5"/>
+                                    <Setter Property="Control.Margin" Value="0,0,0,5" />
                                 </Style>
                             </ItemsControl.ItemContainerStyle>
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <Border
                                         x:Name="templateRoot"
+                                        Padding="7,3,3,3"
                                         Background="{Binding ComboBoxBackground, Source={x:Static services:UIStylesService.Instance}}"
                                         BorderBrush="{Binding ComboBoxBorder, Source={x:Static services:UIStylesService.Instance}}"
                                         BorderThickness="1"
-                                        Padding="3"
                                         SnapsToDevicePixels="true">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*" />
                                                 <ColumnDefinition Width="0" MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" />
                                             </Grid.ColumnDefinitions>
-                                            <Grid
-                                                IsHitTestVisible="false">
+                                            <Grid IsHitTestVisible="false">
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="20" />
                                                     <ColumnDefinition Width="*" />
@@ -125,6 +124,8 @@
                                                 HorizontalAlignment="Right"
                                                 Background="Transparent"
                                                 BorderBrush="Transparent"
+                                                Command="{Binding DataContext.ProjectType.RemoveCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}}"
+                                                CommandParameter="{Binding}"
                                                 SnapsToDevicePixels="true">
                                                 <Button.Style>
                                                     <Style TargetType="{x:Type Button}">
@@ -139,6 +140,9 @@
                                                             </Setter.Value>
                                                         </Setter>
                                                         <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding DataContext.ProjectType.SelectedItems.Count, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}}" Value="1">
+                                                                <Setter Property="Visibility" Value="Hidden" />
+                                                            </DataTrigger>
                                                             <Trigger Property="IsMouseOver" Value="True">
                                                                 <Setter Property="Background" Value="Transparent" />
                                                             </Trigger>
