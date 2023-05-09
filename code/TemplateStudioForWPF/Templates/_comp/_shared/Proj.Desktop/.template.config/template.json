@@ -1,23 +1,28 @@
 ﻿{
     "$schema": "http://json.schemastore.org/template",
-    "author": "Microsoft Community",
+    "author": "Microsoft",
     "classifications": [
-        "Universal"
+      "Universal"
     ],
-    "name": "ts.Avalonia.MVVMToolkit.Project.Desktop",
-    "shortName": "ts.Avalonia.MVVMToolkit.Project.Desktop",
-    "identity": "ts.Avalonia.MVVMToolkit.Project.Desktop",
+    "name": "ts.WPF.Project",
+    "shortName": "ts.WPF.Project",
+    "identity": "ts.WPF.Project",
     "tags": {
         "language": "C#",
-        "type": "item",
+        "type": "project",
+        "ts.outputToParent": "true",
         "ts.type": "composition",
         "ts.platform": "Avalonia",
         "ts.version": "1.0.0",
-        "ts.compositionFilter": "$projectType == Desktop & $frontendframework == MVVMToolkit & ts.type == project"
+        "ts.compositionOrder": "0",
+        "ts.compositionFilter": "$projectType == Desktop & ts.type == project"
     },
     "sourceName": "ts.ItemName",
     "preferNameDirectory": true,
     "PrimaryOutputs": [
+        {
+            "path": "Param_ProjectName.Desktop/Param_ProjectName.Desktop.csproj"
+        }
     ],
     "symbols": {
         "ts.rootNamespace": {
@@ -43,4 +48,4 @@
             "defaultValue": "net7.0"
         }
     }
-}
+  }

@@ -4,11 +4,5 @@
         "templateGroupIdentity": "ts.WPF.Page.Blank",
         "readonly": "false",
         "projecttype": "Desktop|Web|IOS|Android"
-    },
-    {
-        "name": "Multiple views",
-        "templateGroupIdentity": "ts.WPF.Feat.MultiView",
-        "readonly": "true",
-        "projecttype": "IOS|Android"
     }
 ]

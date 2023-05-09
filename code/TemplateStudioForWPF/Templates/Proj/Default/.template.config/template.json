@@ -1,14 +1,14 @@
 ﻿{
-  "$schema": "http://json.schemastore.org/template",
-  "author": "Microsoft",
-  "classifications": [
-    "Universal"
-  ],
-  "name": "ts.WPF.Proj.Default",
-  "shortName": "ts.WPF.Proj.Default",
-  "identity": "ts.WPF.Proj.Default",
-  "groupIdentity": "ts.WPF.Proj.Default",
-  "description": "",
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Microsoft",
+    "classifications": [
+        "Universal"
+    ],
+    "name": "ts.Avalonia.Proj.Default",
+    "shortName": "ts.Avalonia.Proj.Default",
+    "identity": "ts.Avalonia.Proj.Default",
+    "groupIdentity": "ts.Avalonia.Proj.Default",
+    "description": "",
     "tags": {
         "language": "C#",
         "type": "project",
@@ -18,95 +18,56 @@
         "ts.platform": "Avalonia",
         "ts.outputToParent": "true",
         "ts.version": "1.0.0",
-        "ts.displayOrder": "0",
-        "ts.licenses": "[Microsoft.Extensions.Hosting](https://licenses.nuget.org/Apache-2.0)|[MahApps.Metro](https://github.com/MahApps/MahApps.Metro/blob/master/LICENSE)"
+        "ts.displayOrder": "0"
     },
-  "sourceName": "ts.ProjectName",
-  "preferNameDirectory": true,
-  "guids": [
-  ],
-  "PrimaryOutputs": [
-    { "path": "ts.ProjectName/ts.ProjectName.csproj" },
-    { "path": "ts.ProjectName.Core/ts.ProjectName.Core.csproj" }
-  ],
-  "symbols": {
-    "ts.projectName":
-    {
-      "type": "parameter",
-      "replaces": "Param_ProjectName",
-      "fileRename": "Param_ProjectName"
+    "sourceName": "ts.ProjectName",
+    "preferNameDirectory": true,
+    "guids": [
+    ],
+    "PrimaryOutputs": [
+        { "path": "ts.ProjectName/ts.ProjectName.csproj" }
+    ],
+    "symbols": {
+        "ts.rootNamespace": {
+            "type": "parameter",
+            "replaces": "Param_RootNamespace"
+        },
+        "Framework": {
+            "type": "parameter",
+            "description": "The target framework for the project.",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "net7.0",
+                    "description": "Target net7.0"
+                }
+            ],
+            "replaces": "FrameworkParameter",
+            "defaultValue": "net7.0"
+        },
+        "UseCompiledBindings": {
+            "type": "parameter",
+            "description": "Defines if CompiledBindings should be enabled by default in the project (only supported in 11.0 version and newer).",
+            "datatype": "bool",
+            "displayName": "Use compiled Bindings",
+            "defaultValue": "true"
+        },
+        "HostIdentifier": {
+            "type": "bind",
+            "binding": "HostIdentifier"
+        }
     },
-    "ts.rootNamespace": {
-      "type": "parameter",
-      "replaces": "Param_RootNamespace"
-    },
-    "ts.wizardVersion":
-    {
-      "type": "parameter",
-      "dataType": "string",
-      "replaces": "Param_Wizard.Version"
-    },
-    "ts.generationProjectType":
-    {
-      "type": "parameter",
-      "replaces": "Param_ProjectType"
-    },
-    "ts.generationFrontEndFramework":
-    {
-      "type": "parameter",
-      "replaces": "Param_Framework"
-    },
-    "ts.generationPlatform":
-    {
-      "type": "parameter",
-      "replaces": "Param_Platform"
-    },
-    "copyrightYear": {
-        "type": "generated",
-        "generator": "now",
-        "replaces": "1976",
-        "parameters": {
-          "format": "yyyy"
-      }
-    },
-    "baseclass": {
-      "type": "parameter",
-      "replaces": "System.ComponentModel.INotifyPropertyChanged"
-    }
-  },
-  "postActions": [
-    {
-      "description": "Add nuget package",
-      "manualInstructions": [ ],
-      "actionId": "0B814718-16A3-4F7F-89F1-69C0F9170EAD",
-      "args": {
-        "packageId": "Microsoft.Extensions.Hosting",
-        "version": "6.0.0",
-        "projectPath": "Param_ProjectName\\Param_ProjectName.csproj"
-      },
-      "continueOnError": true
-    },
-    {
-      "description": "Add nuget package",
-      "manualInstructions": [ ],
-      "actionId": "0B814718-16A3-4F7F-89F1-69C0F9170EAD",
-      "args": {
-        "packageId": "MahApps.Metro",
-        "version": "2.4.9",
-        "projectPath": "Param_ProjectName\\Param_ProjectName.csproj"
-      },
-      "continueOnError": true
-    },
-    {
-      "description": "Add reference to core project",
-      "manualInstructions": [ ],
-      "actionId": "849AAEB8-487D-45B3-94B9-77FA74E83A01",
-      "args": {
-        "fileIndex": "0",
-        "projectPath": "Param_ProjectName.Core\\Param_ProjectName.Core.csproj",
-        "specifiedPathIsTarget": "true"
-      },
-      "continueOnError": true
-    }
-  ]
+    "postActions": [
+        {
+            "id": "editor",
+            "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+            "description": "Opens MainView and MainViewModel in the editor",
+            "manualInstructions": [],
+            "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
+            "args": {
+                "files": "5;6"
+            },
+            "continueOnError": true
+        }
+    ]
 }
