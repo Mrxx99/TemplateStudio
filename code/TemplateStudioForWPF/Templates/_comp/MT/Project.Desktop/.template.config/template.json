@@ -12,8 +12,9 @@
         "type": "item",
         "ts.type": "composition",
         "ts.platform": "Avalonia",
+        "ts.outputToParent": "true",
         "ts.version": "1.0.0",
-        "ts.compositionFilter": "$projectType == Desktop & $frontendframework == MVVMToolkit2 & ts.type == project"
+        "ts.compositionFilter": "$projectType == Desktop & $frontendframework == MVVMToolkit & ts.type == project"
     },
     "sourceName": "ts.ItemName",
     "preferNameDirectory": true,

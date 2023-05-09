@@ -1,9 +1,8 @@
 ﻿using System;
 using Avalonia;
-//{[{
+//{--{
 using Avalonia.ReactiveUI;
-using Microsoft.VisualStudio.PlatformUI;
-//}]}
+//}--}
 
 namespace Param_RootNamespace.Desktop;
 
@@ -21,12 +20,13 @@ class Program
         => AppBuilder.Configure<App>()
             .UsePlatformDetect()
             .WithInterFont()
-//{[{
+            //^^
+            //{[{
+            .LogToTrace();
+            //}]}
+
+            //{--{
             .LogToTrace()
             .UseReactiveUI();
-//}]}
-//^^
-//{[{
-            .LogToTrace();
-//}]}
+            //}--}
 }

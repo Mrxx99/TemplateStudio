@@ -173,7 +173,8 @@
     <Compile Include="Templates\Proj\Default\ts.ProjectName\Views\MainView.axaml.cs" />
     <Compile Include="Templates\Proj\Default\ts.ProjectName\Views\MainWindow.axaml.cs" />
     <Content Include="Templates\_comp\MT\Project\ViewModels\MainViewModel_postaction.cs" />
-    <Compile Include="Templates\_comp\MT\Project.Desktop\Program_postaction.cs" />
+    <Compile Include="Templates\_comp\MT\Project.Desktop\Param_ProjectName.Desktop\Program_postaction.cs" />
+    <Compile Include="Templates\_comp\MT\Project\App_postaction.axaml.cs" />
     <Compile Include="Templates\_comp\MT\Project\ViewModels\ViewModelBase_postaction.cs" />
     <Compile Include="Templates\_comp\_shared\Proj.Desktop\Param_ProjectName.Desktop\Program.cs" />
     <Content Include="TemplateStudio.targetsize-128.png">
