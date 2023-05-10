@@ -18,28 +18,9 @@ namespace SharedFunctionality.UI.ViewModels.Common
     {
         private readonly Func<bool> _isSelectionEnabled;
         private readonly Func<Task> _onSelected;
-        private readonly DialogService _dialogService = DialogService.Instance;
-
-        private T _selected;
-        private T _origSelected;
         private RelayCommand<T> _removeCommand;
 
         public RelayCommand<T> RemoveCommand => _removeCommand ?? (_removeCommand = new RelayCommand<T>(a => Remove(a)));
-        public T Selected
-        {
-            get => _selected;
-            set => SafeThreading.JoinableTaskFactory.RunAsync(async () =>
-            {
-                try
-                {
-                    await SelectAsync(value);
-                }
-                catch (Exception ex)
-                {
-                    _dialogService.ShowError(ex);
-                }
-            });
-        }
 
         public ObservableCollection<T> Items { get; } = new ObservableCollection<T>();
 
@@ -51,16 +32,10 @@ namespace SharedFunctionality.UI.ViewModels.Common
             _onSelected = onSelected;
         }
 
-        private async Task<bool> SelectAsync(T value)
+        public async Task<bool> SelectAsync(T value)
         {
             if (value != null)
             {
-                _origSelected = _selected;
-                if (value != _selected)
-                {
-                    _selected = value;
-                }
-
                 if (_isSelectionEnabled())
                 {
                     var selectedItems = Items.Where(x => x.IsSelected);
@@ -69,32 +44,23 @@ namespace SharedFunctionality.UI.ViewModels.Common
                         return false;
                     }
 
-                    if (_selected.IsSelected == true)
+                    if (value.IsSelected == true)
                     {
-                        _selected.IsSelected = false;
-                        SelectedItems.Remove(_selected);
+                        value.IsSelected = false;
+                        SelectedItems.Remove(value);
                     }
                     else
                     {
-                        _selected.IsSelected = true;
-                        SelectedItems.Add(_selected);
+                        value.IsSelected = true;
+                        SelectedItems.Add(value);
                     }
 
-                    OnPropertyChanged(nameof(Selected));
                     if (_onSelected != null)
                     {
                         await _onSelected?.Invoke();
                     }
 
                     return true;
-                }
-                else
-                {
-                    DispatcherService.BeginInvoke(() =>
-                    {
-                        _selected = _origSelected;
-                        OnPropertyChanged(nameof(Selected));
-                    });
                 }
             }
 

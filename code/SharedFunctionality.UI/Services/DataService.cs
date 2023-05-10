@@ -22,7 +22,7 @@ namespace Microsoft.Templates.UI.Services
             var data = newProjectTypes
                         .Select(m =>
                         {
-                            context.ProjectType = m.Name;
+                            context.ProjectTypes.Add(m.Name);
                             var targetFrameworks = GenContext.ToolBox.Repo.GetFrontEndFrameworks(context)
                                         .Select(fx => new FrameworkMetaDataViewModel(fx))
                                         .OrderBy(f => f.Order)

@@ -176,7 +176,7 @@ namespace Microsoft.Templates.VsEmulator.Main
 
         public void SetProjectData(UserSelectionContext context, bool useStyleCop)
         {
-            ProjectType = context.ProjectType;
+            ProjectType = string.Join(",", context.ProjectTypes);
             Framework = context.FrontEndFramework;
             Platform = context.Platform;
             Language = context.Language;

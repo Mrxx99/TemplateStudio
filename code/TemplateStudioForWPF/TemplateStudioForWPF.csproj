@@ -167,33 +167,76 @@
   <ItemGroup />
   <ItemGroup>
     <Compile Include="TemplateStudioForWpfPackage.cs" />
-    <Compile Include="Templates\Proj\Default\ts.ProjectName\App.axaml.cs" />
-    <Compile Include="Templates\Proj\Default\ts.ProjectName\ViewModels\MainViewModel.cs" />
-    <Compile Include="Templates\Proj\Default\ts.ProjectName\ViewModels\ViewModelBase.cs" />
-    <Compile Include="Templates\Proj\Default\ts.ProjectName\Views\MainView.axaml.cs" />
-    <Compile Include="Templates\Proj\Default\ts.ProjectName\Views\MainWindow.axaml.cs" />
-    <Content Include="Templates\_comp\MT\Project\ViewModels\MainViewModel_postaction.cs" />
-    <Compile Include="Templates\_comp\MT\Project.Desktop\Param_ProjectName.Desktop\Program_postaction.cs" />
-    <Compile Include="Templates\_comp\MT\Project\App_postaction.axaml.cs" />
-    <Compile Include="Templates\_comp\MT\Project\ViewModels\ViewModelBase_postaction.cs" />
-    <Compile Include="Templates\_comp\_shared\Proj.Desktop\Param_ProjectName.Desktop\Program.cs" />
+    <Content Include="Templates\Proj\Default\ts.ProjectName\App.axaml.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default\ts.ProjectName\ViewModels\MainViewModel.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default\ts.ProjectName\ViewModels\ViewModelBase.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default\ts.ProjectName\Views\MainView.axaml.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default\ts.ProjectName\Views\MainWindow.axaml.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\MT\Project\ViewModels\MainViewModel_postaction.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\MT\Project.Desktop\Param_ProjectName.Desktop\Program_postaction.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\MT\Project\App_postaction.axaml.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\MT\Project\ViewModels\ViewModelBase_postaction.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\MainActivity.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\SplashActivity.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Desktop\Param_ProjectName.Desktop\Program.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="TemplateStudio.targetsize-128.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="Templates\Proj\Default\ts.ProjectName\App.axaml" />
-    <None Include="Templates\Proj\Default\Directory.Build.props" />
-    <None Include="Templates\Proj\Default\ts.ProjectName\Views\MainView.axaml" />
-    <None Include="Templates\Proj\Default\ts.ProjectName\Views\MainWindow.axaml" />
+    <Content Include="Templates\Proj\Default\ts.ProjectName\App.axaml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default\Directory.Build.props">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default\ts.ProjectName\Views\MainView.axaml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default\ts.ProjectName\Views\MainWindow.axaml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="Templates\_catalog\frontendframeworks\MVVMToolkit.md" />
     <None Include="Templates\_catalog\projectTypes.json" />
     <None Include="Templates\_catalog\projectTypes\Desktop.md" />
     <None Include="Templates\_catalog\projectTypes\IOS.md" />
     <None Include="Templates\_catalog\projectTypes\Android.md" />
     <None Include="Templates\_catalog\projectTypes\Web.md" />
-    <Content Include="Templates\_comp\MT\Project\Param_ProjectName_postaction.csproj" />
-    <None Include="Templates\_comp\_shared\Proj.Desktop\Param_ProjectName.Desktop\app.manifest" />
-    <None Include="Templates\_comp\_shared\Proj.Desktop\Param_ProjectName.Desktop\Param_ProjectName.Desktop.csproj" />
+    <Content Include="Templates\_comp\MT\Project\Param_ProjectName_postaction.csproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\Param_ProjectName.Android.csproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Desktop\Param_ProjectName.Desktop\app.manifest">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Desktop\Param_ProjectName.Desktop\Param_ProjectName.Desktop.csproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Page Include="..\SharedStyles\TemplateStudioStyles.xaml">
       <Link>Styles\TemplateStudioStyles.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
@@ -266,8 +309,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Templates\Proj\Default\.gitignore" />
-    <Content Include="Templates\Proj\Default\ts.ProjectName\Assets\avalonia-logo.ico" />
+    <Content Include="Templates\Proj\Default\.gitignore">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default\ts.ProjectName\Assets\avalonia-logo.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Templates\_comp\MT\Project.MenuBar\App_postaction.xaml.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -292,6 +339,24 @@
     <Content Include="Templates\_comp\MT\Project.SplitView\ViewModels\ShellViewModel_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\Icon.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\Properties\AndroidManifest.xml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\Resources\drawable\splash_screen.xml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\Resources\values-night\colors.xml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\Resources\values\colors.xml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\Resources\values\styles.xml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItem.Settings\ViewModels\ShellViewModel_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -302,24 +367,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItem\ViewModels\ShellViewModel_postaction.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar\Contracts\Services\IRightPaneService.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar\Contracts\Views\IShellWindow_postaction.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar\Properties\Resources.Designer_postaction.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar\Services\RightPaneService.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar\ViewModels\ShellViewModel.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar\Views\ShellWindow.xaml.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.Ribbon.AddBackstageTabItem.Settings\Properties\Resources.Designer_postaction.cs">
@@ -433,7 +480,7 @@
     <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItem\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar\.template.config\template.json">
+    <Content Include="Templates\_comp\_shared\Proj.Android\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.Ribbon.AddBackstageTabItem.Settings\.template.config\template.json">
@@ -464,9 +511,6 @@
     <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItem\Views\ShellWindow_postaction.xaml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar\Views\ShellWindow.xaml">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Templates\_comp\_shared\Proj.Ribbon.AddBackstageTabItem.Settings\Views\ShellWindow_postaction.xaml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -486,9 +530,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItemRes\Properties\Resources_postaction.resx">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar\Properties\Resources_postaction.resx">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.Ribbon.AddBackstageTabItem.Settings\Properties\Resources_postaction.resx">

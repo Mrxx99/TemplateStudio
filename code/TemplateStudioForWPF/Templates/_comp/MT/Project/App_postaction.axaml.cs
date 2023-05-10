@@ -1,7 +1,6 @@
 ﻿using Avalonia;
 //^^
 //{[{
-using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 //}]}
 using Avalonia.Controls.ApplicationLifetimes;

@@ -499,7 +499,7 @@ namespace Microsoft.Templates.VsEmulator.Main
                 var context = new UserSelectionContext(language, config.Platform)
                 {
                     FrontEndFramework = config.Framework,
-                    ProjectType = config.ProjectType
+                    ProjectTypes = new List<string> { config.ProjectType }
                 };
 
                 context.AddAppModel(config.AppModel);

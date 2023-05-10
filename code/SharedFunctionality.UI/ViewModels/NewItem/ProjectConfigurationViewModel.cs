@@ -125,7 +125,7 @@ namespace Microsoft.Templates.UI.ViewModels.NewItem
         {
             var context = new UserSelectionContext(Language, SelectedPlatform)
             {
-                ProjectType = SelectedProjectType.Name,
+                ProjectTypes = new System.Collections.Generic.List<string> { SelectedProjectType.Name },
             };
 
             var targetFrameworks = GenContext.ToolBox.Repo.GetFrontEndFrameworks(context).ToList();

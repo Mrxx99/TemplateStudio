@@ -231,7 +231,7 @@ namespace Microsoft.Templates.UI.Launcher
                     ProjectMetadataService.SaveProjectMetadata(configInfo, GenContext.ToolBox.Shell.Project.GetActiveProjectPath());
                     var userSeletion = new UserSelectionContext(language, configInfo.Platform)
                     {
-                        ProjectType = configInfo.ProjectType,
+                        ProjectTypes = new List<string> { configInfo.ProjectType },
                         FrontEndFramework = configInfo.Framework,
                     };
 
@@ -249,7 +249,7 @@ namespace Microsoft.Templates.UI.Launcher
             {
                 var userSeletion = new UserSelectionContext(language, configInfo.Platform)
                 {
-                    ProjectType = configInfo.ProjectType,
+                    ProjectTypes = new List<string> { configInfo.ProjectType },
                     FrontEndFramework = configInfo.Framework,
                 };
 

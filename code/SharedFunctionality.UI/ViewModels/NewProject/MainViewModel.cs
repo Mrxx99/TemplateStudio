@@ -178,7 +178,7 @@ namespace Microsoft.Templates.UI.ViewModels.NewProject
 
             if (item is ProjectTypeMetaDataViewModel projectTypeMetaData)
             {
-                ProjectType.Selected = projectTypeMetaData;
+                await ProjectType.SelectAsync(projectTypeMetaData);
             }
             else if (item is FrameworkMetaDataViewModel frameworkMetaData)
             {
@@ -194,7 +194,7 @@ namespace Microsoft.Templates.UI.ViewModels.NewProject
         {
             await SafeThreading.JoinableTaskFactory.SwitchToMainThreadAsync();
 
-            Context.ProjectType = ProjectType.Selected.Name;
+            Context.ProjectTypes = ProjectType.SelectedItems.Select(x=>x.Name).ToList();
             await Framework.LoadDataAsync(Context);
         }
 
