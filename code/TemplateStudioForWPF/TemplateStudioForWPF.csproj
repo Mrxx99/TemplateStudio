@@ -231,12 +231,22 @@
     <Content Include="Templates\Proj\Default\ts.ProjectName\Views\MainWindow.axaml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="Templates\_catalog\frontendframeworks\MVVMToolkit.md" />
+    <Content Include="Templates\_catalog\frontendframeworks\MVVMToolkit.md">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="Templates\_catalog\projectTypes.json" />
-    <None Include="Templates\_catalog\projectTypes\Desktop.md" />
-    <None Include="Templates\_catalog\projectTypes\IOS.md" />
-    <None Include="Templates\_catalog\projectTypes\Android.md" />
-    <None Include="Templates\_catalog\projectTypes\Web.md" />
+    <Content Include="Templates\_catalog\projectTypes\Desktop.md">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_catalog\projectTypes\IOS.md">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_catalog\projectTypes\Android.md">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_catalog\projectTypes\Web.md">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Templates\_comp\MT\Project\Param_ProjectName_postaction.csproj">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -295,26 +305,26 @@
       <Link>TemplateStudioKey.snk</Link>
     </Content>
     <Content Include="Commands\Resources\TemplateStudioCommand.png" />
-    <Page Include="Templates\_catalog\frontendframeworks\MVVMToolkit.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Content Include="Templates\_catalog\frontendframeworks\MVVMToolkit.xaml">
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Templates\_catalog\projectTypes\Desktop.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_catalog\projectTypes\Desktop.xaml">
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Templates\_catalog\projectTypes\IOS.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_catalog\projectTypes\IOS.xaml">
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Templates\_catalog\projectTypes\Android.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_catalog\projectTypes\Android.xaml">
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Templates\_catalog\projectTypes\Web.xaml">
-      <Generator>MSBuild:Compile</Generator>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_catalog\projectTypes\Web.xaml">
       <SubType>Designer</SubType>
-    </Page>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <VSCTCompile Include="Commands\TemplateStudioForWpfPackage.vsct">
       <Generator>VsctGenerator</Generator>
       <ResourceName>Menus.ctmenu</ResourceName>
