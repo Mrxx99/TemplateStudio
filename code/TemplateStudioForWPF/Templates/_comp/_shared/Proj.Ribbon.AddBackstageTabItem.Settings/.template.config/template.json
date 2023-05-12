@@ -13,7 +13,7 @@
         "ts.type": "composition",
         "ts.platform": "Avalonia",
         "ts.version": "1.0.0",
-        "ts.compositionFilter": "ts.type == page & identity == ts.WPF.Page.Settings & $frontendframework == MVVMToolkit & $projectType == Android"
+        "ts.compositionFilter": "ts.type == page & identity == ts.WPF.Page.Settings & $frontendframework == MVVMToolkit2 & $projectType == Android"
     },
     "sourceName": "ts.ItemName",
     "preferNameDirectory": true,

@@ -14,7 +14,7 @@
         "ts.platform": "Avalonia",
         "ts.version": "1.0.0",
         "ts.compositionOrder": "0",
-        "ts.compositionFilter": "$projectType == Android & $frontendframework == MVVMToolkit & ts.type == project",
+        "ts.compositionFilter": "$projectType == Android & $frontendframework == MVVMToolkit2 & ts.type == project",
         "ts.licenses": "[Fluent.Ribbon](https://www.nuget.org/packages/Fluent.Ribbon/8.0.3/License)"
     },
     "sourceName": "ts.ItemName",

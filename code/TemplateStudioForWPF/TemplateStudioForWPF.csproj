@@ -167,6 +167,18 @@
   <ItemGroup />
   <ItemGroup>
     <Compile Include="TemplateStudioForWpfPackage.cs" />
+    <Content Include="Templates\_comp\_shared\Proj.iOS\Param_ProjectName.iOS\AppDelegate.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.iOS\Param_ProjectName.iOS\Main.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\Program.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\MT\Project.Android\Param_ProjectName.Android\SplashActivity_postaction.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Templates\Proj\Default\ts.ProjectName\App.axaml.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -235,6 +247,24 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.Desktop\Param_ProjectName.Desktop\Param_ProjectName.Desktop.csproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\Properties\launchSettings.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\runtimeconfig.template.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.iOS\Param_ProjectName.iOS\Param_ProjectName.iOS.csproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.iOS\Param_ProjectName.iOS\Entitlements.plist">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.iOS\Param_ProjectName.iOS\Info.plist">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.iOS\Param_ProjectName.iOS\Resources\LaunchScreen.xib">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Page Include="..\SharedStyles\TemplateStudioStyles.xaml">
@@ -315,25 +345,7 @@
     <Content Include="Templates\Proj\Default\ts.ProjectName\Assets\avalonia-logo.ico">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.MenuBar\App_postaction.xaml.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\MT\Project.MenuBar\Services\ApplicationHostService_postaction.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\MT\Project.MenuBar\ViewModels\ShellViewModel_postaction.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\MT\Project.Ribbon\App_postaction.xaml.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\MT\Project.Ribbon\Behaviors\RibbonPageConfiguration_postaction.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\MT\Project.Ribbon\Services\ApplicationHostService_postaction.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\MT\Project.Ribbon\ViewModels\ShellViewModel_postaction.cs">
+    <Content Include="Templates\_comp\MT\Project.Web\Param_ProjectName.Browser\Program_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\MT\Project.SplitView\ViewModels\ShellViewModel_postaction.cs">
@@ -364,9 +376,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItemRes\Properties\Resources.Designer_postaction.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItem\ViewModels\ShellViewModel_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.Ribbon.AddBackstageTabItem.Settings\Properties\Resources.Designer_postaction.cs">
@@ -444,10 +453,10 @@
     <Content Include="Templates\_comp\MT\Project.Desktop\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.MenuBar\.template.config\template.json">
+    <Content Include="Templates\_comp\MT\Project.Android\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.Ribbon\.template.config\template.json">
+    <Content Include="Templates\_comp\MT\Project.Web\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\MT\Project.SplitView\.template.config\template.json">
@@ -456,13 +465,25 @@
     <Content Include="Templates\_comp\MT\Project\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.AddPlatforms\.template.config\template.json">
+    <Content Include="Templates\_comp\_shared\Proj.Web\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.AddPlatforms\Param_ProjectName.Core\Param_ProjectName.Core_postaction.csproj">
+    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\AppBundle\app.css">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.AddPlatforms\Param_ProjectName\Param_ProjectName_postaction.csproj">
+    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\AppBundle\favicon.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\AppBundle\index.html">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\AppBundle\Logo.svg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\AppBundle\main.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\Param_ProjectName.Browser.csproj">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.Desktop\.template.config\template.json">
@@ -477,7 +498,7 @@
     <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItemRes\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItem\.template.config\template.json">
+    <Content Include="Templates\_comp\_shared\Proj.iOS\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.Android\.template.config\template.json">
@@ -506,9 +527,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItem.Settings\Views\ShellWindow_postaction.xaml">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItem\Views\ShellWindow_postaction.xaml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.Ribbon.AddBackstageTabItem.Settings\Views\ShellWindow_postaction.xaml">

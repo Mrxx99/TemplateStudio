@@ -4,9 +4,9 @@
     "classifications": [
         "Universal"
     ],
-    "name": "ts.Avalonia.Project.Desktop",
-    "shortName": "ts.Avalonia.Project.Desktop",
-    "identity": "ts.Avalonia.Project.Desktop",
+    "name": "ts.Avalonia.Project.IOS",
+    "identity": "ts.Avalonia.Project.IOS",
+    "shortName": "ts.Avalonia.Project.IOS",
     "tags": {
         "language": "C#",
         "type": "project",
@@ -14,14 +14,13 @@
         "ts.type": "composition",
         "ts.platform": "Avalonia",
         "ts.version": "1.0.0",
-        "ts.compositionOrder": "0",
-        "ts.compositionFilter": "$projectType == Desktop & ts.type == project"
+        "ts.compositionFilter": "$projectType == IOS & ts.type == project"
     },
     "sourceName": "ts.ItemName",
     "preferNameDirectory": true,
     "PrimaryOutputs": [
         {
-            "path": "Param_ProjectName.Desktop/Param_ProjectName.Desktop.csproj"
+            "path": "Param_ProjectName.iOS/Param_ProjectName.iOS.csproj"
         }
     ],
     "symbols": {
