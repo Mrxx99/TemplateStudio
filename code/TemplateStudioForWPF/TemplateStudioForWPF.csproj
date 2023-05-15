@@ -167,6 +167,9 @@
   <ItemGroup />
   <ItemGroup>
     <Compile Include="TemplateStudioForWpfPackage.cs" />
+    <Content Include="Templates\_comp\MT\Project.iOS\Param_ProjectName.iOS\AppDelegate_postaction.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Templates\_comp\_shared\Proj.iOS\Param_ProjectName.iOS\AppDelegate.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -234,7 +237,9 @@
     <Content Include="Templates\_catalog\frontendframeworks\MVVMToolkit.md">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <None Include="Templates\_catalog\projectTypes.json" />
+    <Content Include="Templates\_catalog\projectTypes.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Templates\_catalog\projectTypes\Desktop.md">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -358,9 +363,6 @@
     <Content Include="Templates\_comp\MT\Project.Web\Param_ProjectName.Browser\Program_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.SplitView\ViewModels\ShellViewModel_postaction.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\Icon.png">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -469,7 +471,7 @@
     <Content Include="Templates\_comp\MT\Project.Web\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.SplitView\.template.config\template.json">
+    <Content Include="Templates\_comp\MT\Project.iOS\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\MT\Project\.template.config\template.json">

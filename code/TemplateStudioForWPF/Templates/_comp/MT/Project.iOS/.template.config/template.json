@@ -4,17 +4,17 @@
     "classifications": [
         "Universal"
     ],
-    "name": "ts.Avalonia.MVVMToolkit.Project.Web",
-    "shortName": "ts.Avalonia.MVVMToolkit.Project.Web",
-    "identity": "ts.Avalonia.MVVMToolkit.Project.Web",
+    "name": "ts.Avalonia.MVVMToolkit.Project.iOS",
+    "shortName": "ts.Avalonia.MVVMToolkit.Project.iOS",
+    "identity": "ts.Avalonia.MVVMToolkit.Project.iOS",
     "tags": {
         "language": "C#",
         "type": "item",
-        "ts.type": "composition",
         "ts.outputToParent": "true",
+        "ts.type": "composition",
         "ts.platform": "Avalonia",
         "ts.version": "1.0.0",
-        "ts.compositionFilter": "$projectType == Web & $frontendframework == MVVMToolkit & ts.type == project"
+        "ts.compositionFilter": "$projectType == IOS & $frontendframework == MVVMToolkit & ts.type == project"
     },
     "sourceName": "ts.ItemName",
     "preferNameDirectory": true,

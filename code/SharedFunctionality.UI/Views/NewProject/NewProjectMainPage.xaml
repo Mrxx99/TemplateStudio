@@ -112,6 +112,7 @@
                                                     Style="{StaticResource TSImageExProjectDetails}" />
                                                 <TextBlock
                                                     Grid.Column="1"
+                                                    Foreground="{Binding ComboBoxText, Source={x:Static services:UIStylesService.Instance}}"
                                                     Margin="{StaticResource Margin_M_Left}"
                                                     Style="{StaticResource TSTextBlockComboBoxItem}"
                                                     Text="{Binding Title}" />

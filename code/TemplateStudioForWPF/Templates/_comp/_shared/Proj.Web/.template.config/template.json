@@ -12,6 +12,7 @@
         "type": "project",
         "ts.type": "composition",
         "ts.platform": "Avalonia",
+        "ts.compositionOrder": "0",
         "ts.version": "1.0.0",
         "ts.outputToParent": "true",
         "ts.compositionFilter": "$projectType == Web & ts.type == project"
