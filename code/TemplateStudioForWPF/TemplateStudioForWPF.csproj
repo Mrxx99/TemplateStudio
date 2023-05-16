@@ -282,6 +282,11 @@
     <Content Include="Templates\_comp\_shared\Proj.iOS\Param_ProjectName.iOS\Resources\LaunchScreen.xib">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Templates\Ft\CompiledBindings\.template.config\description.md" />
+    <Content Include="Templates\Ft\CompiledBindings\.template.config\template.json" />
+    <Content Include="Templates\Ft\CompiledBindings\Param_ProjectName_postaction.csproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Page Include="..\SharedStyles\TemplateStudioStyles.xaml">
       <Link>Styles\TemplateStudioStyles.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
