@@ -164,74 +164,77 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Templates\Proj\Default.FSharp\.template.config\" />
+    <Folder Include="Templates\Proj\Default.FSharp\ts.ProjectName\" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="TemplateStudioForWpfPackage.cs" />
-    <Content Include="Templates\_comp\MT\Project.iOS\Param_ProjectName.iOS\AppDelegate_postaction.cs">
+    <Content Include="Templates\_comp\MT\Project.CSharp.iOS\Param_ProjectName.iOS\AppDelegate_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.iOS\Param_ProjectName.iOS\AppDelegate.cs">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.iOS\Param_ProjectName.iOS\AppDelegate.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.iOS\Param_ProjectName.iOS\Main.cs">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.iOS\Param_ProjectName.iOS\Main.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\Program.cs">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Web\Param_ProjectName.Browser\Program.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.Android\Param_ProjectName.Android\SplashActivity_postaction.cs">
+    <Content Include="Templates\_comp\MT\Project.CSharp.Android\Param_ProjectName.Android\SplashActivity_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Proj\Default\ts.ProjectName\App.axaml.cs">
+    <Content Include="Templates\Proj\Default.CSharp\ts.ProjectName\App.axaml.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Proj\Default\ts.ProjectName\ViewModels\MainViewModel.cs">
+    <Content Include="Templates\Proj\Default.CSharp\ts.ProjectName\ViewModels\MainViewModel.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Proj\Default\ts.ProjectName\ViewModels\ViewModelBase.cs">
+    <Content Include="Templates\Proj\Default.CSharp\ts.ProjectName\ViewModels\ViewModelBase.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Proj\Default\ts.ProjectName\Views\MainView.axaml.cs">
+    <Content Include="Templates\Proj\Default.CSharp\ts.ProjectName\Views\MainView.axaml.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Proj\Default\ts.ProjectName\Views\MainWindow.axaml.cs">
+    <Content Include="Templates\Proj\Default.CSharp\ts.ProjectName\Views\MainWindow.axaml.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project\ViewModels\MainViewModel_postaction.cs">
+    <Content Include="Templates\_comp\MT\Project.CSharp\ViewModels\MainViewModel_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.Desktop\Param_ProjectName.Desktop\Program_postaction.cs">
+    <Content Include="Templates\_comp\MT\Project.CSharp.Desktop\Param_ProjectName.Desktop\Program_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project\App_postaction.axaml.cs">
+    <Content Include="Templates\_comp\MT\Project.CSharp\App_postaction.axaml.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project\ViewModels\ViewModelBase_postaction.cs">
+    <Content Include="Templates\_comp\MT\Project.CSharp\ViewModels\ViewModelBase_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\MainActivity.cs">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Android\Param_ProjectName.Android\MainActivity.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\SplashActivity.cs">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Android\Param_ProjectName.Android\SplashActivity.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Desktop\Param_ProjectName.Desktop\Program.cs">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Desktop\Param_ProjectName.Desktop\Program.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="TemplateStudio.targetsize-128.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Proj\Default\ts.ProjectName\App.axaml">
+    <Content Include="Templates\Proj\Default.CSharp\ts.ProjectName\App.axaml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Proj\Default\Directory.Build.props">
+    <Content Include="Templates\Proj\Default.CSharp\Directory.Build.props">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Proj\Default\ts.ProjectName\Views\MainView.axaml">
+    <Content Include="Templates\Proj\Default.CSharp\ts.ProjectName\Views\MainView.axaml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Proj\Default\ts.ProjectName\Views\MainWindow.axaml">
+    <Content Include="Templates\Proj\Default.CSharp\ts.ProjectName\Views\MainWindow.axaml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_catalog\frontendframeworks\MVVMToolkit.md">
@@ -252,34 +255,34 @@
     <Content Include="Templates\_catalog\projectTypes\Web.md">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project\Param_ProjectName_postaction.csproj">
+    <Content Include="Templates\_comp\MT\Project.CSharp\Param_ProjectName_postaction.csproj">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\Param_ProjectName.Android.csproj">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Android\Param_ProjectName.Android\Param_ProjectName.Android.csproj">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Desktop\Param_ProjectName.Desktop\app.manifest">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Desktop\Param_ProjectName.Desktop\app.manifest">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Desktop\Param_ProjectName.Desktop\Param_ProjectName.Desktop.csproj">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Desktop\Param_ProjectName.Desktop\Param_ProjectName.Desktop.csproj">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\Properties\launchSettings.json">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Web\Param_ProjectName.Browser\Properties\launchSettings.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\runtimeconfig.template.json">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Web\Param_ProjectName.Browser\runtimeconfig.template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.iOS\Param_ProjectName.iOS\Param_ProjectName.iOS.csproj">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.iOS\Param_ProjectName.iOS\Param_ProjectName.iOS.csproj">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.iOS\Param_ProjectName.iOS\Entitlements.plist">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.iOS\Param_ProjectName.iOS\Entitlements.plist">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.iOS\Param_ProjectName.iOS\Info.plist">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.iOS\Param_ProjectName.iOS\Info.plist">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.iOS\Param_ProjectName.iOS\Resources\LaunchScreen.xib">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.iOS\Param_ProjectName.iOS\Resources\LaunchScreen.xib">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\Ft\CompiledBindings\.template.config\description.md" />
@@ -359,70 +362,70 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Templates\Proj\Default\.gitignore">
+    <Content Include="Templates\Proj\Default.CSharp\.gitignore">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Proj\Default\ts.ProjectName\Assets\avalonia-logo.ico">
+    <Content Include="Templates\Proj\Default.CSharp\ts.ProjectName\Assets\avalonia-logo.ico">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.Web\Param_ProjectName.Browser\Program_postaction.cs">
+    <Content Include="Templates\_comp\MT\Project.CSharp.Web\Param_ProjectName.Browser\Program_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\Icon.png">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Android\Param_ProjectName.Android\Icon.png">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\Properties\AndroidManifest.xml">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Android\Param_ProjectName.Android\Properties\AndroidManifest.xml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\Resources\drawable\splash_screen.xml">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Android\Param_ProjectName.Android\Resources\drawable\splash_screen.xml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\Resources\values-night\colors.xml">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Android\Param_ProjectName.Android\Resources\values-night\colors.xml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\Resources\values\colors.xml">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Android\Param_ProjectName.Android\Resources\values\colors.xml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Android\Param_ProjectName.Android\Resources\values\styles.xml">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Android\Param_ProjectName.Android\Resources\values\styles.xml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItem.Settings\ViewModels\ShellViewModel_postaction.cs">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Android\ViewModels\ShellViewModel_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItemRes.Settings\Properties\Resources.Designer_postaction.cs">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.iOS\Properties\Resources.Designer_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItemRes\Properties\Resources.Designer_postaction.cs">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Desktop\Properties\Resources.Designer_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.Ribbon.AddBackstageTabItem.Settings\Properties\Resources.Designer_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Ribbon\Behaviors\BackstageTabNavigationBehavior.cs">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Behaviors\BackstageTabNavigationBehavior.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Ribbon\Behaviors\RibbonPageConfiguration.cs">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Behaviors\RibbonPageConfiguration.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Ribbon\Behaviors\RibbonTabsBehavior.cs">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Behaviors\RibbonTabsBehavior.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Ribbon\Contracts\Services\IRightPaneService.cs">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Contracts\Services\IRightPaneService.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Ribbon\Contracts\Views\IShellWindow_postaction.cs">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Contracts\Views\IShellWindow_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Ribbon\Properties\Resources.Designer_postaction.cs">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Properties\Resources.Designer_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Ribbon\Services\RightPaneService.cs">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Services\RightPaneService.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Ribbon\ViewModels\ShellViewModel.cs">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\ViewModels\ShellViewModel.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Ribbon\Views\ShellWindow.xaml.cs">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Views\ShellWindow.xaml.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.SplitView.AddHamburgerMenuItem.Settings\ViewModels\ShellViewModel_postaction.cs">
@@ -452,13 +455,13 @@
     <Content Include="Templates\projectNameValidation.config.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Proj\Default\.template.config\Layout.json">
+    <Content Include="Templates\Proj\Default.CSharp\.template.config\Layout.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Proj\Default\.template.config\template.json">
+    <Content Include="Templates\Proj\Default.CSharp\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Proj\Default\ts.ProjectName\ts.ProjectName.csproj">
+    <Content Include="Templates\Proj\Default.CSharp\ts.ProjectName\ts.ProjectName.csproj">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_catalog\frontendframeworks.json">
@@ -467,64 +470,64 @@
     <Content Include="Templates\_catalog\frontendframeworks\ReactiveUI.md">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.Desktop\.template.config\template.json">
+    <Content Include="Templates\_comp\MT\Project.CSharp.Desktop\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.Android\.template.config\template.json">
+    <Content Include="Templates\_comp\MT\Project.CSharp.Android\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.Web\.template.config\template.json">
+    <Content Include="Templates\_comp\MT\Project.CSharp.Web\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.iOS\.template.config\template.json">
+    <Content Include="Templates\_comp\MT\Project.CSharp.iOS\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project\.template.config\template.json">
+    <Content Include="Templates\_comp\MT\Project.CSharp\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Web\.template.config\template.json">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Web\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\AppBundle\app.css">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Web\Param_ProjectName.Browser\AppBundle\app.css">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\AppBundle\favicon.ico">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Web\Param_ProjectName.Browser\AppBundle\favicon.ico">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\AppBundle\index.html">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Web\Param_ProjectName.Browser\AppBundle\index.html">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\AppBundle\Logo.svg">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Web\Param_ProjectName.Browser\AppBundle\Logo.svg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\AppBundle\main.js">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Web\Param_ProjectName.Browser\AppBundle\main.js">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Web\Param_ProjectName.Browser\Param_ProjectName.Browser.csproj">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Web\Param_ProjectName.Browser\Param_ProjectName.Browser.csproj">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Desktop\.template.config\template.json">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Desktop\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItem.Settings\.template.config\template.json">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Android\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItemRes.Settings\.template.config\template.json">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.iOS\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItemRes\.template.config\template.json">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Desktop\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.iOS\.template.config\template.json">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.iOS\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Android\.template.config\template.json">
+    <Content Include="Templates\_comp\_shared\Proj.CSharp.Android\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.Ribbon.AddBackstageTabItem.Settings\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Ribbon\.template.config\template.json">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.SplitView.AddHamburgerMenuItem.Settings\.template.config\template.json">
@@ -543,16 +546,16 @@
       <IncludeInVSIX>true</IncludeInVSIX>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItem.Settings\Views\ShellWindow_postaction.xaml">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Android\Views\ShellWindow_postaction.xaml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.Ribbon.AddBackstageTabItem.Settings\Views\ShellWindow_postaction.xaml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Ribbon\App_postaction.xaml">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\App_postaction.xaml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Ribbon\Views\ShellWindow.xaml">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Views\ShellWindow.xaml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.SplitView.AddHamburgerMenuItem.Settings\Views\ShellWindow_postaction.xaml">
@@ -561,16 +564,16 @@
     <Content Include="Templates\_comp\_shared\Proj.SplitView\Views\ShellWindow.xaml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItemRes.Settings\Properties\Resources_postaction.resx">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.iOS\Properties\Resources_postaction.resx">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.MenuBar.AddMenuItemRes\Properties\Resources_postaction.resx">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Desktop\Properties\Resources_postaction.resx">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.Ribbon.AddBackstageTabItem.Settings\Properties\Resources_postaction.resx">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.Ribbon\Properties\Resources_postaction.resx">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Properties\Resources_postaction.resx">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.SplitView.AddHamburgerMenuResources\Properties\Resources_postaction.resx">
