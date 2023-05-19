@@ -135,9 +135,16 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ProjectTemplates\WPF\Ts4WpfCsTemplate.csproj">
+    <ProjectReference Include="..\ProjectTemplates\Avalonia\Cs\Ts4AvaloniaCsTemplate.csproj">
       <Project>{98849B09-BB00-4680-999E-60CA37011A87}</Project>
-      <Name>Ts4WpfCsTemplate</Name>
+      <Name>Ts4AvaloniaCsTemplate</Name>
+      <VSIXSubPath>ProjectTemplates</VSIXSubPath>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectTemplates\Avalonia\Fs\Ts4AvaloniaFsTemplate.csproj">
+      <Project>{74ed48ee-940b-4f67-93ed-bda344671bb0}</Project>
+      <Name>Ts4AvaloniaFsTemplate</Name>
       <VSIXSubPath>ProjectTemplates</VSIXSubPath>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
@@ -164,12 +171,15 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Templates\Proj\Default.FSharp\.template.config\" />
-    <Folder Include="Templates\Proj\Default.FSharp\ts.ProjectName\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="TemplateStudioForWpfPackage.cs" />
+    <Content Include="Templates\Proj\Default.FSharp\.gitignore">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default.FSharp\ts.ProjectName\Assets\avalonia-logo.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Templates\_comp\MT\Project.CSharp.iOS\Param_ProjectName.iOS\AppDelegate_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -285,9 +295,55 @@
     <Content Include="Templates\_comp\_shared\Proj.CSharp.iOS\Param_ProjectName.iOS\Resources\LaunchScreen.xib">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Ft\CompiledBindings\.template.config\description.md" />
-    <Content Include="Templates\Ft\CompiledBindings\.template.config\template.json" />
+    <Content Include="Templates\Ft\CompiledBindings\.template.config\description.md">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Ft\CompiledBindings\.template.config\template.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Templates\Ft\CompiledBindings\Param_ProjectName_postaction.csproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default.FSharp\.template.config\template.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default.FSharp\Directory.Build.props">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default.FSharp\ts.ProjectName\App.axaml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default.FSharp\ts.ProjectName\App.axaml.fs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default.FSharp\ts.ProjectName\ts.ProjectName.fsproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default.FSharp\ts.ProjectName\ViewModels\MainViewModel.fs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default.FSharp\ts.ProjectName\ViewModels\ViewModelBase.fs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default.FSharp\ts.ProjectName\Views\MainView.axaml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default.FSharp\ts.ProjectName\Views\MainView.axaml.fs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default.FSharp\ts.ProjectName\Views\MainWindow.axaml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Proj\Default.FSharp\ts.ProjectName\Views\MainWindow.axaml.fs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Desktop\Param_ProjectName.Desktop\app.manifest">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Desktop\Param_ProjectName.Desktop\Param_ProjectName.Desktop.fsproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Desktop\Param_ProjectName.Desktop\Program.fs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Page Include="..\SharedStyles\TemplateStudioStyles.xaml">
@@ -395,9 +451,6 @@
     <Content Include="Templates\_comp\_shared\Proj.FSharp.iOS\Properties\Resources.Designer_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.FSharp.Desktop\Properties\Resources.Designer_postaction.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Templates\_comp\_shared\Proj.Ribbon.AddBackstageTabItem.Settings\Properties\Resources.Designer_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -453,9 +506,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\projectNameValidation.config.json">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\Proj\Default.CSharp\.template.config\Layout.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\Proj\Default.CSharp\.template.config\template.json">
@@ -565,9 +615,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.FSharp.iOS\Properties\Resources_postaction.resx">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\_shared\Proj.FSharp.Desktop\Properties\Resources_postaction.resx">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.Ribbon.AddBackstageTabItem.Settings\Properties\Resources_postaction.resx">

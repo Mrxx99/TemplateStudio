@@ -1,0 +1,66 @@
+﻿{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Microsoft",
+    "classifications": [
+        "Universal"
+    ],
+    "name": "ts.Avalonia.Proj.Default.FSharp",
+    "shortName": "ts.Avalonia.Proj.Default.FSharp",
+    "identity": "ts.Avalonia.Proj.Default.FSharp",
+    "groupIdentity": "ts.Avalonia.Proj.Default.FSharp",
+    "description": "",
+    "tags": {
+        "language": "F#",
+        "type": "project",
+        "ts.type": "project",
+        "ts.projecttype": "Desktop|Web|IOS|Android",
+        "ts.frontendframework": "ReactiveUI|MVVMToolkit",
+        "ts.platform": "Avalonia",
+        "ts.outputToParent": "true",
+        "ts.version": "1.0.0",
+        "ts.displayOrder": "0"
+    },
+    "sourceName": "ts.ProjectName",
+    "preferNameDirectory": true,
+    "guids": [
+    ],
+    "PrimaryOutputs": [
+        { "path": "ts.ProjectName/ts.ProjectName.fsproj" }
+    ],
+    "symbols": {
+        "ts.rootNamespace": {
+            "type": "parameter",
+            "replaces": "Param_RootNamespace"
+        },
+        "Framework": {
+            "type": "parameter",
+            "description": "The target framework for the project.",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "net7.0",
+                    "description": "Target net7.0"
+                }
+            ],
+            "replaces": "FrameworkParameter",
+            "defaultValue": "net7.0"
+        },
+        "HostIdentifier": {
+            "type": "bind",
+            "binding": "HostIdentifier"
+        }
+    },
+    "postActions": [
+        {
+            "id": "editor",
+            "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+            "description": "Opens MainView and MainViewModel in the editor",
+            "manualInstructions": [],
+            "actionId": "84C0DA21-51C8-4541-9940-6CA19AF04EE6",
+            "args": {
+                "files": "5;6"
+            },
+            "continueOnError": true
+        }
+    ]
+}

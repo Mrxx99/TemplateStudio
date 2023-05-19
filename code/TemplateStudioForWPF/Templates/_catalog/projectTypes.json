@@ -6,7 +6,7 @@
         "author": "AvaloniaUI",
         "order": "1",
         "platform": "Avalonia",
-        "languages": [ "C#" ]
+        "languages": [ "C#", "F#" ]
     },
     {
         "name": "Web",
@@ -15,7 +15,7 @@
         "author": "AvaloniaUI",
         "order": "2",
         "platform": "Avalonia",
-        "languages": [ "C#" ]
+        "languages": [ "C#", "F#" ]
     },
     {
         "name": "IOS",
@@ -24,7 +24,7 @@
         "author": "AvaloniaUI",
         "order": "4",
         "platform": "Avalonia",
-        "languages": [ "C#" ]
+        "languages": [ "C#", "F#" ]
     },
     {
         "name": "Android",
@@ -33,6 +33,6 @@
         "author": "AvaloniaUI",
         "order": "3",
         "platform": "Avalonia",
-        "languages": [ "C#" ]
+        "languages": [ "C#", "F#" ]
     }
 ]

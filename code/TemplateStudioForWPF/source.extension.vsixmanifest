@@ -3,12 +3,12 @@
     <Metadata>
         <Identity Id="TemplateStudioForWPF.f4e060e0-bdf6-4ed0-9924-983506ec9862" Version="5.3" Language="en-US" Publisher="Microsoft" />
         <DisplayName>Template Studio for Avalonia</DisplayName>
-        <Description xml:space="preserve">Template Studio accelerates the creation of new WPF apps using a wizard-based UI.</Description>
+        <Description xml:space="preserve">Template Studio accelerates the creation of new Avalonia apps using a wizard-based UI.</Description>
         <MoreInfo>https://github.com/microsoft/TemplateStudio/</MoreInfo>
         <License>Content\EULA.rtf</License>
         <GettingStartedGuide>https://github.com/microsoft/TemplateStudio/blob/main/docs/README.md</GettingStartedGuide>
         <Icon>TemplateStudio.targetsize-128.png</Icon>
-        <Tags>Template Studio, WPF, XAML, MVVM, Desktop</Tags>
+        <Tags>Template Studio, Avalonia, XAML, MVVM, Desktop</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.2, 18.0)">
@@ -20,7 +20,8 @@
     <Assets>
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="TemplateStudioColors.pkgdef" />
-        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="Ts4WpfCsTemplate" d:TargetPath="|Ts4WpfCsTemplate;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="Ts4AvaloniaCsTemplate" d:TargetPath="|Ts4AvaloniaCsTemplate;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+        <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="Ts4AvaloniaFsTemplate" d:TargetPath="|Ts4AvaloniaFsTemplate;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
         <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" AssemblyName="|%CurrentProject%;AssemblyName|" />
         <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="SharedResources" Path="|SharedResources|" AssemblyName="|SharedResources;AssemblyName|" />
     </Assets>

@@ -12,8 +12,8 @@
     <ProjectGuid>{98849B09-BB00-4680-999E-60CA37011A87}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ts4WpfCsTemplate</RootNamespace>
-    <AssemblyName>Ts4WpfCsTemplate</AssemblyName>
+    <RootNamespace>Ts4AvaloniaCsTemplate</RootNamespace>
+    <AssemblyName>Ts4AvaloniaCsTemplate</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
@@ -59,7 +59,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="Ts4WpfCsTemplate.vstemplate" />
+    <VSTemplate Include="Ts4AvaloniaCsTemplate.vstemplate" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Avalonia.ico" />

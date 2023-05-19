@@ -22,9 +22,9 @@ namespace TemplateStudioForWPF
     [ProvideAutoLoad(PackageGuids.guidTemplateStudioForWpfUIContextString, PackageAutoLoadFlags.BackgroundLoad)]
     [ProvideUIContextRule(PackageGuids.guidTemplateStudioForWpfUIContextString,
         name: "Load TS4WPF Project Package",
-        expression: "HasWPF & UsesCSharp",
-        termNames: new[] { "HasWPF", "UsesCSharp" },
-        termValues: new[] { "SolutionHasProjectCapability: WPF", "SolutionHasProjectCapability: CSharp" })]
+        expression: "HasWPF",
+        termNames: new[] { "HasWPF" },
+        termValues: new[] { "SolutionHasProjectCapability: WPF" })]
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [Guid(PackageGuids.guidTemplateStudioForWpfPackageString)]
     [ProvideMenuResource("Menus.ctmenu", 1)]

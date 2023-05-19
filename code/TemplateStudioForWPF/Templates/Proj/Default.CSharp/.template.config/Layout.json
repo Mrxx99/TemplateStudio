@@ -1,8 +1,0 @@
-﻿[
-    {
-        "name": "Main",
-        "templateGroupIdentity": "ts.WPF.Page.Blank",
-        "readonly": "false",
-        "projecttype": "Desktop|Web|IOS|Android"
-    }
-]
