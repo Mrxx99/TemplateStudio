@@ -1,28 +1,25 @@
 ﻿{
     "$schema": "http://json.schemastore.org/template",
-    "author": "Microsoft",
+    "author": "Microsoft Community",
     "classifications": [
         "Universal"
     ],
-    "name": "ts.Avalonia.Project.IOS",
-    "identity": "ts.Avalonia.Project.IOS",
-    "shortName": "ts.Avalonia.Project.IOS",
+    "name": "ts.Avalonia.MVVMToolkit.Project.FSharp",
+    "shortName": "ts.Avalonia.MVVMToolkit.Project.FSharp",
+    "identity": "ts.Avalonia.MVVMToolkit.Project.FSharp",
     "tags": {
         "language": "F#",
-        "type": "project",
+        "type": "item",
         "ts.type": "composition",
-        "ts.compositionOrder": "0",
         "ts.outputToParent": "true",
         "ts.platform": "Avalonia",
         "ts.version": "1.0.0",
-        "ts.compositionFilter": "$projectType == IOS & ts.type == project"
+        "ts.compositionFilter": "$frontendframework == MVVMToolkit & ts.type == project"
     },
     "sourceName": "ts.ItemName",
     "preferNameDirectory": true,
     "PrimaryOutputs": [
-        {
-            "path": "Param_ProjectName.iOS/Param_ProjectName.iOS.fsproj"
-        }
+        { "path": "Param_ProjectName/Param_ProjectName.fsproj" }
     ],
     "symbols": {
         "ts.rootNamespace": {

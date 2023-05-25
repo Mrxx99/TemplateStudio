@@ -13,7 +13,7 @@
         "ts.type": "composition",
         "ts.platform": "Avalonia",
         "ts.version": "1.0.0",
-        "ts.compositionFilter": "$projectType == Desktop & $frontendframework == MVVMToolkit & ts.type == project"
+        "ts.compositionFilter": "$frontendframework == MVVMToolkit & ts.type == project"
     },
     "sourceName": "ts.ItemName",
     "preferNameDirectory": true,

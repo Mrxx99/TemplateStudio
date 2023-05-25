@@ -21,7 +21,7 @@
     "preferNameDirectory": true,
     "PrimaryOutputs": [
         {
-            "path": "Param_ProjectName.Web/Param_ProjectName.Browser.fsproj"
+            "path": "Param_ProjectName.Browser/Param_ProjectName.Browser.fsproj"
         }
     ],
     "symbols": {

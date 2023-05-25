@@ -159,6 +159,7 @@
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Design" />
@@ -170,6 +171,7 @@
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -385,31 +387,59 @@
     <Content Include="Templates\_comp\_shared\Proj.FSharp.iOS\Param_ProjectName.iOS\Resources\LaunchScreen.xib">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Web\AppBundle\app.css">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Browser\AppBundle\app.css">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Web\AppBundle\favicon.ico">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Browser\AppBundle\favicon.ico">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Web\AppBundle\index.html">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Browser\AppBundle\index.html">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Web\AppBundle\Logo.svg">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Browser\AppBundle\Logo.svg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Web\AppBundle\main.js">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Browser\AppBundle\main.js">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Web\Param_ProjectName.Browser.fsproj">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Browser\Param_ProjectName.Browser.fsproj">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Web\Program.fs">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Browser\Program.fs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Web\Properties\launchSettings.json">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Browser\Properties\launchSettings.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Web\runtimeconfig.template.json">
+    <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Browser\runtimeconfig.template.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\MT\Project.FSharp\.template.config\template.json" />
+    <Content Include="Templates\_comp\MT\Project.FSharp\Param_ProjectName\ViewModels\ViewModelBase.fs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\MT\Project.FSharp\Param_ProjectName\App_postaction.axaml.fs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\MT\Project.FSharp.Desktop\Param_ProjectName.Desktop\Program_postaction.fs" />
+    <Content Include="Templates\_comp\MT\Project.FSharp.Desktop\.template.config\template.json" />
+    <Content Include="Templates\_comp\MT\Project.FSharp.Android\.template.config\template.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\MT\Project.FSharp.Android\Param_ProjectName.Android\Activities_postaction.fs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\MT\Project.FSharp.iOS\.template.config\template.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\MT\Project.FSharp.iOS\Param_ProjectName.iOS\AppDelegate_postaction.fs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\MT\Project.FSharp.Web\.template.config\template.json" />
+    <Content Include="Templates\_comp\MT\Project.FSharp.Web\Param_ProjectName.Browser\Program_postaction.fs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\MT\Project.FSharp\Param_ProjectName\Param_ProjectName.fsproj">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Page Include="..\SharedStyles\TemplateStudioStyles.xaml">
@@ -457,6 +487,10 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_catalog\projectTypes\Web.xaml">
+      <SubType>Designer</SubType>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Ft\CompiledBindings\.template.config\icon.xaml">
       <SubType>Designer</SubType>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

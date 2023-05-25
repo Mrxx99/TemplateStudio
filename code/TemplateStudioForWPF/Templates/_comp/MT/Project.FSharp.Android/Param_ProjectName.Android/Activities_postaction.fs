@@ -3,7 +3,9 @@ open Android.App
 open Android.Content
 open Android.Content.PM
 open Avalonia
+//{--{
 open Avalonia.ReactiveUI
+//}--}
 type Application = Android.App.Application
 
 open Avalonia.Android
@@ -26,7 +28,9 @@ type SplashActivity() =
     override _.CustomizeAppBuilder(builder) =
         base.CustomizeAppBuilder(builder)
             .WithInterFont()
+            //{--{
             .UseReactiveUI()
+            //}--}
 
     override x.OnResume() =
         base.OnResume()

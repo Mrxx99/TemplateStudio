@@ -14,6 +14,7 @@
         "ts.outputToParent": "true",
         "ts.platform": "Avalonia",
         "ts.version": "1.0.0",
+        "ts.compositionOrder": "0",
         "ts.compositionFilter": "$projectType == Android & ts.type == project"
     },
     "sourceName": "ts.ItemName",
