@@ -297,13 +297,13 @@
     <Content Include="Templates\_comp\_shared\Proj.CSharp.iOS\Param_ProjectName.iOS\Resources\LaunchScreen.xib">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Ft\CompiledBindings\.template.config\description.md">
+    <Content Include="Templates\Ft\CompiledBindings.CSharp\.template.config\description.md">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Ft\CompiledBindings\.template.config\template.json">
+    <Content Include="Templates\Ft\CompiledBindings.CSharp\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Ft\CompiledBindings\Param_ProjectName_postaction.csproj">
+    <Content Include="Templates\Ft\CompiledBindings.CSharp\Param_ProjectName_postaction.csproj">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\Proj\Default.FSharp\.template.config\template.json">
@@ -414,15 +414,21 @@
     <Content Include="Templates\_comp\_shared\Proj.FSharp.Web\Param_ProjectName.Browser\runtimeconfig.template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.FSharp\.template.config\template.json" />
+    <Content Include="Templates\_comp\MT\Project.FSharp\.template.config\template.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Templates\_comp\MT\Project.FSharp\Param_ProjectName\ViewModels\ViewModelBase.fs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\MT\Project.FSharp\Param_ProjectName\App_postaction.axaml.fs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.FSharp.Desktop\Param_ProjectName.Desktop\Program_postaction.fs" />
-    <Content Include="Templates\_comp\MT\Project.FSharp.Desktop\.template.config\template.json" />
+    <Content Include="Templates\_comp\MT\Project.FSharp.Desktop\Param_ProjectName.Desktop\Program_postaction.fs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\_comp\MT\Project.FSharp.Desktop\.template.config\template.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Templates\_comp\MT\Project.FSharp.Android\.template.config\template.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -435,11 +441,22 @@
     <Content Include="Templates\_comp\MT\Project.FSharp.iOS\Param_ProjectName.iOS\AppDelegate_postaction.fs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.FSharp.Web\.template.config\template.json" />
+    <Content Include="Templates\_comp\MT\Project.FSharp.Web\.template.config\template.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Templates\_comp\MT\Project.FSharp.Web\Param_ProjectName.Browser\Program_postaction.fs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\MT\Project.FSharp\Param_ProjectName\Param_ProjectName.fsproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Ft\CompiledBindings.FSharp\.template.config\description.md">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Ft\CompiledBindings.FSharp\.template.config\template.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Ft\CompiledBindings.FSharp\Param_ProjectName_postaction.fsproj">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Page Include="..\SharedStyles\TemplateStudioStyles.xaml">
@@ -490,7 +507,11 @@
       <SubType>Designer</SubType>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\Ft\CompiledBindings\.template.config\icon.xaml">
+    <Content Include="Templates\Ft\CompiledBindings.CSharp\.template.config\icon.xaml">
+      <SubType>Designer</SubType>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Ft\CompiledBindings.FSharp\.template.config\icon.xaml">
       <SubType>Designer</SubType>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

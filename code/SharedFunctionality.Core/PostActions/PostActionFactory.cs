@@ -153,6 +153,7 @@ namespace Microsoft.Templates.Core.PostActions
                 case ".resw":
                 case ".resx":
                 case ".csproj":
+                case ".fsproj":
                 case ".vbproj":
                     return new XmlStyleProvider();
                 default:
