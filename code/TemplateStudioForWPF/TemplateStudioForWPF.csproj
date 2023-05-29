@@ -176,6 +176,9 @@
   <ItemGroup />
   <ItemGroup>
     <Compile Include="TemplateStudioForWpfPackage.cs" />
+    <Content Include="Templates\Ft\Embedded.CSharp\Param_ProjectName.Desktop\Program_postaction.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Templates\Proj\Default.FSharp\.gitignore">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -459,6 +462,15 @@
     <Content Include="Templates\Ft\CompiledBindings.FSharp\Param_ProjectName_postaction.fsproj">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Templates\Ft\Embedded.CSharp\.template.config\description.md">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Ft\Embedded.CSharp\.template.config\template.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Ft\Embedded.CSharp\Param_ProjectName.Desktop\Param_ProjectName.Desktop_postaction.csproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Page Include="..\SharedStyles\TemplateStudioStyles.xaml">
       <Link>Styles\TemplateStudioStyles.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
@@ -512,6 +524,10 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\Ft\CompiledBindings.FSharp\.template.config\icon.xaml">
+      <SubType>Designer</SubType>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Ft\Embedded.CSharp\.template.config\icon.xaml">
       <SubType>Designer</SubType>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
