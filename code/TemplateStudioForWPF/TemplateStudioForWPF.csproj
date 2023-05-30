@@ -175,7 +175,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Compile Include="TemplateStudioForWpfPackage.cs" />
+    <Compile Include="TemplateStudioForAvaloniaPackage.cs" />
     <Content Include="Templates\Ft\Embedded.CSharp\Param_ProjectName.Desktop\Program_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

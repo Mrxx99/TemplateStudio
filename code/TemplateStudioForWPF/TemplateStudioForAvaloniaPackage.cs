@@ -109,7 +109,7 @@ namespace TemplateStudioForWPF
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            if (RightClickActions.VisibleForWpf(TemplateType.Page))
+            if (RightClickActions.VisibleForAvalonia(TemplateType.Page))
             {
                 RightClickActions.AddNewPage();
             }
@@ -119,7 +119,7 @@ namespace TemplateStudioForWPF
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            if (RightClickActions.VisibleForWpf(TemplateType.Feature))
+            if (RightClickActions.VisibleForAvalonia(TemplateType.Feature))
             {
                 RightClickActions.AddNewFeature();
             }
@@ -129,7 +129,7 @@ namespace TemplateStudioForWPF
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            if (RightClickActions.VisibleForWpf(TemplateType.Service))
+            if (RightClickActions.VisibleForAvalonia(TemplateType.Service))
             {
                 RightClickActions.AddNewService();
             }
@@ -139,7 +139,7 @@ namespace TemplateStudioForWPF
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            if (RightClickActions.VisibleForWpf(TemplateType.Testing))
+            if (RightClickActions.VisibleForAvalonia(TemplateType.Testing))
             {
                 RightClickActions.AddNewTesting();
             }
@@ -161,7 +161,7 @@ namespace TemplateStudioForWPF
 
             var cmd = (OleMenuCommand)sender;
             cmd.Enabled = RightClickActions.Enabled();
-            cmd.Visible = RightClickActions.VisibleForWpf(templateType);
+            cmd.Visible = RightClickActions.VisibleForAvalonia(templateType);
         }
 
         private void TempFolderAvailable(object sender, TemplateType templateType)

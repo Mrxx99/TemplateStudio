@@ -128,39 +128,11 @@ namespace Microsoft.Templates.UI.VisualStudio
             }
         }
 
-        public bool VisibleForWpf(TemplateType templateType)
+        public bool VisibleForAvalonia(TemplateType templateType)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            if (!_shell.Project.IsActiveProjectWpf())
-            {
-                return false;
-            }
-            else
-            {
-                return Visible(templateType);
-            }
-        }
-
-        public bool VisibleForWinUI(TemplateType templateType)
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            if (!_shell.Project.IsActiveProjectWinUI())
-            {
-                return false;
-            }
-            else
-            {
-                return Visible(templateType);
-            }
-        }
-
-        public bool VisibleForUwp(TemplateType templateType)
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            if (!_shell.Project.IsActiveProjectUwp())
+            if (!_shell.Project.IsActiveProjectAvalonia())
             {
                 return false;
             }
@@ -194,23 +166,7 @@ namespace Microsoft.Templates.UI.VisualStudio
             ThreadHelper.ThrowIfNotOnUIThread();
 
             return _shell.Project.GetActiveProjectIsWts()
-                && _shell.Project.IsActiveProjectWpf();
-        }
-
-        public bool VisibleForWinUI()
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            return _shell.Project.GetActiveProjectIsWts()
-                && _shell.Project.IsActiveProjectWinUI();
-        }
-
-        public bool VisibleForUwp()
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            return _shell.Project.GetActiveProjectIsWts()
-                && _shell.Project.IsActiveProjectUwp();
+                && _shell.Project.IsActiveProjectAvalonia();
         }
 
         public bool Visible()
