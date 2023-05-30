@@ -7,7 +7,7 @@ using System.ComponentModel.Design;
 using Microsoft.Templates.Core;
 using Microsoft.VisualStudio.Shell;
 
-namespace TemplateStudioForWPF.Commands
+namespace TemplateStudioForAvalonia.Commands
 {
     internal sealed class TemplateStudioCommand
     {

@@ -8,11 +8,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TemplateStudioForWPF")]
+[assembly: AssemblyTitle("TemplateStudioForAvalonia")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TemplateStudioForWPF")]
+[assembly: AssemblyProduct("TemplateStudioForAvalonia")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -33,4 +33,4 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("5.1.0.0")]  // Do not change this. It is not displayed but must match the *.vstemplate entries.
-[assembly: AssemblyFileVersion(TemplateStudioForWPF.Vsix.Version)]
+[assembly: AssemblyFileVersion(TemplateStudioForAvalonia.Vsix.Version)]

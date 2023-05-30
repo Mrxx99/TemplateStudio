@@ -9,7 +9,7 @@ using System.Threading;
 using Microsoft.Templates.Core;
 using Microsoft.Templates.UI.VisualStudio;
 using Microsoft.VisualStudio.Shell;
-using TemplateStudioForWPF.Commands;
+using TemplateStudioForAvalonia.Commands;
 using Task = System.Threading.Tasks.Task;
 
 // https://docs.microsoft.com/visualstudio/extensibility/how-to-use-asyncpackage-to-load-vspackages-in-the-background?view=vs-2022
@@ -17,7 +17,7 @@ using Task = System.Threading.Tasks.Task;
 // https://docs.microsoft.com/visualstudio/extensibility/internals/authoring-dot-vsct-files?view=vs-2022
 // https://docs.microsoft.com/visualstudio/extensibility/command-flag-element?view=vs-2022
 
-namespace TemplateStudioForWPF
+namespace TemplateStudioForAvalonia
 {
     [ProvideAutoLoad(PackageGuids.guidTemplateStudioForWpfUIContextString, PackageAutoLoadFlags.BackgroundLoad)]
     [ProvideUIContextRule(PackageGuids.guidTemplateStudioForWpfUIContextString,

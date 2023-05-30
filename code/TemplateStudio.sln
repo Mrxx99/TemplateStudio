@@ -26,7 +26,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedFunctionality.UI", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedResources", "SharedResources\SharedResources.csproj", "{D617CF2A-6CED-4A31-B87C-3A890D0DDE93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateStudioForWPF", "TemplateStudioForAvalonia\TemplateStudioForWPF.csproj", "{D53BB989-5FA3-4F0C-B67A-69D61F488723}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateStudioForAvalonia", "TemplateStudioForAvalonia\TemplateStudioForAvalonia.csproj", "{D53BB989-5FA3-4F0C-B67A-69D61F488723}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedFunctionality.Tests", "test\SharedFunctionality.Tests\SharedFunctionality.Tests.shproj", "{7496482F-BAD2-428D-A337-5DC0137ECA3F}"
 EndProject
