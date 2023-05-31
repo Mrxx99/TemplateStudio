@@ -7,7 +7,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln'
+  solution: 'TemplateStudio.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'ReleaseWPF'
 
