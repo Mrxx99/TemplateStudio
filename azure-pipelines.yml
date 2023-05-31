@@ -23,4 +23,16 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    
+- task: CopyFiles@2
+  inputs:
+    Contents: |
+     code\TemplateStudioForAvalonia\bin\ReleaseWPF\TemplateStudioForWPF.vsix
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  condition: succeeded()
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'publish'
+  condition: succeeded()
