@@ -83,17 +83,7 @@ namespace Microsoft.Templates.Fakes.GenShell
             return Directory.EnumerateFiles(path, "*proj", SearchOption.AllDirectories).FirstOrDefault();
         }
 
-        public bool IsActiveProjectWpf()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool IsActiveProjectWinUI()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool IsActiveProjectUwp()
+        public bool IsActiveProjectAvalonia()
         {
             throw new NotImplementedException();
         }

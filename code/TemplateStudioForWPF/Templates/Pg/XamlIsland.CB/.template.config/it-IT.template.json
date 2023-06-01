@@ -1,6 +1,0 @@
-﻿{
-  "author": "Microsoft",
-  "name": "XAML Island",
-  "description": "Pagina che ospita un controllo UWP tramite un'isola XAML.",
-  "identity": "ts.WPF.Page.XamlIsland.CodeBehind"
-}

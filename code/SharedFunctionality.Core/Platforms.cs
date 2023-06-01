@@ -9,25 +9,14 @@ namespace Microsoft.Templates.Core
 {
     public static class Platforms
     {
-        public const string Uwp = "Uwp";
 
-        public const string Web = "Web";
-
-        public const string Wpf = "Wpf";
-
-        public const string WinUI = "WinUI";
-
-        public const string ReactNative = "RN";
+        public const string Avalonia = "Avalonia";
 
         public static IEnumerable<string> GetAllPlatforms()
         {
             return new[]
             {
-                Uwp,
-                Web,
-                Wpf,
-                WinUI,
-                ReactNative,
+                Avalonia
             };
         }
 

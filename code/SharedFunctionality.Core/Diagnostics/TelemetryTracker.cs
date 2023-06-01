@@ -113,7 +113,7 @@ namespace Microsoft.Templates.Core.Diagnostics
 
             var properties = new Dictionary<string, string>()
             {
-                { TelemetryProperties.ProjectType, context.ProjectType },
+                //{ TelemetryProperties.ProjectType, context.ProjectTypes },
                 ////{ TelemetryProperties.Framework, context.FrontEndFramework },
                 { TelemetryProperties.FrontendFramework, context.FrontEndFramework },
                 //// Remove BackendFramework as only intended for Web projects
@@ -177,7 +177,7 @@ namespace Microsoft.Templates.Core.Diagnostics
             var properties = new Dictionary<string, string>()
             {
                 { TelemetryProperties.Status, status.ToString() },
-                { TelemetryProperties.ProjectType, context.ProjectType },
+                //{ TelemetryProperties.ProjectType, context.ProjectTypes },
                 ////{ TelemetryProperties.Framework, context.FrontEndFramework },
                 { TelemetryProperties.FrontendFramework,  context.FrontEndFramework },
                 //// Remove BackendFramework as only intended for Web projects
@@ -254,7 +254,7 @@ namespace Microsoft.Templates.Core.Diagnostics
                 { TelemetryProperties.GenEngineMessage, message },
                 { TelemetryProperties.EventName, eventToTrack },
                 { TelemetryProperties.GenSource, genSource.ToString() },
-                { TelemetryProperties.ProjectType, context.ProjectType },
+                //{ TelemetryProperties.ProjectType, context.ProjectTypes },
                 { TelemetryProperties.VsProjectCategory, context.Platform },
             };
 

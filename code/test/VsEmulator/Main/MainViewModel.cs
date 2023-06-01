@@ -134,17 +134,9 @@ namespace Microsoft.Templates.VsEmulator.Main
                 var parameters = parameter.Split(',');
                 var appModel = parameters.Length == 3 ? parameters[2] : string.Empty;
                 var userSelection = await NewProjectAsync(parameters[0], parameters[1], appModel);
-                if (parameters[0] == Platforms.Uwp)
-                {
-                    _userSelectionUwp = userSelection;
-                }
-                else if (parameters[0] == Platforms.Wpf)
+                if (parameters[0] == Platforms.Avalonia)
                 {
                     _userSelectionWpf = userSelection;
-                }
-                else if (parameters[0] == Platforms.WinUI)
-                {
-                    _userSelectionWinUI = userSelection;
                 }
             });
         }
@@ -192,26 +184,7 @@ namespace Microsoft.Templates.VsEmulator.Main
         private void SetupForProjectCreation(string platform, string language, string appmodel = null)
         {
 
-            TemplatesSource ts = null;
-
-            switch (platform)
-            {
-                case Platforms.Uwp:
-                    ts = new UwpTestsTemplatesSource();
-                    break;
-                case Platforms.Wpf:
-                    ts = new WpfTestsTemplatesSource();
-                    break;
-                case Platforms.WinUI:
-                    if (language == ProgrammingLanguages.CSharp)
-                        ts = new WinUICsTestsTemplatesSource();
-                    else if (language == ProgrammingLanguages.Cpp)
-                        ts = new WinUICppTestsTemplatesSource();
-                    break;
-                default:
-                    ts = null;
-                    break;
-            }
+            TemplatesSource ts = new WpfTestsTemplatesSource();
 
             GenContext.Bootstrap(
                 ts,
@@ -254,14 +227,8 @@ namespace Microsoft.Templates.VsEmulator.Main
                     var userSelection = WizardLauncher.Instance.StartNewProject(context, string.Empty, string.Empty, Services.FakeStyleValuesProvider.Instance);
                     switch (platform)
                     {
-                        case Platforms.Uwp:
-                            _canRecreateUwpProject = true;
-                            break;
-                        case Platforms.Wpf:
+                        case Platforms.Avalonia:
                             _canRecreateWpfProject = true;
-                            break;
-                        case Platforms.WinUI:
-                            _canRecreateWinUIProject = true;
                             break;
                     }
 
@@ -339,26 +306,7 @@ namespace Microsoft.Templates.VsEmulator.Main
 
             switch (platform)
             {
-                case Platforms.Uwp:
-
-                    var path = Path.Combine(Environment.CurrentDirectory, @"..\..\..\TemplateStudioForUWP.Tests\TestData\UWP");
-                    var scanResult = CodeGen.Instance.Scanner.Scan(path);
-                    styleCopTemplates = scanResult.Templates.Where(t => t.GetLanguage() == language);
-                    GenContext.ToolBox.Repo.AddAdditionalTemplates(styleCopTemplates);
-
-                    switch (language)
-                    {
-                        case "C#":
-                            styleCopTemplate = "ts.Feat.StyleCop";
-                            break;
-                        case "VisualBasic":
-                            styleCopTemplate = "ts.Feat.VBStyleAnalysis";
-                            break;
-                        default:
-                            return;
-                    }
-                    break;
-                case Platforms.Wpf:
+                case Platforms.Avalonia:
 
                     var wpfScPath = Path.Combine(Environment.CurrentDirectory, @"..\..\..\TemplateStudioForWPF.Tests\TestData\WPF");
                     var wpfScanResult = CodeGen.Instance.Scanner.Scan(wpfScPath);
@@ -366,14 +314,6 @@ namespace Microsoft.Templates.VsEmulator.Main
                     GenContext.ToolBox.Repo.AddAdditionalTemplates(styleCopTemplates);
 
                     styleCopTemplate = "ts.WPF.Feat.StyleCop";
-                    break;
-                case Platforms.WinUI:
-                    switch (appmodel)
-                    {
-                        case AppModels.Desktop:
-                            styleCopTemplate = "ts.WinUI.Feat.StyleCop";
-                            break;
-                    }
                     break;
             }
 
@@ -514,37 +454,16 @@ namespace Microsoft.Templates.VsEmulator.Main
                         .Union(Directory.EnumerateFiles(destinationParent, "*.vbproj", SearchOption.AllDirectories))
                         .Union(Directory.EnumerateFiles(destinationParent, "*.vcxproj", SearchOption.AllDirectories)).FirstOrDefault();
 
-                var platform = Platforms.WinUI;
+                var platform = "";
 
                 string language = string.Empty;
                 switch (Path.GetExtension(projFile))
                 {
-                    case ".vbproj":
-                        language = ProgrammingLanguages.VisualBasic;
-                        platform = Platforms.Uwp;
-                        break;
                     case ".csproj":
                         language = ProgrammingLanguages.CSharp;
+                        platform = Platforms.Avalonia;
+                        
 
-                        var fileContents = File.ReadAllText(projFile);
-
-                        if (fileContents.Contains("<UseWinUI>"))
-                        {
-                            platform = Platforms.WinUI;
-                        }
-                        else if (fileContents.Contains("<UseWPF>"))
-                        {
-                            platform = Platforms.Wpf;
-                        }
-                        else
-                        {
-                            platform = Platforms.Uwp;
-                        }
-
-                        break;
-                    case ".vcxproj":
-                        language = ProgrammingLanguages.Cpp;
-                        platform = Platforms.WinUI;
                         break;
                 }
                 var projectName = Path.GetFileNameWithoutExtension(projFile);
@@ -555,20 +474,8 @@ namespace Microsoft.Templates.VsEmulator.Main
 
                 switch (platform)
                 {
-                    case Platforms.Uwp:
-                        ts = new UwpTestsTemplatesSource();
-                        break;
-                    case Platforms.Wpf:
+                    case Platforms.Avalonia:
                         ts = new WpfTestsTemplatesSource();
-                        break;
-                    case Platforms.WinUI:
-                        if (language == ProgrammingLanguages.CSharp)
-                            ts = new WinUICsTestsTemplatesSource();
-                        else if (language == ProgrammingLanguages.Cpp)
-                            ts = new WinUICppTestsTemplatesSource();
-                        break;
-                    default:
-                        ts = null;
                         break;
                 }
 
@@ -592,7 +499,7 @@ namespace Microsoft.Templates.VsEmulator.Main
                 var context = new UserSelectionContext(language, config.Platform)
                 {
                     FrontEndFramework = config.Framework,
-                    ProjectType = config.ProjectType
+                    ProjectTypes = new List<string> { config.ProjectType }
                 };
 
                 context.AddAppModel(config.AppModel);
@@ -693,9 +600,9 @@ namespace Microsoft.Templates.VsEmulator.Main
         {
             GenContext.Bootstrap(
                 new LocalTemplatesSource(installedPackagePath: string.Empty, id: string.Empty),
-                new FakeGenShell(Platforms.Uwp, ProgrammingLanguages.CSharp, msg => SetState(msg), l => AddLog(l), _host),
+                new FakeGenShell(Platforms.Avalonia, ProgrammingLanguages.CSharp, msg => SetState(msg), l => AddLog(l), _host),
                 WizardVersion,
-                Platforms.Uwp,
+                Platforms.Avalonia,
                 ProgrammingLanguages.CSharp);
 
             //   await GenContext.ToolBox.Repo.SynchronizeAsync();

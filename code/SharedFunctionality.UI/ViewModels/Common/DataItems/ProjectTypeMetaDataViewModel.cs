@@ -40,7 +40,7 @@ namespace Microsoft.Templates.UI.ViewModels.Common
             MetadataType = metadataInfo.MetadataType;
             Licenses = metadataInfo.LicenseTerms?.Select(l => new LicenseViewModel(l));
             Frameworks = frameworks;
-            var fx = frameworks.First().Name;
+            //var fx = frameworks.First().Name;
             var layout = GenContext.ToolBox.Repo.GetLayoutTemplates(context);
             Layout = layout.Select(l => new LayoutViewModel(l, context));
         }

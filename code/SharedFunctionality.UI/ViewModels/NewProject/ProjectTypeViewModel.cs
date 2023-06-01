@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 using Microsoft.Templates.Core.Gen;
 using Microsoft.Templates.UI.Services;
 using Microsoft.Templates.UI.ViewModels.Common;
+using SharedFunctionality.UI.ViewModels.Common;
 
 namespace Microsoft.Templates.UI.ViewModels.NewProject
 {
-    public class ProjectTypeViewModel : SelectableGroup<ProjectTypeMetaDataViewModel>
+    public class ProjectTypeViewModel : MultiSelectableGroup<ProjectTypeMetaDataViewModel>
     {
         public ProjectTypeViewModel(Func<bool> isSelectionEnabled, Func<Task> onSelected)
             : base(isSelectionEnabled, onSelected)

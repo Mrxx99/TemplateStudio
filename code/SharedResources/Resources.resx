@@ -318,7 +318,7 @@
     <comment>Wizard title on WizardShell page for UWP projects</comment>
   </data>
   <data name="NewProjectTitleWPF" xml:space="preserve">
-    <value>New WPF app</value>
+    <value>New Avalonia app</value>
     <comment>Wizard title on WizardShell page for WPF projects</comment>
   </data>
   <data name="NotificationRemoveError_Dependency" xml:space="preserve">
@@ -445,8 +445,8 @@
     <value>Your project details</value>
     <comment>Project details header on MainPage</comment>
   </data>
-  <data name="ProjectTypeTitle" xml:space="preserve">
-    <value>Select a project type</value>
+  <data name="PlatformTypeTitle" xml:space="preserve">
+    <value>Select target platforms</value>
     <comment>ProjectType Title on ProjectTypePage</comment>
   </data>
   <data name="TemplateDetailsAuthor" xml:space="preserve">
@@ -1422,5 +1422,14 @@ See the final result: {2}
   <data name="ValidatorUsesMvvmToolkitSevenMessage" xml:space="preserve">
     <value>Update to MVVM Toolkit version 8</value>
     <comment>Message when a breaking change is detected for MvvmToolkit version</comment>
+  </data>
+  <data name="NewProjectStepPlatform" xml:space="preserve">
+    <value>Platform</value>
+  </data>
+  <data name="Avalonia" xml:space="preserve">
+    <value>Avalonia</value>
+  </data>
+  <data name="ProjectDetailsTargetPlatformSectionTitle" xml:space="preserve">
+    <value>Target platforms</value>
   </data>
 </root>

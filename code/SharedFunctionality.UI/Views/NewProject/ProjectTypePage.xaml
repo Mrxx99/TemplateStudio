@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
         <TextBlock
             Grid.Row="0"
-            Text="{x:Static res:Resources.ProjectTypeTitle}"
+            Text="{x:Static res:Resources.PlatformTypeTitle}"
             Margin="{StaticResource Margin_L_LeftRight_M2_Top}"
             Style="{StaticResource TSTextBlockSectionTitle}" />
         <ListView            

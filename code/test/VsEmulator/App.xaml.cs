@@ -94,9 +94,9 @@ namespace Microsoft.Templates.VsEmulator
 
                     GenContext.Bootstrap(
                         new LocalTemplatesSource(string.Empty, "0.0.0.0", string.Empty),
-                        new FakeGenShell(Platforms.Uwp, progLanguage),
+                        new FakeGenShell(Platforms.Avalonia, progLanguage),
                         "0.0.0.0",
-                        Platforms.Uwp,
+                        Platforms.Avalonia,
                         progLanguage);
 
                     await GenContext.ToolBox.Repo.RefreshAsync();
@@ -130,13 +130,6 @@ namespace Microsoft.Templates.VsEmulator
                         case "FEATURE":
                             EnableRightClickSupportForProject(projectPath, progLanguage);
                             var userFeatureSelection = WizardLauncher.Instance.StartAddTemplate(GenContext.CurrentLanguage, FakeStyleValuesProvider.Instance, TemplateType.Feature, WizardTypeEnum.AddFeature);
-
-                            break;
-
-                        case "PROJECT":
-                        default:
-                            var context = new UserSelectionContext(progLanguage, Platforms.Uwp);
-                            var userSelectionIsNotUsed = WizardLauncher.Instance.StartNewProject(context, string.Empty, string.Empty, FakeStyleValuesProvider.Instance);
 
                             break;
                     }

@@ -22,32 +22,17 @@ namespace Microsoft.Templates.UI.VisualStudio.GenShell
     public class VsGenShellProject : IGenShellProject
     {
         private readonly VsShellService _vsShellService;
-        private const string UwpProjectTypeGuid = "A5A43C5B-DE2A-4C0C-9213-0A381AF9435A";
 
         public VsGenShellProject(VsShellService vsShellService)
         {
             _vsShellService = vsShellService;
         }
 
-        public bool IsActiveProjectWpf()
+        public bool IsActiveProjectAvalonia()
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
             return ActiveProjectHasCapability("WPF");
-        }
-
-        public bool IsActiveProjectWinUI()
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            return ActiveProjectHasCapability("WINUI");
-        }
-
-        public bool IsActiveProjectUwp()
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            return ActiveProjectIsOfType(UwpProjectTypeGuid);
         }
 
         private bool ActiveProjectHasCapability(string capability)

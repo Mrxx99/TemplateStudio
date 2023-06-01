@@ -1,0 +1,38 @@
+﻿[
+    {
+        "name": "Desktop",
+        "displayName": "Desktop",
+        "summary": "This option allows you to run your project on Windows, OSX, Linux.",
+        "author": "AvaloniaUI",
+        "order": "1",
+        "platform": "Avalonia",
+        "languages": [ "C#", "F#" ]
+    },
+    {
+        "name": "Web",
+        "displayName": "Web",
+        "summary": "This option allows you to run your project on Web using Web Assembly.",
+        "author": "AvaloniaUI",
+        "order": "2",
+        "platform": "Avalonia",
+        "languages": [ "C#", "F#" ]
+    },
+    {
+        "name": "IOS",
+        "displayName": "IOS",
+        "summary": "This option allows you to run your project on IOS devices.",
+        "author": "AvaloniaUI",
+        "order": "4",
+        "platform": "Avalonia",
+        "languages": [ "C#", "F#" ]
+    },
+    {
+        "name": "Android",
+        "displayName": "Android",
+        "summary": "This option allows you to run your project on Android devices.",
+        "author": "AvaloniaUI",
+        "order": "3",
+        "platform": "Avalonia",
+        "languages": [ "C#", "F#" ]
+    }
+]

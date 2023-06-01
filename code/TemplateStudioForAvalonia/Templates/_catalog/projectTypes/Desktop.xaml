@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--This file is NOT compatible with Silverlight-->
+<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+    <Path
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="48"
+        Height="48"
+        Data="m147.9 192.635 132.781-18.353v128.683h-132.781zm0 235.457 132.781 18.353v-127.087h-132.781zm147.389 20.311 176.607 24.445v-153.49h-176.607zm0-276.079v130.641h176.607v-155.086z"
+        Fill="#000000"
+        Stretch="Uniform" />
+</Viewbox>

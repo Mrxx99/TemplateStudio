@@ -223,6 +223,15 @@ namespace Microsoft.Templates.SharedResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Avalonia.
+        /// </summary>
+        public static string Avalonia {
+            get {
+                return ResourceManager.GetString("Avalonia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Breaking changes.
         /// </summary>
         public static string BreakingChanges {
@@ -1396,6 +1405,15 @@ namespace Microsoft.Templates.SharedResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Platform.
+        /// </summary>
+        public static string NewProjectStepPlatform {
+            get {
+                return ResourceManager.GetString("NewProjectStepPlatform", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Project type.
         /// </summary>
         public static string NewProjectStepProjectType {
@@ -1450,7 +1468,7 @@ namespace Microsoft.Templates.SharedResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New WPF app.
+        ///   Looks up a localized string similar to New Avalonia app.
         /// </summary>
         public static string NewProjectTitleWPF {
             get {
@@ -1671,6 +1689,15 @@ namespace Microsoft.Templates.SharedResources {
         public static string PackageCertificateString {
             get {
                 return ResourceManager.GetString("PackageCertificateString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select target platforms.
+        /// </summary>
+        public static string PlatformTypeTitle {
+            get {
+                return ResourceManager.GetString("PlatformTypeTitle", resourceCulture);
             }
         }
         
@@ -1900,6 +1927,15 @@ namespace Microsoft.Templates.SharedResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Target platforms.
+        /// </summary>
+        public static string ProjectDetailsTargetPlatformSectionTitle {
+            get {
+                return ResourceManager.GetString("ProjectDetailsTargetPlatformSectionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Testing.
         /// </summary>
         public static string ProjectDetailsTestingSectionTitle {
@@ -1914,15 +1950,6 @@ namespace Microsoft.Templates.SharedResources {
         public static string ProjectDetailsTitle {
             get {
                 return ResourceManager.GetString("ProjectDetailsTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Select a project type.
-        /// </summary>
-        public static string ProjectTypeTitle {
-            get {
-                return ResourceManager.GetString("ProjectTypeTitle", resourceCulture);
             }
         }
         

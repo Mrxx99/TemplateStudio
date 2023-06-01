@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--This file is NOT compatible with Silverlight-->
+<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+    <Image>
+        <Image.Source>
+            <DrawingImage>
+                <DrawingImage.Drawing>
+                    <DrawingGroup>
+                        <DrawingGroup.Children>
+                            <GeometryDrawing Brush="#FF888D8F" Geometry="m352.855 124v2.003c0 23.521-19.124 42.582-42.709 42.582-23.592 0-42.71-19.067-42.71-42.582 0-.692 0-1.348 0-2.003h-143.436v371.394h372.498v-371.394z" />
+                            <GeometryDrawing Brush="White" Geometry="m210.527 324.146h24.687l16.854 89.493h.304l20.257-89.493h23.092l18.296 90.591h.359l19.21-90.591h24.212l-31.462 131.499h-24.498l-18.144-89.493h-.475l-19.422 89.493h-24.955zm175.105 0h38.917l38.65 131.499h-25.466l-8.406-29.262h-44.334l-6.489 29.262h-24.802zm14.814 32.412-10.767 48.245h33.513l-12.362-48.245z" />
+                        </DrawingGroup.Children>
+                    </DrawingGroup>
+                </DrawingImage.Drawing>
+            </DrawingImage>
+        </Image.Source>
+    </Image>
+</Viewbox>

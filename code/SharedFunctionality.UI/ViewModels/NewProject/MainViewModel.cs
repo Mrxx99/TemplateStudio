@@ -24,7 +24,7 @@ namespace Microsoft.Templates.UI.ViewModels.NewProject
 {
     public class MainViewModel : BaseMainViewModel
     {
-        public const string NewProjectStepProjectType = "01ProjectType";
+        public const string NewProjectStepPlatform = "01Platform";
         public const string NewProjectStepFramework = "02Framework";
 
         private RelayCommand _refreshTemplatesCacheCommand;
@@ -77,7 +77,7 @@ namespace Microsoft.Templates.UI.ViewModels.NewProject
         {
             get
             {
-                yield return StepData.MainStep(NewProjectStepProjectType, "1", Resources.NewProjectStepProjectType, () => new ProjectTypePage(), true, true);
+                yield return StepData.MainStep(NewProjectStepPlatform, "1", Resources.NewProjectStepPlatform, () => new ProjectTypePage(), true, true);
                 yield return StepData.MainStep(NewProjectStepFramework, "2", Resources.NewProjectStepDesignPattern, () => new FrameworkPage());
             }
         }
@@ -86,25 +86,8 @@ namespace Microsoft.Templates.UI.ViewModels.NewProject
         {
             switch (context.Platform)
             {
-                case Platforms.Uwp:
-                    WizardStatus.Title = $"{Resources.NewProjectTitleUWP} ({GenContext.Current.ProjectName})";
-                    break;
-                case Platforms.Wpf:
+                case Platforms.Avalonia:
                     WizardStatus.Title = $"{Resources.NewProjectTitleWPF} ({GenContext.Current.ProjectName})";
-                    break;
-                case Platforms.WinUI:
-                    switch (context.GetAppModel())
-                    {
-                        case AppModels.Desktop:
-                            WizardStatus.Title = $"{Resources.NewProjectTitleWinUIDesktop} ({GenContext.Current.ProjectName})";
-                            break;
-                        case AppModels.Uwp:
-                            WizardStatus.Title = $"{Resources.NewProjectTitleWinUIUWP} ({GenContext.Current.ProjectName})";
-                            break;
-                    }
-
-                    break;
-                default:
                     break;
             }
 
@@ -195,7 +178,7 @@ namespace Microsoft.Templates.UI.ViewModels.NewProject
 
             if (item is ProjectTypeMetaDataViewModel projectTypeMetaData)
             {
-                ProjectType.Selected = projectTypeMetaData;
+                await ProjectType.SelectAsync(projectTypeMetaData);
             }
             else if (item is FrameworkMetaDataViewModel frameworkMetaData)
             {
@@ -211,7 +194,7 @@ namespace Microsoft.Templates.UI.ViewModels.NewProject
         {
             await SafeThreading.JoinableTaskFactory.SwitchToMainThreadAsync();
 
-            Context.ProjectType = ProjectType.Selected.Name;
+            Context.ProjectTypes = ProjectType.SelectedItems.Select(x=>x.Name).ToList();
             await Framework.LoadDataAsync(Context);
         }
 

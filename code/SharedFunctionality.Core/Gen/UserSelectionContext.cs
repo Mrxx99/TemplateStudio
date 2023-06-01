@@ -9,7 +9,7 @@ namespace Microsoft.Templates.Core.Gen
 {
     public class UserSelectionContext
     {
-        public string ProjectType { get; set; }
+        public List<string> ProjectTypes { get; set; } = new List<string>();
 
         public string FrontEndFramework { get; set; }
 

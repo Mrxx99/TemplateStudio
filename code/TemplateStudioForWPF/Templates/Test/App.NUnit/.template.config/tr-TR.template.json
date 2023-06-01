@@ -1,6 +1,0 @@
-﻿{
-  "author": "Microsoft Community",
-  "name": "Test App with NUnit",
-  "description": "NUnit kullanarak uygulamaya birim testleri için bir proje ekleyin.",
-  "identity": "ts.WPF.Testing.UnitTests.App.NUnit"
-}

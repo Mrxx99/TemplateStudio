@@ -22,10 +22,6 @@ namespace Microsoft.Templates.Core.Gen.Shell
 
         bool GetActiveProjectIsWts();
 
-        bool IsActiveProjectWpf();
-
-        bool IsActiveProjectWinUI();
-
-        bool IsActiveProjectUwp();
+        bool IsActiveProjectAvalonia();
     }
 }

@@ -109,6 +109,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Common\DataItems\TemplateInfoViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Common\ErrorDialogViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Common\InfoDialogViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Common\MultiSelectableGroup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Common\QuestionDialogViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Common\Selectable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Common\SelectableGroup`1.cs" />

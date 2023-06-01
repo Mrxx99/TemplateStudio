@@ -1,0 +1,22 @@
+﻿[
+    {
+        "name": "MVVMToolkit",
+        "displayName": "Community Toolkit",
+        "summary": "A modern, fast, modular MVVM library and part of the Windows Community Toolkit.",
+        "author": "Microsoft Community",
+        "order": "1",
+        "licenses": "[CommunityToolkit.Mvvm](https://github.com/CommunityToolkit/dotnet/blob/main/License.md)",
+        "platform": "Avalonia",
+        "languages": [ "C#", "F#" ]
+    },
+    {
+        "name": "ReactiveUI",
+        "displayName": "ReactiveUI",
+        "summary": "Cross-platform MVVM framework for all .NET platforms that is inspired by functional reactive programming.",
+        "author": "ReactiveUI team",
+        "order": "0",
+        "licenses": "[ReactiveUI](https://github.com/reactiveui/ReactiveUI/blob/main/LICENSE)",
+        "platform": "Avalonia",
+        "languages": [ "C#", "F#" ]
+    }
+]

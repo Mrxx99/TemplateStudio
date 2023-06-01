@@ -1,4 +1,0 @@
-﻿{
-  "name": "Webansicht",
-  "description": "Die Webseite rendert Webinhalte mit WebView2 (Microsoft Edge mit Chromium)."
-}

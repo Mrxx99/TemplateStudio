@@ -157,9 +157,9 @@ namespace Microsoft.Templates.Core
 
         public IEnumerable<MetadataInfo> GetFrontEndFrameworks(UserSelectionContext context)
         {
-            if (string.IsNullOrEmpty(context.ProjectType))
+            if (context.ProjectTypes.Count == 0)
             {
-                throw new ArgumentNullException(nameof(context.ProjectType));
+                throw new ArgumentNullException(nameof(context.ProjectTypes));
             }
 
             var frameworks = GetSupportedFx(context);
@@ -174,9 +174,9 @@ namespace Microsoft.Templates.Core
 
         public IEnumerable<MetadataInfo> GetBackEndFrameworks(UserSelectionContext context)
         {
-            if (string.IsNullOrEmpty(context.ProjectType))
+            if (context.ProjectTypes.Count == 0)
             {
-                throw new ArgumentNullException(nameof(context.ProjectType));
+                throw new ArgumentNullException(nameof(context.ProjectTypes));
             }
 
             var frameworks = GetSupportedFx(context);
@@ -191,14 +191,14 @@ namespace Microsoft.Templates.Core
 
         public IEnumerable<ITemplateInfo> GetTemplates(TemplateType type, UserSelectionContext context)
         {
-            if (string.IsNullOrEmpty(context.ProjectType))
+            if (context.ProjectTypes.Count == 0)
             {
-                throw new ArgumentNullException(nameof(context.ProjectType));
+                throw new ArgumentNullException(nameof(context.ProjectTypes));
             }
 
             return Get(t => t.GetTemplateType() == type
                 && t.GetPlatform().Equals(context.Platform, StringComparison.OrdinalIgnoreCase)
-                && (t.GetProjectTypeList().Contains(context.ProjectType) || t.GetProjectTypeList().Contains(All))
+                && (t.GetProjectTypeList().Any(y=> context.ProjectTypes.FirstOrDefault(x=>x==y)!= null) || t.GetProjectTypeList().Contains(All))
                 && IsMatchFrontEnd(t, context.FrontEndFramework)
                 ////&& IsMatchBackEnd(t, context.BackEndFramework)
                 && IsMatchPropertyBag(t, context.PropertyBag));
@@ -263,51 +263,52 @@ namespace Microsoft.Templates.Core
 
         public IEnumerable<LayoutInfo> GetLayoutTemplates(UserSelectionContext context)
         {
-            if (string.IsNullOrEmpty(context.ProjectType))
-            {
-                throw new ArgumentNullException(nameof(context.ProjectType));
-            }
+            //if (string.IsNullOrEmpty(context.ProjectType))
+            //{
+            //    throw new ArgumentNullException(nameof(context.ProjectType));
+            //}
 
-            var projectTemplates = GetTemplates(TemplateType.Project, context);
+            //var projectTemplates = GetTemplates(TemplateType.Project, context);
 
-            foreach (var projectTemplate in projectTemplates)
-            {
-                var layout = projectTemplate?
-                .GetLayout()
-                .Where(l => l.ProjectType == null || l.ProjectType.GetMultiValue().Contains(context.ProjectType));
+            //foreach (var projectTemplate in projectTemplates)
+            //{
+            //    var layout = projectTemplate?
+            //    .GetLayout()
+            //    .Where(l => l.ProjectType == null || l.ProjectType.GetMultiValue().Contains(context.ProjectType));
 
-                if (layout != null)
-                {
-                    foreach (var item in layout)
-                    {
-                        var template = Find(t => t.GroupIdentity == item.TemplateGroupIdentity
-                                                && (t.GetProjectTypeList().Contains(context.ProjectType) || t.GetProjectTypeList().Contains(All))
-                                                && IsMatchFrontEnd(t, context.FrontEndFramework)
-                                                ////&& IsMatchBackEnd(t, context.BackEndFramework)
-                                                && IsMatchPropertyBag(t, context.PropertyBag)
-                                                && t.GetLanguage() == context.Language
-                                                && t.GetPlatform() == context.Platform);
+            //    if (layout != null)
+            //    {
+            //        foreach (var item in layout)
+            //        {
+            //            var template = Find(t => t.GroupIdentity == item.TemplateGroupIdentity
+            //                                    && (t.GetProjectTypeList().Contains(context.ProjectType) || t.GetProjectTypeList().Contains(All))
+            //                                    && IsMatchFrontEnd(t, context.FrontEndFramework)
+            //                                    ////&& IsMatchBackEnd(t, context.BackEndFramework)
+            //                                    && IsMatchPropertyBag(t, context.PropertyBag)
+            //                                    && t.GetLanguage() == context.Language
+            //                                    && t.GetPlatform() == context.Platform);
 
-                        if (template == null)
-                        {
-                            LogOrAlertException(string.Format(Resources.ErrorLayoutNotFound, item.TemplateGroupIdentity, context.FrontEndFramework, context.Platform));
-                        }
-                        else
-                        {
-                            var templateType = template.GetTemplateType();
-                            if (!templateType.IsItemTemplate())
-                            {
-                                LogOrAlertException(string.Format(Resources.ErrorLayoutType, template.Identity));
-                            }
-                            else
-                            {
-                                var templateInfo = GetTemplateInfo(template, context);
-                                yield return new LayoutInfo() { Layout = item, Template = templateInfo };
-                            }
-                        }
-                    }
-                }
-            }
+            //            if (template == null)
+            //            {
+            //                LogOrAlertException(string.Format(Resources.ErrorLayoutNotFound, item.TemplateGroupIdentity, context.FrontEndFramework, context.Platform));
+            //            }
+            //            else
+            //            {
+            //                var templateType = template.GetTemplateType();
+            //                if (!templateType.IsItemTemplate())
+            //                {
+            //                    LogOrAlertException(string.Format(Resources.ErrorLayoutType, template.Identity));
+            //                }
+            //                else
+            //                {
+            //                    var templateInfo = GetTemplateInfo(template, context);
+            //                    yield return new LayoutInfo() { Layout = item, Template = templateInfo };
+            //                }
+            //            }
+            //        }
+            //    }
+            //}
+            return new List<LayoutInfo>();
         }
 
         public void AddAdditionalTemplates(IEnumerable<ITemplateInfo> extraTemplates)
@@ -347,7 +348,7 @@ namespace Microsoft.Templates.Core
         {
             var filtered = GetAll()
                           .Where(t => t.GetTemplateType() == TemplateType.Project
-                          && (t.GetProjectTypeList().Contains(context.ProjectType) || t.GetProjectTypeList().Contains(All))
+                          && (t.GetProjectTypeList().Any(y => context.ProjectTypes.FirstOrDefault(x => x == y) != null) || t.GetProjectTypeList().Contains(All))
                           && IsMatchPropertyBag(t, context.PropertyBag)
                           && t.GetPlatform().Equals(context.Platform, StringComparison.OrdinalIgnoreCase)).ToList();
 
@@ -361,9 +362,9 @@ namespace Microsoft.Templates.Core
 
         public IEnumerable<ITemplateInfo> GetDependencies(ITemplateInfo template, UserSelectionContext context, IList<ITemplateInfo> dependencyList)
         {
-            if (string.IsNullOrEmpty(context.ProjectType))
+            if (context.ProjectTypes.Count == 0)
             {
-                throw new ArgumentNullException(nameof(context.ProjectType));
+                throw new ArgumentNullException(nameof(context.ProjectTypes));
             }
 
             var dependencies = template.GetDependencyList();
@@ -371,7 +372,7 @@ namespace Microsoft.Templates.Core
             foreach (var dependency in dependencies)
             {
                 var dependencyTemplate = Find(t => t.Identity == dependency
-                                                && (t.GetProjectTypeList().Contains(context.ProjectType) || t.GetProjectTypeList().Contains(All))
+                                                && (t.GetProjectTypeList().Any(y => context.ProjectTypes.FirstOrDefault(x => x == y) != null) || t.GetProjectTypeList().Contains(All))
                                                 && IsMatchFrontEnd(t, context.FrontEndFramework)
                                                 ////&& IsMatchBackEnd(t, context.BackEndFramework)
                                                 && IsMatchPropertyBag(t, context.PropertyBag)
@@ -414,9 +415,9 @@ namespace Microsoft.Templates.Core
 
         public IEnumerable<ITemplateInfo> GetRequirements(ITemplateInfo template, UserSelectionContext context)
         {
-            if (string.IsNullOrEmpty(context.ProjectType))
+            if (context.ProjectTypes.Count == 0)
             {
-                throw new ArgumentNullException(nameof(context.ProjectType));
+                throw new ArgumentNullException(nameof(context.ProjectTypes));
             }
 
             var requirementsList = new List<ITemplateInfo>();
@@ -425,7 +426,7 @@ namespace Microsoft.Templates.Core
             foreach (var requirement in requirements)
             {
                 var requirementTemplate = Find(t => t.Identity == requirement
-                                                                && (t.GetProjectTypeList().Contains(context.ProjectType) || t.GetProjectTypeList().Contains(All))
+                                                                && (t.GetProjectTypeList().Any(y => context.ProjectTypes.FirstOrDefault(x => x == y) != null) || t.GetProjectTypeList().Contains(All))
                                                                 && IsMatchFrontEnd(t, context.FrontEndFramework)
                                                                 && IsMatchBackEnd(t, context.BackEndFramework)
                                                                 && IsMatchPropertyBag(t, context.PropertyBag)
@@ -470,9 +471,9 @@ namespace Microsoft.Templates.Core
 
         public IEnumerable<ITemplateInfo> GetExclusions(ITemplateInfo template, UserSelectionContext context)
         {
-            if (string.IsNullOrEmpty(context.ProjectType))
+            if (context.ProjectTypes.Count == 0)
             {
-                throw new ArgumentNullException(nameof(context.ProjectType));
+                throw new ArgumentNullException(nameof(context.ProjectTypes));
             }
 
             var exclusionsList = new List<ITemplateInfo>();
@@ -481,7 +482,7 @@ namespace Microsoft.Templates.Core
             foreach (var exclusion in exclusions)
             {
                 var exclusionTemplate = Find(t => t.GroupIdentity == exclusion
-                                                                && (t.GetProjectTypeList().Contains(context.ProjectType) || t.GetProjectTypeList().Contains(All))
+                                                                && (t.GetProjectTypeList().Any(y => context.ProjectTypes.FirstOrDefault(x => x == y) != null) || t.GetProjectTypeList().Contains(All))
                                                                 && IsMatchFrontEnd(t, context.FrontEndFramework)
                                                                 && IsMatchBackEnd(t, context.BackEndFramework)
                                                                 && IsMatchPropertyBag(t, context.PropertyBag)

@@ -1,6 +1,0 @@
-﻿{
-  "author": "Microsoft Community",
-  "name": "Test App with NUnit",
-  "description": "Добавление проекта для модульного тестирования приложения с помощью NUnit.",
-  "identity": "ts.WPF.Testing.UnitTests.App.NUnit"
-}

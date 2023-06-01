@@ -72,9 +72,9 @@ namespace Microsoft.Templates.Core.Gen
                 sb.AppendLine();
             }
 
-            if (!string.IsNullOrEmpty(Context.ProjectType))
+            if (Context.ProjectTypes.Count == 0)
             {
-                sb.AppendFormat("ProjectType: '{0}'", Context.ProjectType);
+                sb.AppendFormat("ProjectTypes: '{0}'", string.Join(", ", Context.ProjectTypes));
                 sb.AppendLine();
             }
 

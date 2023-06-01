@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+	<TemplateData>
+		<Name>Template Studio for Avalonia</Name>
+		<Description>Template Studio quickly builds a Avalonia .NET Core app, using a wizard-based UI to turn your needs into a foundation of Avalonia patterns and best practices.</Description>
+		<Icon>Avalonia.ico</Icon>
+		<ProjectType>CSharp</ProjectType>
+		<LanguageTag>csharp</LanguageTag>
+		<SortOrder>10</SortOrder>
+		<TemplateID>4cf9118e-0b52-4fff-82a6-09cee34aea75</TemplateID>
+		<CreateNewFolder>true</CreateNewFolder>
+		<DefaultName>AvaloniaApplication</DefaultName>
+		<ProvideDefaultName>true</ProvideDefaultName>
+        <PlatformTag>Windows</PlatformTag>
+        <PlatformTag>Linux</PlatformTag>
+        <PlatformTag>MacOS</PlatformTag>
+		<ProjectTypeTag>Desktop</ProjectTypeTag>
+        <ProjectTypeTag>Avalonia</ProjectTypeTag>
+        <ProjectTypeTag>Mobile</ProjectTypeTag>
+        <ProjectTypeTag>Web</ProjectTypeTag>
+	</TemplateData>
+	<TemplateContent>
+		<CustomParameters>
+			<CustomParameter Name="$ts.platform$" Value="Avalonia"/>
+			<CustomParameter Name="$ts.language$" Value="C#"/>
+			<CustomParameter Name="$ts.category$" Value="TemplateStudio"/>
+			<CustomParameter Name="$ts.requiredversion$" Value="17.0"/>
+			<CustomParameter Name="$ts.requiredworkloads$" Value="Microsoft.VisualStudio.Workload.ManagedDesktop"/>
+		</CustomParameters>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>TemplateStudioForWPF, Version=5.1.0.0, Culture=neutral, PublicKeyToken=6dbc4347ed494013</Assembly>
+		<FullClassName>Microsoft.Templates.UI.VisualStudio.SolutionWizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>

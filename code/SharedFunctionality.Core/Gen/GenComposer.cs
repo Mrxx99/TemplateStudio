@@ -18,7 +18,7 @@ namespace Microsoft.Templates.Core.Gen
         {
             var genQueue = new List<GenInfo>();
 
-            if (string.IsNullOrEmpty(userSelection.Context.ProjectType) || string.IsNullOrEmpty(userSelection.Context.FrontEndFramework))
+            if (userSelection.Context.ProjectTypes.Count == 0 || string.IsNullOrEmpty(userSelection.Context.FrontEndFramework))
             {
                 return genQueue;
             }
@@ -77,7 +77,7 @@ namespace Microsoft.Templates.Core.Gen
         {
             var genQueue = new List<GenInfo>();
 
-            if (string.IsNullOrEmpty(userSelection.Context.ProjectType) || string.IsNullOrEmpty(userSelection.Context.FrontEndFramework))
+            if (userSelection.Context.ProjectTypes.Count == 0 || string.IsNullOrEmpty(userSelection.Context.FrontEndFramework))
             {
                 return genQueue;
             }
@@ -196,7 +196,7 @@ namespace Microsoft.Templates.Core.Gen
 
             var context = new QueryablePropertyDictionary
             {
-                new QueryableProperty("projecttype", userSelection.Context.ProjectType),
+                new QueryableProperty("projecttype", string.Join("|",userSelection.Context.ProjectTypes)),
                 new QueryableProperty("page", string.Join("|", userSelection.Pages.Select(p => p.TemplateId))),
                 new QueryableProperty("feature", string.Join("|", userSelection.Features.Select(p => p.TemplateId))),
                 new QueryableProperty("service", string.Join("|", userSelection.Services.Select(p => p.TemplateId))),
@@ -321,7 +321,7 @@ namespace Microsoft.Templates.Core.Gen
         {
             projectGenInfo?.Parameters.Add(GenParams.Username, Environment.UserName);
             projectGenInfo?.Parameters.Add(GenParams.WizardVersion, string.Concat("v", GenContext.ToolBox.WizardVersion));
-            projectGenInfo?.Parameters.Add(GenParams.ProjectType, userSelection.Context.ProjectType);
+            projectGenInfo?.Parameters.Add(GenParams.ProjectType, string.Join("|", userSelection.Context.ProjectTypes));
             projectGenInfo?.Parameters.Add(GenParams.FrontEndFramework, userSelection.Context.FrontEndFramework ?? string.Empty);
             projectGenInfo?.Parameters.Add(GenParams.BackEndFramework, userSelection.Context.BackEndFramework ?? string.Empty);
             projectGenInfo?.Parameters.Add(GenParams.Platform, userSelection.Context.Platform);

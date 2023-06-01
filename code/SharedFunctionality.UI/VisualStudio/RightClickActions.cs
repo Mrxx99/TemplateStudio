@@ -28,10 +28,7 @@ namespace Microsoft.Templates.UI.VisualStudio
         // Need to reconsider how this works now we have more than just one extension - where should this logic move to
         private readonly IEnumerable<RightClickAvailability> _availableOptions = new List<RightClickAvailability>()
         {
-            new RightClickAvailability(Platforms.Uwp, ProgrammingLanguages.CSharp) { TemplateTypes = new List<TemplateType>() { TemplateType.Page, TemplateType.Feature, TemplateType.Service, TemplateType.Testing } },
-            new RightClickAvailability(Platforms.Uwp, ProgrammingLanguages.VisualBasic) { TemplateTypes = new List<TemplateType>() { TemplateType.Page, TemplateType.Feature, TemplateType.Service, TemplateType.Testing } },
-            new RightClickAvailability(Platforms.Wpf, ProgrammingLanguages.CSharp) { TemplateTypes = new List<TemplateType>() { TemplateType.Page, TemplateType.Feature, TemplateType.Testing } },
-            new RightClickAvailability(Platforms.WinUI, ProgrammingLanguages.CSharp, AppModels.Desktop) { TemplateTypes = new List<TemplateType>() { TemplateType.Page, TemplateType.Feature, TemplateType.Testing } },
+            new RightClickAvailability(Platforms.Avalonia, ProgrammingLanguages.CSharp) { TemplateTypes = new List<TemplateType>() { TemplateType.Page, TemplateType.Feature, TemplateType.Testing } }
         };
 
         private readonly GenerationService _generationService = GenerationService.Instance;
@@ -131,39 +128,11 @@ namespace Microsoft.Templates.UI.VisualStudio
             }
         }
 
-        public bool VisibleForWpf(TemplateType templateType)
+        public bool VisibleForAvalonia(TemplateType templateType)
         {
             ThreadHelper.ThrowIfNotOnUIThread();
 
-            if (!_shell.Project.IsActiveProjectWpf())
-            {
-                return false;
-            }
-            else
-            {
-                return Visible(templateType);
-            }
-        }
-
-        public bool VisibleForWinUI(TemplateType templateType)
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            if (!_shell.Project.IsActiveProjectWinUI())
-            {
-                return false;
-            }
-            else
-            {
-                return Visible(templateType);
-            }
-        }
-
-        public bool VisibleForUwp(TemplateType templateType)
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            if (!_shell.Project.IsActiveProjectUwp())
+            if (!_shell.Project.IsActiveProjectAvalonia())
             {
                 return false;
             }
@@ -197,23 +166,7 @@ namespace Microsoft.Templates.UI.VisualStudio
             ThreadHelper.ThrowIfNotOnUIThread();
 
             return _shell.Project.GetActiveProjectIsWts()
-                && _shell.Project.IsActiveProjectWpf();
-        }
-
-        public bool VisibleForWinUI()
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            return _shell.Project.GetActiveProjectIsWts()
-                && _shell.Project.IsActiveProjectWinUI();
-        }
-
-        public bool VisibleForUwp()
-        {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            return _shell.Project.GetActiveProjectIsWts()
-                && _shell.Project.IsActiveProjectUwp();
+                && _shell.Project.IsActiveProjectAvalonia();
         }
 
         public bool Visible()

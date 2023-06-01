@@ -1,6 +1,0 @@
-﻿{
-  "author": "Microsoft Community",
-  "name": "DataGrid",
-  "description": "Stránka zobrazující jednoduchou datovou mřížku",
-  "identity": "ts.Page.DataGrid.Prism"
-}
