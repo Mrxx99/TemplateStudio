@@ -3,14 +3,11 @@
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
 
-trigger:
-- avalonia-port
-
 pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln'
+  solution: '**/TemplateStudio.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'ReleaseWPF'
 
@@ -26,4 +23,16 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    
+- task: CopyFiles@2
+  inputs:
+    Contents: |
+     code\TemplateStudioForWPF\bin\ReleaseWPF\TemplateStudioForWPF.vsix
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  condition: succeeded()
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'publish'
+  condition: succeeded()
