@@ -27,7 +27,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     Contents: |
-     code\TemplateStudioForWPF\bin\ReleaseWPF\TemplateStudioForWPF.vsix
+     code\TemplateStudioForAvalonia\bin\ReleaseWPF\TemplateStudioForWPF.vsix
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
   condition: succeeded()
 
