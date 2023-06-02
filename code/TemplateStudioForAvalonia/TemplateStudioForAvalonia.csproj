@@ -50,7 +50,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TemplateStudioForAvalonia</RootNamespace>
-    <AssemblyName>TemplateStudioForWPF</AssemblyName>
+    <AssemblyName>TemplateStudioForAvalonia</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
@@ -176,6 +176,10 @@
   <ItemGroup />
   <ItemGroup>
     <Compile Include="TemplateStudioForAvaloniaPackage.cs" />
+    <Content Include="TemplateStudio.targetsize-128.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Templates\Ft\Embedded.CSharp\Param_ProjectName.Desktop\Program_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -234,10 +238,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.CSharp.Desktop\Param_ProjectName.Desktop\Program.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="TemplateStudio.targetsize-128.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\Proj\Default.CSharp\ts.ProjectName\App.axaml">
