@@ -27,7 +27,8 @@ steps:
 - task: CopyFiles@2
   inputs:
     Contents: |
-     code\TemplateStudioForAvalonia\bin\ReleaseWPF\TemplateStudioForWPF.vsix
+     code\TemplateStudioForAvalonia\bin\ReleaseWPF\TemplateStudioForAvalonia.vsix
+     code\TemplateStudioForAvalonia\bin\ReleaseWPF\publishManifest.json
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
   condition: succeeded()
 
