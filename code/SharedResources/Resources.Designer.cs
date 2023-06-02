@@ -2837,6 +2837,15 @@ namespace Microsoft.Templates.SharedResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Template Studio for Avalonia.
+        /// </summary>
+        public static string TemplateStudioForAvalonia {
+            get {
+                return ResourceManager.GetString("TemplateStudioForAvalonia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Template Studio for UWP.
         /// </summary>
         public static string TemplateStudioForUwp {
