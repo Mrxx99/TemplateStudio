@@ -10,8 +10,8 @@ namespace Microsoft.Templates.SharedResources
         public static string AppName => Resources.TemplateStudioForUwp;
         public const string AssemblyName = "TemplateStudioForUwp";
 #elif _WPF_
-        public static string AppName => Resources.TemplateStudioForWpf;
-        public const string AssemblyName = "TemplateStudioForWpf";
+        public static string AppName => Resources.TemplateStudioForAvalonia;
+        public const string AssemblyName = "TemplateStudioForAvalonia";
 #elif _WINUICS_
         public static string AppName => Resources.TemplateStudioForWinUI;
         public const string AssemblyName = "TemplateStudioForWinUICs";
