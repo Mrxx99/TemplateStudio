@@ -29,6 +29,7 @@ steps:
     Contents: |
      code\TemplateStudioForAvalonia\bin\ReleaseWPF\TemplateStudioForAvalonia.vsix
      code\TemplateStudioForAvalonia\bin\ReleaseWPF\publishManifest.json
+     code\TemplateStudioForAvalonia\bin\ReleaseWPF\overview.md
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
   condition: succeeded()
 
