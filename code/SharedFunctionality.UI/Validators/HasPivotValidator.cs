@@ -26,30 +26,7 @@ namespace Microsoft.Templates.UI.Validators
 
         public ValidationResult Validate()
         {
-            var result = new ValidationResult();
-            var projectType = ProjectMetadataService.GetProjectMetadata(GenContext.ToolBox.Shell.Project.GetActiveProjectPath()).ProjectType;
-
-            if (projectType == "TabbedPivot" && HasPivot())
-            {
-                var message = new ValidationMessage
-                {
-                    Message = Resources.ValidatorHasPivotMessage,
-                    Url = string.Format(Resources.ValidatorHasPivotLink, Core.Configuration.Current.GitHubDocsUrl),
-                    HyperLinkMessage = Resources.ValidatorHasPivotLinkMessage,
-                };
-
-                result.IsValid = false;
-                result.ErrorMessages.Add(message);
-            }
-
-            return result;
-        }
-
-        private bool HasPivot()
-        {
-            var filePath = Path.Combine(GenContext.ToolBox.Shell.Project.GetActiveProjectPath(), "Views", "PivotPage.xaml");
-            var fileContent = FileHelper.GetFileContent(filePath);
-            return fileContent.Contains("<Pivot");
+            return new ValidationResult();
         }
     }
 }

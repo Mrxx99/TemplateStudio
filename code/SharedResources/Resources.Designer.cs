@@ -1441,38 +1441,11 @@ namespace Microsoft.Templates.SharedResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New Universal Windows Platform app.
-        /// </summary>
-        public static string NewProjectTitleUWP {
-            get {
-                return ResourceManager.GetString("NewProjectTitleUWP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to New WinUI 3 Desktop app.
-        /// </summary>
-        public static string NewProjectTitleWinUIDesktop {
-            get {
-                return ResourceManager.GetString("NewProjectTitleWinUIDesktop", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to New WinUI 3 UWP app.
-        /// </summary>
-        public static string NewProjectTitleWinUIUWP {
-            get {
-                return ResourceManager.GetString("NewProjectTitleWinUIUWP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to New Avalonia app.
         /// </summary>
-        public static string NewProjectTitleWPF {
+        public static string NewProjectTitleAvalonia {
             get {
-                return ResourceManager.GetString("NewProjectTitleWPF", resourceCulture);
+                return ResourceManager.GetString("NewProjectTitleAvalonia", resourceCulture);
             }
         }
         
@@ -2846,15 +2819,6 @@ namespace Microsoft.Templates.SharedResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Template Studio for UWP.
-        /// </summary>
-        public static string TemplateStudioForUwp {
-            get {
-                return ResourceManager.GetString("TemplateStudioForUwp", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Template Studio for WinUI.
         /// </summary>
         public static string TemplateStudioForWinUI {
@@ -2864,29 +2828,11 @@ namespace Microsoft.Templates.SharedResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Template Studio for WPF.
-        /// </summary>
-        public static string TemplateStudioForWpf {
-            get {
-                return ResourceManager.GetString("TemplateStudioForWpf", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to By continuing, you agree to the terms of the above licenses..
         /// </summary>
         public static string TermsAndConditionsText {
             get {
                 return ResourceManager.GetString("TermsAndConditionsText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to UWP.
-        /// </summary>
-        public static string UWP {
-            get {
-                return ResourceManager.GetString("UWP", resourceCulture);
             }
         }
         
@@ -2914,15 +2860,6 @@ namespace Microsoft.Templates.SharedResources {
         public static string ValidatorHasActivationServiceBeforeIdentityMessage {
             get {
                 return ResourceManager.GetString("ValidatorHasActivationServiceBeforeIdentityMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0}UWP/projectTypes/updatetonavigationview.md.
-        /// </summary>
-        public static string ValidatorHasHamburgerMenuLink {
-            get {
-                return ResourceManager.GetString("ValidatorHasHamburgerMenuLink", resourceCulture);
             }
         }
         
@@ -2999,15 +2936,6 @@ namespace Microsoft.Templates.SharedResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0}UWP/projectTypes/updatetowinuinavigationview.md.
-        /// </summary>
-        public static string ValidatorHasOldNavigationViewLink {
-            get {
-                return ResourceManager.GetString("ValidatorHasOldNavigationViewLink", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to See documentation to update..
         /// </summary>
         public static string ValidatorHasOldNavigationViewLinkMessage {
@@ -3022,15 +2950,6 @@ namespace Microsoft.Templates.SharedResources {
         public static string ValidatorHasOldNavigationViewMessage {
             get {
                 return ResourceManager.GetString("ValidatorHasOldNavigationViewMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0}UWP/projectTypes/updatetohorizontalnavview.md.
-        /// </summary>
-        public static string ValidatorHasPivotLink {
-            get {
-                return ResourceManager.GetString("ValidatorHasPivotLink", resourceCulture);
             }
         }
         
@@ -3089,15 +3008,6 @@ namespace Microsoft.Templates.SharedResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Windows UI.
-        /// </summary>
-        public static string WinUI {
-            get {
-                return ResourceManager.GetString("WinUI", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to .NET desktop development.
         /// </summary>
         public static string WorkloadDisplayNameManagedDesktop {
@@ -3130,15 +3040,6 @@ namespace Microsoft.Templates.SharedResources {
         public static string WorkloadDisplayNameUniversal {
             get {
                 return ResourceManager.GetString("WorkloadDisplayNameUniversal", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to WPF (.NET Core).
-        /// </summary>
-        public static string WPF {
-            get {
-                return ResourceManager.GetString("WPF", resourceCulture);
             }
         }
     }

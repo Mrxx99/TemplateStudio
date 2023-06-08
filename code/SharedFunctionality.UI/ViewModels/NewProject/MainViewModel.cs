@@ -87,7 +87,7 @@ namespace Microsoft.Templates.UI.ViewModels.NewProject
             switch (context.Platform)
             {
                 case Platforms.Avalonia:
-                    WizardStatus.Title = $"{Resources.NewProjectTitleWPF} ({GenContext.Current.ProjectName})";
+                    WizardStatus.Title = $"{Resources.NewProjectTitleAvalonia} ({GenContext.Current.ProjectName})";
                     break;
             }
 

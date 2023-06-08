@@ -484,10 +484,10 @@
       <DependentUpon>TemplateStudioStyles.xaml</DependentUpon>
     </Compile>
     <Compile Include="Commands\TemplateStudioCommand.cs" />
-    <Compile Include="Commands\TemplateStudioForWpfPackage.cs">
+    <Compile Include="Commands\TemplateStudioForAvaloniaPackage.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TemplateStudioForWpfPackage.vsct</DependentUpon>
+      <DependentUpon>TemplateStudioForAvaloniaPackage.vsct</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="source.extension.cs">
@@ -531,10 +531,10 @@
       <SubType>Designer</SubType>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <VSCTCompile Include="Commands\TemplateStudioForWpfPackage.vsct">
+    <VSCTCompile Include="Commands\TemplateStudioForAvaloniaPackage.vsct">
       <Generator>VsctGenerator</Generator>
       <ResourceName>Menus.ctmenu</ResourceName>
-      <LastGenOutput>TemplateStudioForWpfPackage.cs</LastGenOutput>
+      <LastGenOutput>TemplateStudioForAvaloniaPackage.cs</LastGenOutput>
     </VSCTCompile>
     <Content Include="Content\EULA.rtf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

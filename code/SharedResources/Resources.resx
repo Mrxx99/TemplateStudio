@@ -313,13 +313,8 @@
     <value>Design pattern</value>
     <comment>New project: Navigation step design pattern</comment>
   </data>
-  <data name="NewProjectTitleUWP" xml:space="preserve">
-    <value>New Universal Windows Platform app</value>
-    <comment>Wizard title on WizardShell page for UWP projects</comment>
-  </data>
-  <data name="NewProjectTitleWPF" xml:space="preserve">
+  <data name="NewProjectTitleAvalonia" xml:space="preserve">
     <value>New Avalonia app</value>
-    <comment>Wizard title on WizardShell page for WPF projects</comment>
   </data>
   <data name="NotificationRemoveError_Dependency" xml:space="preserve">
     <value>You can not remove **{0}** because these templates depend on it: {1}</value>
@@ -656,25 +651,13 @@
     <value>no content available.</value>
     <comment>Message in no content panel</comment>
   </data>
-  <data name="ValidatorHasHamburgerMenuLink" xml:space="preserve">
-    <value>{0}UWP/projectTypes/updatetonavigationview.md</value>
-    <comment>Has hamburger menu validation link documentation</comment>
-  </data>
   <data name="ValidatorHasHamburgerMenuLinkMessage" xml:space="preserve">
     <value>See documentation to update.</value>
     <comment>Has hamburger menu validation link documentation message</comment>
   </data>
-  <data name="ValidatorHasPivotLink" xml:space="preserve">
-    <value>{0}UWP/projectTypes/updatetohorizontalnavview.md</value>
-    <comment>Has pivot validation link documentation</comment>
-  </data>
   <data name="ValidatorHasPivotLinkMessage" xml:space="preserve">
     <value>See documentation to update.</value>
     <comment>Has pivot validation link documentation message</comment>
-  </data>
-  <data name="ValidatorHasOldNavigationViewLink" xml:space="preserve">
-    <value>{0}UWP/projectTypes/updatetowinuinavigationview.md</value>
-    <comment>Has old navigation view validation link documentation</comment>
   </data>
   <data name="ValidatorHasOldNavigationViewLinkMessage" xml:space="preserve">
     <value>See documentation to update.</value>
@@ -877,12 +860,6 @@ Please verify the following list of packages needed by your project's code and m
   <data name="InfoDialogRequiredWorkloadNotFoundMessage" xml:space="preserve">
     <value>You need to install the following workloads to create a {0} project: {1} </value>
   </data>
-  <data name="UWP" xml:space="preserve">
-    <value>UWP</value>
-  </data>
-  <data name="WPF" xml:space="preserve">
-    <value>WPF (.NET Core)</value>
-  </data>
   <data name="TemplateDetailsRequiredVSWorkloads" xml:space="preserve">
     <value>Required Visual Studio Workloads / Components:</value>
   </data>
@@ -894,15 +871,6 @@ Please verify the following list of packages needed by your project's code and m
   </data>
   <data name="ErrorInvalidRequirementType" xml:space="preserve">
     <value>Invalid Requirement Type {0}</value>
-  </data>
-  <data name="NewProjectTitleWinUIDesktop" xml:space="preserve">
-    <value>New WinUI 3 Desktop app</value>
-  </data>
-  <data name="NewProjectTitleWinUIUWP" xml:space="preserve">
-    <value>New WinUI 3 UWP app</value>
-  </data>
-  <data name="WinUI" xml:space="preserve">
-    <value>Windows UI</value>
   </data>
   <data name="DeprecatedMessage" xml:space="preserve">
     <value>Deprecated</value>
@@ -923,12 +891,6 @@ Please verify the following list of packages needed by your project's code and m
   </data>
   <data name="ButtonRestore" xml:space="preserve">
     <value>Restore</value>
-  </data>
-  <data name="TemplateStudioForUwp" xml:space="preserve">
-    <value>Template Studio for UWP</value>
-  </data>
-  <data name="TemplateStudioForWpf" xml:space="preserve">
-    <value>Template Studio for WPF</value>
   </data>
   <data name="ErrorFailedToGenerateProjectFromTemplates" xml:space="preserve">
     <value>Exception when generating the project</value>
@@ -1431,5 +1393,8 @@ See the final result: {2}
   </data>
   <data name="ProjectDetailsTargetPlatformSectionTitle" xml:space="preserve">
     <value>Target platforms</value>
+  </data>
+  <data name="TemplateStudioForAvalonia" xml:space="preserve">
+    <value>Template Studio for Avalonia</value>
   </data>
 </root>

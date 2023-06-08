@@ -19,16 +19,16 @@ using Task = System.Threading.Tasks.Task;
 
 namespace TemplateStudioForAvalonia
 {
-    [ProvideAutoLoad(PackageGuids.guidTemplateStudioForWpfUIContextString, PackageAutoLoadFlags.BackgroundLoad)]
-    [ProvideUIContextRule(PackageGuids.guidTemplateStudioForWpfUIContextString,
-        name: "Load TS4WPF Project Package",
+    [ProvideAutoLoad(PackageGuids.guidTemplateStudioForAvaloniaUIContextString, PackageAutoLoadFlags.BackgroundLoad)]
+    [ProvideUIContextRule(PackageGuids.guidTemplateStudioForAvaloniaUIContextString,
+        name: "Load TS4Avalonia Project Package",
         expression: "HasWPF",
         termNames: new[] { "HasWPF" },
         termValues: new[] { "SolutionHasProjectCapability: WPF" })]
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
-    [Guid(PackageGuids.guidTemplateStudioForWpfPackageString)]
+    [Guid(PackageGuids.guidTemplateStudioForAvaloniaPackageString)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
-    public sealed class TemplateStudioForWpfPackage : AsyncPackage
+    public sealed class TemplateStudioForAvaloniaPackage : AsyncPackage
     {
         private readonly Lazy<RightClickActions> _rightClickActions = new Lazy<RightClickActions>(() => new RightClickActions());
 
@@ -63,7 +63,7 @@ namespace TemplateStudioForAvalonia
                  this,
                  commandService,
                  PackageIds.AddPageCommand,
-                 PackageGuids.guidTemplateStudioForWpfPackageCmdSet,
+                 PackageGuids.guidTemplateStudioForAvaloniaPackageCmdSet,
                  AddPage,
                  RightClickAvailable,
                  TemplateType.Page);
@@ -72,7 +72,7 @@ namespace TemplateStudioForAvalonia
                 this,
                  commandService,
                 PackageIds.AddFeatureCommand,
-                PackageGuids.guidTemplateStudioForWpfPackageCmdSet,
+                PackageGuids.guidTemplateStudioForAvaloniaPackageCmdSet,
                 AddFeature,
                 RightClickAvailable,
                 TemplateType.Feature);
@@ -81,7 +81,7 @@ namespace TemplateStudioForAvalonia
                  this,
                  commandService,
                  PackageIds.AddServiceCommand,
-                 PackageGuids.guidTemplateStudioForWpfPackageCmdSet,
+                 PackageGuids.guidTemplateStudioForAvaloniaPackageCmdSet,
                  AddService,
                  RightClickAvailable,
                  TemplateType.Service);
@@ -90,7 +90,7 @@ namespace TemplateStudioForAvalonia
                  this,
                  commandService,
                  PackageIds.AddTestingCommand,
-                 PackageGuids.guidTemplateStudioForWpfPackageCmdSet,
+                 PackageGuids.guidTemplateStudioForAvaloniaPackageCmdSet,
                  AddTesting,
                  RightClickAvailable,
                  TemplateType.Testing);
@@ -99,7 +99,7 @@ namespace TemplateStudioForAvalonia
                 this,
                  commandService,
                 PackageIds.OpenTempFolder,
-                PackageGuids.guidTemplateStudioForWpfPackageCmdSet,
+                PackageGuids.guidTemplateStudioForAvaloniaPackageCmdSet,
                 OpenTempFolder,
                 TempFolderAvailable,
                 TemplateType.Unspecified);

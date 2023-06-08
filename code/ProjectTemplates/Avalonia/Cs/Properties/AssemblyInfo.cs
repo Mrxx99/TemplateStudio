@@ -8,12 +8,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Ts4WpfCsTemplate")]
+[assembly: AssemblyTitle("Ts4AvaloniaCsTemplate")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Ts4WpfCsTemplate")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2022")]
+[assembly: AssemblyCompany("Avalonia")]
+[assembly: AssemblyProduct("Ts4AvaloniaCsTemplate")]
+[assembly: AssemblyCopyright("Copyright © Avalonia 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
