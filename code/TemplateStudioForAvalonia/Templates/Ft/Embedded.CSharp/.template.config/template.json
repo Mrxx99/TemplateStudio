@@ -16,7 +16,7 @@
         "ts.outputToParent": "true",
         "ts.platform": "Avalonia",
         "ts.version": "1.0.0",
-        "ts.defaultInstance": "Embedded",
+        "ts.defaultInstance": "Embedded Support",
         "ts.multipleInstance": "false",
         "ts.isHidden": "false",
         "ts.genGroup": "0",

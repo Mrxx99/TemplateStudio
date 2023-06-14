@@ -113,8 +113,8 @@ namespace Microsoft.Templates.UI.ViewModels.Common
             IsNotBusy = !IsBusy;
         }
 
-        private void OnOpenWebSite() => Process.Start("https://github.com/microsoft/TemplateStudio");
+        private void OnOpenWebSite() => Process.Start("https://github.com/AvaloniaUI/TemplateStudio");
 
-        private void OnCreateIssue() => Process.Start($"https://github.com/microsoft/TemplateStudio/issues/new/choose");
+        private void OnCreateIssue() => Process.Start($"https://github.com/AvaloniaUI/TemplateStudio/issues/new/choose");
     }
 }
