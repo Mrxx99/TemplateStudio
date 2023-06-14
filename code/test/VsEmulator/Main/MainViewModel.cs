@@ -184,7 +184,7 @@ namespace Microsoft.Templates.VsEmulator.Main
         private void SetupForProjectCreation(string platform, string language, string appmodel = null)
         {
 
-            TemplatesSource ts = new WpfTestsTemplatesSource();
+            TemplatesSource ts = new AvaloniaTestsTemplatesSource();
 
             GenContext.Bootstrap(
                 ts,
@@ -475,7 +475,7 @@ namespace Microsoft.Templates.VsEmulator.Main
                 switch (platform)
                 {
                     case Platforms.Avalonia:
-                        ts = new WpfTestsTemplatesSource();
+                        ts = new AvaloniaTestsTemplatesSource();
                         break;
                 }
 

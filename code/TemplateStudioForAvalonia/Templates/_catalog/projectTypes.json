@@ -19,8 +19,8 @@
     },
     {
         "name": "IOS",
-        "displayName": "IOS",
-        "summary": "This option allows you to run your project on IOS devices.",
+        "displayName": "iOS",
+        "summary": "This option allows you to run your project on iOS devices.",
         "author": "AvaloniaUI",
         "order": "4",
         "platform": "Avalonia",

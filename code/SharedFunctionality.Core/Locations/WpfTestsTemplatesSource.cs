@@ -6,24 +6,24 @@ using System.IO;
 
 namespace Microsoft.Templates.Core.Locations
 {
-    public sealed class WpfTestsTemplatesSource : LocalTemplatesSource
+    public sealed class AvaloniaTestsTemplatesSource : LocalTemplatesSource
     {
-        public WpfTestsTemplatesSource()
+        public AvaloniaTestsTemplatesSource()
             : base(null)
         {
         }
 
-        public WpfTestsTemplatesSource(string id)
+        public AvaloniaTestsTemplatesSource(string id)
             : base(string.Empty, id)
         {
         }
 
-        public override string Id => "WpfUITest" + GetAgentName();
+        public override string Id => "AvaloniaUITest" + GetAgentName();
 
         public override string GetContentRootFolder()
         {
             var dir = Path.GetDirectoryName(System.Environment.CurrentDirectory);
-            dir = Path.Combine(dir, @"..\..\..\TemplateStudioForWpf\Templates");
+            dir = Path.Combine(dir, @"..\..\..\TemplateStudioForAvalonia\Templates");
 
             return dir;
         }
