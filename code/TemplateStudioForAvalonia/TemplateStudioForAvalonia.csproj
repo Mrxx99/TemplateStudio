@@ -201,7 +201,7 @@
     <Content Include="Templates\_comp\_shared\Proj.CSharp.Web\Param_ProjectName.Browser\Program.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Templates\_comp\MT\Project.CSharp.Android\Param_ProjectName.Android\SplashActivity_postaction.cs">
+    <Content Include="Templates\_comp\MT\Project.CSharp.Android\Param_ProjectName.Android\MainActivity_postaction.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\Proj\Default.CSharp\ts.ProjectName\App.axaml.cs">
@@ -232,9 +232,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.CSharp.Android\Param_ProjectName.Android\MainActivity.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\_comp\_shared\Proj.CSharp.Android\Param_ProjectName.Android\SplashActivity.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\_comp\_shared\Proj.CSharp.Desktop\Param_ProjectName.Desktop\Program.cs">
