@@ -4,12 +4,6 @@
 
 **Which issue does this PR relate to?**
 
-**Applies to the following platforms:**
-
-- [ ] WinUI
-- [ ] WPF
-- [ ] UWP
-
 **Anything that requires particular review or attention?**
 
 **Do all automated tests pass?**
@@ -22,7 +16,6 @@
 
 **If you've included a new template:**
   - Be sure you reviewed the [Template Verification Checklist](https://github.com/microsoft/TemplateStudio/wiki/Checklist:-Template-Verification).
-  - Be sure it's included in the list on this [UWP](https://github.com/microsoft/TemplateStudio/blob/main/docs/UWP/getting-started-endusers.md) or [WPF](https://github.com/microsoft/TemplateStudio/blob/main/docs/WPF/getting-started-endusers.md) getting started doc.
 
 **Have you raised issues for any needed follow-on work?**
 
