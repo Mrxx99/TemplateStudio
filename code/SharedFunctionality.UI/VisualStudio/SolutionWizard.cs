@@ -104,8 +104,7 @@ namespace Microsoft.Templates.UI.VisualStudio
             }
             catch (System.Exception exc)
             {
-                System.Diagnostics.Debug.WriteLine(exc);
-                System.Diagnostics.Debugger.Break();
+                System.Diagnostics.Debug.WriteLine(exc);                
                 AppHealth.Current.Exception.TrackAsync(exc, Resources.ErrorFailedToGenerateProjectFromTemplates).FireAndForget();
             }
         }
@@ -156,8 +155,6 @@ namespace Microsoft.Templates.UI.VisualStudio
             catch (System.Exception exc)
             {
                 System.Diagnostics.Debug.WriteLine(exc);
-                System.Diagnostics.Debugger.Break();
-
                 throw;
             }
         }
