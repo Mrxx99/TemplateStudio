@@ -4,7 +4,6 @@ open Android.App
 open Android.Content.PM
 open Avalonia
 open Avalonia.Android
-open Avalonia.ReactiveUI
 open Param_RootNamespace
 
 [<Activity(
@@ -19,4 +18,3 @@ type MainActivity() =
     override _.CustomizeAppBuilder(builder) =
         base.CustomizeAppBuilder(builder)
             .WithInterFont()
-            .UseReactiveUI()
