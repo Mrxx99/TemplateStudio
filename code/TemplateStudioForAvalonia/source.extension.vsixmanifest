@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="TemplateStudioForAvalonia.973b9e25-68ad-44b2-b375-9a775809cb97" Version="1.2" Language="en-US" Publisher="Avalonia Team" />
+        <Identity Id="TemplateStudioForAvalonia.973b9e25-68ad-44b2-b375-9a775809cb97" Version="1.3" Language="en-US" Publisher="Avalonia Team" />
         <DisplayName>Avalonia Template Studio</DisplayName>
         <Description xml:space="preserve">Template Studio accelerates the creation of new Avalonia apps using a wizard-based UI.</Description>
         <MoreInfo>https://github.com/AvaloniaUI/TemplateStudio</MoreInfo>
