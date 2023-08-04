@@ -11,7 +11,7 @@ namespace TemplateStudioForAvalonia
         public const string Name = "Avalonia Template Studio";
         public const string Description = @"Template Studio accelerates the creation of new Avalonia apps using a wizard-based UI.";
         public const string Language = "en-US";
-        public const string Version = "1.2";
+        public const string Version = "1.3";
         public const string Author = "Microsoft";
         public const string Tags = "Template Studio, Avalonia, XAML, MVVM, Desktop";
     }
