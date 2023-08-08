@@ -6,7 +6,7 @@
     "shortName": "Meadow",
     "groupIdentity": "ts.Avalonia.Feat.Meadow",
     "identity": "ts.Avalonia.Feat.Meadow",
-    "description": "Adds support for running applications on a Meadow Platform.",
+    "description": "Adds support for running applications on the Meadow Platform by Wilderness Labs.",
     "tags": {
         "language": "C#",
         "type": "item",

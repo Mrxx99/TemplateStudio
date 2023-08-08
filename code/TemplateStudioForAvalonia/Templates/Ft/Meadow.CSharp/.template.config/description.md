@@ -1,1 +1,1 @@
-﻿Adds support for running applications on a Meadow Platform.
+﻿Adds support for running applications on the Meadow Platform by Wilderness Labs.
