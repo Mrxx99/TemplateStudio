@@ -9,11 +9,13 @@ To get started, install the extension, then select the corresponding Template St
 
 <figcaption>VS New Project Dialog (C#)</figcaption>
 
-![VS New Project screenshot](https://github.com/AvaloniaUI/TemplateStudio/assets/53405089/d3322aa6-39e1-4d29-9b9d-37e0fcbb0a90)
+![VS New Project screenshot](https://github.com/AvaloniaUI/TemplateStudio/assets/53405089/6c5cf387-3df6-4821-9668-e544f40535a7)
 
 <figcaption>VS New Project Dialog (F#)</figcaption>
 
-![VS New F# Project screenshot](https://github.com/AvaloniaUI/TemplateStudio/assets/53405089/ffe32de4-dc39-4bbc-b359-94e12d21ef54)
+![VS New F# Project screenshot](https://github.com/AvaloniaUI/TemplateStudio/assets/53405089/42ac695f-a78d-4ea8-a6ec-12522677dc76)
+
+
 
 <figcaption>Template Studio for Avalonia (C#)</figcaption>
 
@@ -41,9 +43,9 @@ Options: **MVVM Toolkit**, **ReactiveUI**.
 
 Specify which capabilities you want to use in your app, and we'll build out the framework for the features into your app.
 
-Options: **Compiled Bindings**, **Embedded Support**.
+Options: **Compiled Bindings**, **Embedded Support**, **Meadow Support**.
 
-![Template Studio C# features](https://github.com/AvaloniaUI/TemplateStudio/assets/53405089/3059adcf-a45e-4728-9c99-4867df87b8f6)
+![Template Studio C# features](https://github.com/AvaloniaUI/TemplateStudio/assets/53405089/b8e01ce4-5fef-4794-bd2e-6c042126c0ad)
 
 ## Principles
 
