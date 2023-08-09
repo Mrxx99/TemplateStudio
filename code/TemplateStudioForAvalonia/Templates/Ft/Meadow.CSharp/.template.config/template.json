@@ -1,0 +1,57 @@
+﻿{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "AvaloniaUI",
+    "classifications": [ "Universal" ],
+    "name": "Meadow Support",
+    "shortName": "Meadow",
+    "groupIdentity": "ts.Avalonia.Feat.Meadow",
+    "identity": "ts.Avalonia.Feat.Meadow",
+    "description": "Adds support for running applications on the Meadow Platform by Wilderness Labs.",
+    "tags": {
+        "language": "C#",
+        "type": "item",
+        "ts.type": "feature",
+        "ts.projecttype": "Desktop",
+        "ts.frontendframework": "all",
+        "ts.outputToParent": "true",
+        "ts.platform": "Avalonia",
+        "ts.version": "1.0.0",
+        "ts.dependencies": "ts.Avalonia.Feat.Embedded",
+        "ts.defaultInstance": "Meadow Support",
+        "ts.multipleInstance": "false",
+        "ts.isHidden": "false",
+        "ts.genGroup": "0",
+        "ts.rightClickEnabled": "true"
+    },
+    "sourceName": "ts.ItemName",
+    "preferNameDirectory": true,
+    "PrimaryOutputs": [
+        {
+            "path": "Param_ProjectName_postaction.csproj"
+        }
+    ],
+    "symbols": {
+        "ts.rootNamespace": {
+            "type": "parameter",
+            "replaces": "Param_RootNamespace"
+        },
+        "ts.projectName": {
+            "type": "parameter",
+            "replaces": "Param_ProjectName",
+            "fileRename": "Param_ProjectName"
+        },
+        "Framework": {
+            "type": "parameter",
+            "description": "The target framework for the project.",
+            "datatype": "choice",
+            "choices": [
+                {
+                    "choice": "net7.0",
+                    "description": "Target net7.0"
+                }
+            ],
+            "replaces": "FrameworkParameter",
+            "defaultValue": "net7.0"
+        }
+    }
+}

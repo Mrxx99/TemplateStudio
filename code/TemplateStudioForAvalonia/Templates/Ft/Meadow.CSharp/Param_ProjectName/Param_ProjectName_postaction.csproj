@@ -1,0 +1,9 @@
+﻿  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
+    <!--^^-->
+    <!--{[{-->
+    <PackageReference Include="Meadow.Foundation" Version="1.2" />
+    <PackageReference Include="Meadow.Linux" Version="1.2" />
+    <PackageReference Include="Meadow.Windows" Version="1.2" />
+    <!--}]}-->
+  </ItemGroup>

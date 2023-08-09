@@ -176,6 +176,12 @@
   <ItemGroup />
   <ItemGroup>
     <Compile Include="TemplateStudioForAvaloniaPackage.cs" />
+    <Content Include="Templates\Ft\Meadow.CSharp\Param_ProjectName\App_postaction.axaml.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Ft\Meadow.CSharp\Param_ProjectName\AvaloniaMeadowApplication.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="TemplateStudio.targetsize-128.ico">
       <IncludeInVSIX>true</IncludeInVSIX>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -468,6 +474,15 @@
     <Content Include="Templates\Ft\Embedded.CSharp\Param_ProjectName.Desktop\Param_ProjectName.Desktop_postaction.csproj">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Templates\Ft\Meadow.CSharp\.template.config\description.md">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Ft\Meadow.CSharp\.template.config\template.json">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Ft\Meadow.CSharp\Param_ProjectName\Param_ProjectName_postaction.csproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Page Include="..\SharedStyles\TemplateStudioStyles.xaml">
       <Link>Styles\TemplateStudioStyles.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
@@ -525,6 +540,10 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Templates\Ft\Embedded.CSharp\.template.config\icon.xaml">
+      <SubType>Designer</SubType>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Templates\Ft\Meadow.CSharp\.template.config\icon.xaml">
       <SubType>Designer</SubType>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
